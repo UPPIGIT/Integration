@@ -1,0 +1,4 @@
+mqsicreateconfigurableservice TESTNODE_iibadmin -c SecurityProfiles -o LDAP_SP2 -n authentication,authenticationConfig,passwordValue,propagation,authorization,authorizationConfig -v "LDAP,\"ldap://localhost:389/ou=users,ou=wmbv7,o=ibm,c=us?uid\",MASK,TRUE,LDAP,\"ldap://localhost:389/cn=authorized,ou=users,ou=wmbv7,o=ibm,c=us\""
+
+
+mqsicreateconfigurableservice TESTNODE_iibadmin -c SecurityProfiles -o LDAP_SP1 -n authentication,authenticationConfig,passwordValue,propagation,authorization,authorizationConfig -v "LDAP,\"ldap://localhost:389/ou=users,ou=wmbv7,o=ibm,c=us?uid\",PLAIN,TRUE,LDAP,\"ldap://localhost:389/cn=authorized,ou=users,ou=wmbv7,o=ibm,c=us\""

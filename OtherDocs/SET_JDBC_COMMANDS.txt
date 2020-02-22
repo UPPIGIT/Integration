@@ -1,0 +1,92 @@
+mqsireportproperties TESTNODE_iibadmin -o SAMPLE -c JDBCProviders -r
+
+mqsideleteconfigurableservice TESTNODE_iibadmin -c JDBCProviders -o SAMPLE
+
+mqsicreateconfigurableservice TESTNODE_iibadmin -c JDBCProviders -o SAMPLE -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","SAMPLE","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+
+mqsisetdbparms TESTNODE_iibadmin -n jdbc::SAMPLE -u ezone -p sruthiuppi
+
+mqsisetdbparms TESTNODE_iibadmin -n jdbc::mySecurityId -u ezone -p sruthiuppi
+
+mqsireportproperties TESTNODE_iibadmin -o SAMPLE -c JDBCProviders -r
+
+mqsistop TESTNODE_iibadmin
+mqsistart TESTNODE_iibadmin
+
+
+mqsicvp TESTNODE_iibadmin -n SAMPLE
+
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_iibadmin -o SAMPLE -c JDBCProviders -r
+
+JDBCProviders
+  SAMPLE
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='SAMPLE'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsideleteconfigurableservice TESTNODE_iibadmin -c JDBCProviders -o SAMPLE
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsicreateconfigurableservice TESTNODE_iibadmin -c JDBCProviders -o SAMPLE -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","SAMPLE","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms TESTNODE_iibadmin -n jdbc::SAMPLE -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms TESTNODE_iibadmin -n jdbc::mySecurityId -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_iibadmin -o SAMPLE -c JDBCProviders -r
+
+JDBCProviders
+  SAMPLE
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='SAMPLE'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+
+

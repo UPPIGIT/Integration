@@ -1,0 +1,80 @@
+Message
+	Properties
+			MessageSet:CHARACTER:Webservice_MSET
+			MessageType:CHARACTER:
+			MessageFormat:CHARACTER:
+			Encoding:INTEGER:546
+			CodedCharSetId:INTEGER:1208
+			Transactional:BOOLEAN:false
+			Persistence:BOOLEAN:false
+			CreationTime:TIMESTAMP:java.util.GregorianCalendar[time=1532148391077,areFieldsSet=true,areAllFieldsSet=false,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Asia/Calcutta",offset=19800000,dstSavings=0,useDaylight=false,transitions=6,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=?,YEAR=2018,MONTH=6,WEEK_OF_YEAR=?,WEEK_OF_MONTH=?,DAY_OF_MONTH=21,DAY_OF_YEAR=?,DAY_OF_WEEK=?,DAY_OF_WEEK_IN_MONTH=?,AM_PM=0,HOUR=10,HOUR_OF_DAY=10,MINUTE=16,SECOND=31,MILLISECOND=77,ZONE_OFFSET=?,DST_OFFSET=?]
+			ExpirationTime:INTEGER:-1
+			Priority:INTEGER:0
+			ReplyIdentifier:BLOB:[B@ab9a4c85
+			ReplyProtocol:CHARACTER:SOAP-HTTP
+			Topic:UNKNOWN:null
+			ContentType:CHARACTER:text/xml;charset=UTF-8
+			IdentitySourceType:CHARACTER:
+			IdentitySourceToken:CHARACTER:
+			IdentitySourcePassword:CHARACTER:
+			IdentitySourceIssuedBy:CHARACTER:
+			IdentityMappedType:CHARACTER:
+			IdentityMappedToken:CHARACTER:
+			IdentityMappedPassword:CHARACTER:
+			IdentityMappedIssuedBy:CHARACTER:
+	HTTPInputHeader
+			Host:CHARACTER:localhost:7800
+			Content-Length:CHARACTER:624
+			X-Remote-Addr:CHARACTER:127.0.0.1
+			User-Agent:CHARACTER:Apache-HttpClient/4.1.1 (java 1.5)
+			X-Scheme:CHARACTER:http
+			Connection:CHARACTER:Keep-Alive
+			X-Remote-Host:CHARACTER:127.0.0.1
+			X-Server-Name:CHARACTER:localhost
+			X-Server-Port:CHARACTER:7800
+			X-Original-HTTP-Command:CHARACTER:POST http://localhost:7800/OrederService HTTP/1.1
+			Accept-Encoding:CHARACTER:gzip,deflate
+			SOAPAction:CHARACTER:"http://www.acmeOrders.com/OrderService"
+			Content-Type:CHARACTER:text/xml;charset=UTF-8
+	XMLNSC
+			Envelope
+					soapenv:CHARACTER:http://schemas.xmlsoap.org/soap/envelope/
+					ord:CHARACTER:http://www.acmeOrders.com/OrderService
+					Header
+					Body
+							submitPORequest
+									partNo:CHARACTER:A12
+									partQuantity:CHARACTER:1
+									personName
+											firstName:CHARACTER:Upender
+											lastName:CHARACTER:Tadewar
+									address
+											street:CHARACTER:Hinjewadi
+											city:CHARACTER:pune
+											zipCode:CHARACTER:411025
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+LocalEnvironment
+	Destination
+			HTTP
+					RequestIdentifier:BLOB:[B@4920a4fd
+			RouterList
+					DestinationData
+							labelName:CHARACTER:POST
+	HTTP
+			Input
+					RequestLine
+							Method:CHARACTER:POST
+							RequestURI:CHARACTER:/OrederService
+							HTTPVersion:CHARACTER:HTTP/1.1											

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="WS_Security_MS" targetNamespace="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:portType name="WS_Security_MSPortType"/>
+  <wsdl:binding name="WS_Security_MSSOAP_HTTP_Binding" type="tns:WS_Security_MSPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  </wsdl:binding>
+  <wsdl:service name="WS_Security_MSSOAP_HTTP_Service">
+    <wsdl:port binding="tns:WS_Security_MSSOAP_HTTP_Binding" name="WS_Security_MSSOAP_HTTP_Port">
+      <soap:address location="http://localhost:7800/WS_Security_MSSOAP_HTTP_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

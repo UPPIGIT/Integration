@@ -1,0 +1,38 @@
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiZHBIY3JRUEpOcnhfcHJvZF9hdS1zeWQiLCJyZWdpb24iOiJhdS1zeWQiLCJpYXQiOjE1MDI4MTg3NDIsImV4cCI6MTUxMDU5NDc0Mn0.O8uS2BwHhBZyYeVwIqDZZg7O6rW-rDHvU0eYtdGCE8E
+
+dpHcrQPJNrx_prod_au-syd
+
+dpHcrQPJNrx_prod_au-syd
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiZHBIY3JRUEpOcnhfcHJvZF9hdS1zeWQiLCJyZWdpb24iOiJhdS1zeWQiLCJpYXQiOjE1MDI4MTg3NDIsImV4cCI6MTUxMDU5NDc0Mn0.O8uS2BwHhBZyYeVwIqDZZg7O6rW-rDHvU0eYtdGCE8E
+
+Destination ID
+dpHcrQPJNrx_cwVd8
+Cloud Host : Port
+cap-au-sg-prd-01.integration.ibmcloud.com:15109
+Resource Host : Port
+upender.IIB:7083
+Created by
+at 8/15/2017, 11:14:34 PM
+Last modified by
+at 8/15/2017, 11:14:34 PM
+Security
+Protocol: TCP
+Download Authentication Files
+Edit Disable
+
+au.apiconnect.ibmcloud.com
+
+http://cap-au-sg-prd-01.integration.ibmcloud.com:15109$(request.path)
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiZHBIY3JRUEpOcnhfcHJvZF9hdS1zeWQiLCJyZWdpb24iOiJhdS1zeWQiLCJpYXQiOjE1MDI4MTg3NDIsImV4cCI6MTUxMDU5NDc0Mn0.O8uS2BwHhBZyYeVwIqDZZg7O6rW-rDHvU0eYtdGCE8E
+Gateway ID
+dpHcrQPJNrx_prod_au-syd
+Node
+cap-au-sg-prd-01.integration.ibmcloud.com
+Created by
+UPENDER T at 8/15/2017, 11:09:02 PM
+Last modified by
+UPENDER T at 8/15/2017, 11:09:02 PM
+Security
+Regenerate Gateway Cert and Key

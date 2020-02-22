@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+      <wsa:ReplyTo>
+         <wsa:Address>http://localhost:7801/client2</wsa:Address>
+      </wsa:ReplyTo>
+      <wsa:MessageID>urn:uuid:93969983-ea47-4ca1-beb8-b2c97efc500d</wsa:MessageID>
+      <wsa:Action>http://www.acmeOrders.com/OrderService/OrderService/submitPOResponse</wsa:Action>
+      <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply">uuid:e26f7fc4-dc4b-4a34-ac5d-07bf3d63ba51</wsa:RelatesTo>
+   </soapenv:Header>
+   <soapenv:Body>
+      <NS1:submitPORequest xmlns:NS1="http://www.acmeOrders.com/OrderService">
+         <partNo>A12</partNo>
+         <partQuantity>10</partQuantity>
+         <personName>
+            <firstName>Upender</firstName>
+            <lastName>Tadewar</lastName>
+         </personName>
+         <address>
+            <street>Hinjewadi</street>
+            <city>pune</city>
+            <zipCode>411025</zipCode>
+         </address>
+      </NS1:submitPORequest>
+   </soapenv:Body>
+</soapenv:Envelope>

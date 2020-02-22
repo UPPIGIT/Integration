@@ -1,0 +1,42 @@
+mqsireportproperties IIB10BRK -e default -o ExecutionGroup -n httpNodesUseEmbeddedListener
+
+mqsichangeproperties IIB10BRK -e default -o ExecutionGroup -n httpNodesUseEmbeddedListener -v false
+
+mqsichangeproperties IIB10BRK -b httplistener -o HTTPListener  -n startListener -v true
+
+mqsireportproperties IIB10BRK -e default  -o HTTPConnector -r
+
+netstat -a | findstr 7080
+
+
+
+mqsichangeproperties IIB10BRK -e default -o ExecutionGroup -n httpNodesUseEmbeddedListener -v true
+
+mqsichangeproperties IIB10BRK -b httplistener -o HTTPListener  -n startListener -v false
+
+mqsichangeproperties IIB10BRK -e default -o HTTPConnector   -n explicitlySetPortNumber -v 8085 
+
+Execution group (embedded) listeners:-
+
+change port:-
+
+mqsichangeproperties myBroker -e default -o HTTPConnector   -n explicitlySetPortNumber -v 8085 
+
+The HTTPSConnector object controls the runtime properties that affect the handling of HTTPS (HTTP Secure) messages. 
+Run the following command to display these properties for execution group default on broker myBroker:
+
+mqsireportproperties myBroker -e default -o HTTPSConnector -r
+
+check nodes(http/soap) using EmbeddedListener
+
+mqsireportproperties myBroker -e default -o ExecutionGroup -n soapNodesUseEmbeddedListener
+
+
+mqsireportproperties myBroker -e default -o ExecutionGroup -n httpNodesUseEmbeddedListener
+
+Broker-wide listeners
+
+mqsichangeproperties myBroker -b httplistener -o HTTPConnector   -n port -v 1415
+
+disable brokerwide listiner
+mqsichangeproperties myBroker -b httplistener -o HTTPListener   -n startListener -v false 

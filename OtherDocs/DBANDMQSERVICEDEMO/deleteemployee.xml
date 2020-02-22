@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NS1:deleteEmployee xmlns:NS1="http://DatabaseService">
+  <empno>000050</empno>
+</NS1:deleteEmployee>

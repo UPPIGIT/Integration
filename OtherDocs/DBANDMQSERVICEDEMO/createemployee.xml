@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NS1:createEmployee xmlns:NS1="http://DatabaseService">
+  <empno>439995</empno>
+  <firstnme>SACHI</firstnme>
+  <midinit>S</midinit>
+  <lastname>SURY</lastname>
+  <workdept>IT</workdept>
+  <phoneno>9503</phoneno>
+  <hiredate>1981-05-01 00:00:00</hiredate>
+  <job>str1234</job>
+  <edlevel>3</edlevel>
+  <sex>M</sex>
+  <birthdate>1981-05-01 00:00:00</birthdate>
+  <salary>3.14159</salary>
+  <bonus>3.14159</bonus>
+  <comm>3.14159</comm>
+</NS1:createEmployee>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:ns="http://www.mycompany.com/EmployeeService" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<soapenv:Header>
+ <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss- wssecurity-secext-1.0.xsd"> 
+ <wsse:UsernameToken> 
+ <wsse:Username xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss- wssecurity-utility-1.0.xsd" wsu:Id="unt_907818524">wmbuser1</wsse:Username>
+ <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss- username-token-profile-1.0#PasswordText">user1pw</wsse:Password> 
+ </wsse:UsernameToken>
+ </wsse:Security>
+ </soapenv:Header> 
+ <soapenv:Body> 
+ <ns:employeeInfoRequest> 
+ <id>12345</id>
+ </ns:employeeInfoRequest> </soapenv:Body>
+</soapenv:Envelope>

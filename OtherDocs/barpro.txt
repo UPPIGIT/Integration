@@ -1,0 +1,258 @@
+BIP1052I: Reading Bar file using runtime mqsireadbar...
+C:\Users\ezone\IBM\IIBT10\Flowsecurity\EmployeeService_JSONClient\EmployeeService.MFS.10.0.0.3.bar:
+  EmployeeService.appzip (18/8/17 1:26 AM):
+    gen\EmployeeService.msgflow (18/8/17 1:26 AM):
+    gen\EmployeeServiceInputHTTPTimeoutHandler.subflow (18/8/17 1:26 AM):
+    service.descriptor (18/8/17 1:26 AM):
+    gen\EmployeeServiceInputCatchHandler.subflow (18/8/17 1:26 AM):
+    gen\addEmployee_Request_Response.subflow (18/8/17 1:26 AM):
+    gen\updEmployee_Request_Response.subflow (18/8/17 1:26 AM):
+    gen\EmployeeService_inputMessage.xml (18/8/17 1:26 AM):
+    gen\dltEmployee_Request_Response.subflow (18/8/17 1:26 AM):
+    gen\getEmployee_Request_Response.subflow (18/8/17 1:26 AM):
+    gen\EmployeeServiceInputFailureHandler.subflow (18/8/17 1:26 AM):
+    Deployment descriptor:
+      startMode
+      javaIsolation
+      gen.EmployeeService#additionalInstances
+      gen.EmployeeService#notificationThresholdMsgsPerSec
+      gen.EmployeeService#maximumRateMsgsPerSec
+      gen.EmployeeService#processingTimeoutSec
+      gen.EmployeeService#processingTimeoutAction
+      gen.EmployeeService#wlmPolicy
+      gen.EmployeeService#commitCount
+      gen.EmployeeService#commitInterval
+      gen.EmployeeService#coordinatedTransaction
+      gen.EmployeeService#consumerPolicySet
+      gen.EmployeeService#providerPolicySet
+      gen.EmployeeService#consumerPolicySetBindings
+      gen.EmployeeService#providerPolicySetBindings
+      gen.EmployeeService#securityProfileName
+      gen.EmployeeService#monitoringProfile
+      gen.EmployeeService#startMode
+      gen.EmployeeService#startInstancesWhenFlowStarts
+      gen.EmployeeService#SOAP Input.urlSelector = /EmployeeService
+      gen.EmployeeService#SOAP Input.useHTTPS
+      gen.EmployeeService#SOAP Input.maxClientWaitTime
+      gen.EmployeeService#SOAP Input.allowQueryWSDL = yes
+      gen.EmployeeService#SOAP Input.initialContextFactory
+      gen.EmployeeService#SOAP Input.locationJndiBindings
+      gen.EmployeeService#SOAP Input.connectionFactoryName
+      gen.EmployeeService#SOAP Input.backoutDestination
+      gen.EmployeeService#SOAP Input.backoutThreshold
+      gen.EmployeeService#SOAP Input.propertySelector
+      gen.EmployeeService#SOAP Input.timeStampSelector
+      gen.EmployeeService#SOAP Input.messageDeliveryModeSelector
+      gen.EmployeeService#SOAP Input.messagePrioritySelector
+      gen.EmployeeService#SOAP Input.messageIDSelector
+      gen.EmployeeService#SOAP Input.messageRedeliveredSelector
+      gen.EmployeeService#SOAP Input.messageCorrelationIDSelector
+      gen.EmployeeService#SOAP Input.targetService
+      gen.EmployeeService#SOAP Input.securityProfileName
+      gen.EmployeeService#SOAP Input.policySet
+      gen.EmployeeService#SOAP Input.policySetBindings
+      gen.EmployeeService#SOAP Input.sendProcessingFaultsToFailure
+      gen.EmployeeService#SOAP Input.validateMaster
+      gen.EmployeeService#SOAP Input.validateFailureAction
+      gen.EmployeeService#SOAP Input.componentLevel
+      gen.EmployeeService#SOAP Input.additionalInstances
+      gen.EmployeeService#SOAP Reply.allowMTOM
+      gen.EmployeeService#SOAP Reply.validateMaster
+      gen.EmployeeService#SOAP Reply.securityProfileName
+  EmployeeService_JSONClient.appzip (18/8/17 1:26 AM):
+    EmpServ_JSON_getEmployee_JSON_to_SOAP.map (18/8/17 1:26 AM):
+    EmpServ_JSON_dltEmployee.msgflow (18/8/17 1:26 AM):
+    EmpServ_JSON_dltEmployee_JSON_to_SOAP.map (18/8/17 1:26 AM):
+    EmpServ_JSON_getEmployee_inputMessage.xml (18/8/17 1:26 AM):
+    EmpServ_JSON_dltEmployee_XML_to_JSON.map (18/8/17 1:26 AM):
+    gen\updEmployee_EmployeeService_EmpServ_JSON_updEmployee.subflow (18/8/17 1:26 AM):
+    EmpServ_JSON_updEmployee_JSON_to_SOAP.map (18/8/17 1:26 AM):
+    EmpServ_JSON_getEmployee_XML_to_JSON.map (18/8/17 1:26 AM):
+    application.descriptor (18/8/17 1:26 AM):
+    EmpServ_JSON_getEmployee.msgflow (18/8/17 1:26 AM):
+    gen\dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee.subflow (18/8/17 1:26 AM):
+    EmpServ_JSON_updEmployee_inputMessage.xml (18/8/17 1:26 AM):
+    gen\getEmployee_EmployeeService_EmpServ_JSON_getEmployee.subflow (18/8/17 1:26 AM):
+    EmpServ_JSON_dltEmployee_inputMessage.xml (18/8/17 1:26 AM):
+    EmpServ_JSON_updEmployee.msgflow (18/8/17 1:26 AM):
+    EmpServ_JSON_updEmployee_XML_to_JSON.map (18/8/17 1:26 AM):
+    Deployment descriptor:
+      startMode
+      javaIsolation
+      EmpServ_JSON_getEmployee#additionalInstances
+      EmpServ_JSON_getEmployee#notificationThresholdMsgsPerSec
+      EmpServ_JSON_getEmployee#maximumRateMsgsPerSec
+      EmpServ_JSON_getEmployee#processingTimeoutSec
+      EmpServ_JSON_getEmployee#processingTimeoutAction
+      EmpServ_JSON_getEmployee#wlmPolicy
+      EmpServ_JSON_getEmployee#commitCount
+      EmpServ_JSON_getEmployee#commitInterval
+      EmpServ_JSON_getEmployee#coordinatedTransaction
+      EmpServ_JSON_getEmployee#consumerPolicySet
+      EmpServ_JSON_getEmployee#providerPolicySet
+      EmpServ_JSON_getEmployee#consumerPolicySetBindings
+      EmpServ_JSON_getEmployee#providerPolicySetBindings
+      EmpServ_JSON_getEmployee#securityProfileName
+      EmpServ_JSON_getEmployee#monitoringProfile
+      EmpServ_JSON_getEmployee#startMode
+      EmpServ_JSON_getEmployee#startInstancesWhenFlowStarts
+      EmpServ_JSON_getEmployee#HTTP Input.URLSpecifier = /empServClient_getEmployee
+      EmpServ_JSON_getEmployee#HTTP Input.useHTTPS
+      EmpServ_JSON_getEmployee#HTTP Input.decompressInputMessage
+      EmpServ_JSON_getEmployee#HTTP Input.timeoutForClient
+      EmpServ_JSON_getEmployee#HTTP Input.faultFormat
+      EmpServ_JSON_getEmployee#HTTP Input.validateMaster
+      EmpServ_JSON_getEmployee#HTTP Input.securityProfileName
+      EmpServ_JSON_getEmployee#HTTP Reply.validateMaster
+      EmpServ_JSON_updEmployee#additionalInstances
+      EmpServ_JSON_updEmployee#notificationThresholdMsgsPerSec
+      EmpServ_JSON_updEmployee#maximumRateMsgsPerSec
+      EmpServ_JSON_updEmployee#processingTimeoutSec
+      EmpServ_JSON_updEmployee#processingTimeoutAction
+      EmpServ_JSON_updEmployee#wlmPolicy
+      EmpServ_JSON_updEmployee#commitCount
+      EmpServ_JSON_updEmployee#commitInterval
+      EmpServ_JSON_updEmployee#coordinatedTransaction
+      EmpServ_JSON_updEmployee#consumerPolicySet
+      EmpServ_JSON_updEmployee#providerPolicySet
+      EmpServ_JSON_updEmployee#consumerPolicySetBindings
+      EmpServ_JSON_updEmployee#providerPolicySetBindings
+      EmpServ_JSON_updEmployee#securityProfileName
+      EmpServ_JSON_updEmployee#monitoringProfile
+      EmpServ_JSON_updEmployee#startMode
+      EmpServ_JSON_updEmployee#startInstancesWhenFlowStarts
+      EmpServ_JSON_updEmployee#HTTP Input.URLSpecifier = /empServClient_updEmployee
+      EmpServ_JSON_updEmployee#HTTP Input.useHTTPS
+      EmpServ_JSON_updEmployee#HTTP Input.decompressInputMessage
+      EmpServ_JSON_updEmployee#HTTP Input.timeoutForClient
+      EmpServ_JSON_updEmployee#HTTP Input.faultFormat
+      EmpServ_JSON_updEmployee#HTTP Input.validateMaster
+      EmpServ_JSON_updEmployee#HTTP Input.securityProfileName
+      EmpServ_JSON_updEmployee#HTTP Reply.validateMaster
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.webServiceURL = http://localhost:7090/EmployeeService
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.requestTimeout
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.httpProxyLocation
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.sslProtocol = TLS
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.allowedSSLCiphers
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.requestCompressionType
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.acceptCompressedResponses
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.hostnameChecking
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.keyAlias
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.enableCRLCheck
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.jmsDestination
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.jmsReplyToDestination
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.requestTimeoutJMS
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.initialContextFactory
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.locationJndiBindings
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.connectionFactoryName
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.targetService
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.deliveryMode
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.messagePriority
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.messageExpiration
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.messageType
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.securityProfileName
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.policySet
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.policySetBindings
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.allowMTOM
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.validateMaster
+      gen.updEmployee_EmployeeService_EmpServ_JSON_updEmployee#Request.validateFailureAction
+      EmpServ_JSON_dltEmployee#additionalInstances
+      EmpServ_JSON_dltEmployee#notificationThresholdMsgsPerSec
+      EmpServ_JSON_dltEmployee#maximumRateMsgsPerSec
+      EmpServ_JSON_dltEmployee#processingTimeoutSec
+      EmpServ_JSON_dltEmployee#processingTimeoutAction
+      EmpServ_JSON_dltEmployee#wlmPolicy
+      EmpServ_JSON_dltEmployee#commitCount
+      EmpServ_JSON_dltEmployee#commitInterval
+      EmpServ_JSON_dltEmployee#coordinatedTransaction
+      EmpServ_JSON_dltEmployee#consumerPolicySet
+      EmpServ_JSON_dltEmployee#providerPolicySet
+      EmpServ_JSON_dltEmployee#consumerPolicySetBindings
+      EmpServ_JSON_dltEmployee#providerPolicySetBindings
+      EmpServ_JSON_dltEmployee#securityProfileName
+      EmpServ_JSON_dltEmployee#monitoringProfile
+      EmpServ_JSON_dltEmployee#startMode
+      EmpServ_JSON_dltEmployee#startInstancesWhenFlowStarts
+      EmpServ_JSON_dltEmployee#HTTP Reply.validateMaster
+      EmpServ_JSON_dltEmployee#HTTP Input.URLSpecifier = /empServClient_dltEmployee
+      EmpServ_JSON_dltEmployee#HTTP Input.useHTTPS
+      EmpServ_JSON_dltEmployee#HTTP Input.decompressInputMessage
+      EmpServ_JSON_dltEmployee#HTTP Input.timeoutForClient
+      EmpServ_JSON_dltEmployee#HTTP Input.faultFormat
+      EmpServ_JSON_dltEmployee#HTTP Input.validateMaster
+      EmpServ_JSON_dltEmployee#HTTP Input.securityProfileName
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.webServiceURL = http://localhost:7090/EmployeeService
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.requestTimeout
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.httpProxyLocation
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.sslProtocol = TLS
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.allowedSSLCiphers
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.requestCompressionType
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.acceptCompressedResponses
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.hostnameChecking
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.keyAlias
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.enableCRLCheck
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.jmsDestination
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.jmsReplyToDestination
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.requestTimeoutJMS
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.initialContextFactory
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.locationJndiBindings
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.connectionFactoryName
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.targetService
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.deliveryMode
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.messagePriority
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.messageExpiration
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.messageType
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.securityProfileName
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.policySet
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.policySetBindings
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.allowMTOM
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.validateMaster
+      gen.getEmployee_EmployeeService_EmpServ_JSON_getEmployee#Request.validateFailureAction
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.webServiceURL = http://localhost:7090/EmployeeService
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.requestTimeout
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.httpProxyLocation
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.sslProtocol = TLS
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.allowedSSLCiphers
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.requestCompressionType
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.acceptCompressedResponses
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.hostnameChecking
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.keyAlias
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.enableCRLCheck
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.jmsDestination
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.jmsReplyToDestination
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.requestTimeoutJMS
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.initialContextFactory
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.locationJndiBindings
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.connectionFactoryName
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.targetService
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.deliveryMode
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.messagePriority
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.messageExpiration
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.messageType
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.securityProfileName
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.policySet
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.policySetBindings
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.allowMTOM
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.validateMaster
+      gen.dltEmployee_EmployeeService_EmpServ_JSON_dltEmployee#Request.validateFailureAction
+  EmployeeService_interface_and_maps.shlibzip (18/8/17 1:26 AM):
+    addEmployee_WS.map (18/8/17 1:26 AM):
+    hrdb\iibadmin\HRDB.xsd (18/8/17 1:26 AM):
+    getEmployee_WS.map (18/8/17 1:26 AM):
+    getEmployees_submap.map (18/8/17 1:26 AM):
+    employeeNumber.xsd (18/8/17 1:26 AM):
+    IBMdefined\org\xmlsoap\schemas\soap\envelope\soapenv11.xsd (18/8/17 1:26 AM):
+    dltEmployee_WS.map (18/8/17 1:26 AM):
+    library.descriptor (18/8/17 1:26 AM):
+    addEmployee_submap.map (18/8/17 1:26 AM):
+    EmployeeService.wsdl (18/8/17 1:26 AM):
+    updEmployee_submap.map (18/8/17 1:26 AM):
+    EmployeeService.xsd (18/8/17 1:26 AM):
+    updEmployee_WS.map (18/8/17 1:26 AM):
+    EmployeeService_InlineSchema1.xsd (18/8/17 1:26 AM):
+    IBMdefined\soap.xsd (18/8/17 1:26 AM):
+    DBResp.xsd (18/8/17 1:26 AM):
+    dltEmployee_submap.map (18/8/17 1:26 AM):
+    IBMdefined\org\w3\www\xml\_1998\namespace\xml.xsd (18/8/17 1:26 AM):
+
+BIP8071I: Successful command completion.

@@ -1,0 +1,41 @@
+steps to add users to ldap
+
+go to tivoli admin tool ---> click manage ---managesuffix --add ---ou=users,ou=wmbv7,o=ibm,c=us
+
+open : http://localhost:9081/IDSWebApp/IDSjsp/IDSConsoleFrameWork.jsp
+
+
+
+Directory managemet:
+
+add uesers:-
+--------------------------------------
+add entry :
+
+select object : inetOrgperson
+next--next
+
+relateve dn     cn=wmbuser1
+parent dn      ou=users,ou=wmbv7,o=ibm,c=us
+cn            wmbuser1
+sn           wmbuser1
+next uid      wmbuser1
+password   user1pw
+
+same repeat for all users
+
+add groups:
+select object : groupofNames
+Relatev DN      cn=authorized
+cn        authorized
+members
+cn=wmbuser1,ou=users,ou=wmbv7,o=ibm,c=us
+add
+cn=wmbuser3,ou=users,ou=wmbv7,o=ibm,c=us
+cn=wmbuser5,ou=users,ou=wmbv7,o=ibm,c=us
+
+
+==========================================
+
+for IIB10 flow
+

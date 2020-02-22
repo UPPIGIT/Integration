@@ -1,0 +1,22 @@
+  <out:DEPARTMENT>
+      <DEPTNO>H22</DEPTNO>
+      <DEPTNAME>BRANCH OFFICE H2</DEPTNAME>
+      <MGRNO xsi:nil="true"/>
+      <ADMRDEPT>E01</ADMRDEPT>
+      <LOCATION xsi:nil="true"/>
+
+	  
+()
+        (
+		"departmentNumber" :"C55",
+        "admrdept" : "C05",
+        "name" : "Cognizant",
+        "location" :"PUNE"
+		}
+		
+		{
+		"departmentNumber" :"A01",
+        "admrdept" : "A01",
+        "name" : "ASHAA",
+        "location" :"BHAINSA"
+		}

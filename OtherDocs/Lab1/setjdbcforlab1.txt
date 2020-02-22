@@ -1,0 +1,107 @@
+
+
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties IIB10BRK -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsideleteconfigurableservice IIB10BRK -c JDBCProviders -o HRDB
+BIP8071I: Successful command completion.
+
+
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsicreateconfigurableservice IIB10BRK -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties IIB10BRK -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms IIB10BRK -n jdbc::HRDB -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms IIB10BRK -n jdbc::mySecurityId -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties IIB10BRK -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsistop IIB10BRK
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsistart IIB10BRK
+BIP8096I: Successful command initiation, check the system log to ensure that the component started without problem and that it continues to run without problem.
+
+C:\Program Files\IBM\IIB\10.0.0.9>

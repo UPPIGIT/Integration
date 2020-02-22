@@ -1,0 +1,46 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://xe/risuser_owner" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://StudentService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StudentService" targetNamespace="http://StudentService">
+<wsdl:documentation>
+<wsdl:appinfo source="WMQI_APPINFO">
+<MRWSDLAppInfo imported="true">
+<binding hasEncoding="false" imported="true" name="StudentServiceHttpBinding" originalBindingStyle="document"/>
+<generatedXSD location="StudentService_InlineSchema1.xsd"/>
+</MRWSDLAppInfo>
+</wsdl:appinfo>
+</wsdl:documentation>
+<wsdl:types>
+<xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" targetNamespace="http://StudentService">
+<xsd:import namespace="http://xe/risuser_owner" schemaLocation="http://192.168.0.101:7800/StudentService?xsd=xsd0"/>
+<xsd:import schemaLocation="http://192.168.0.101:7800/StudentService?xsd=xsd1"/>
+<xsd:include schemaLocation="http://192.168.0.101:7800/StudentService?xsd=xsd2"/>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="studentRequestMsg">
+<wsdl:part element="tns:student" name="studentParameters"/>
+</wsdl:message>
+<wsdl:message name="studentResponseMsg">
+<wsdl:part element="tns:studentResponse" name="studentResult"/>
+</wsdl:message>
+<wsdl:portType name="StudentService">
+<wsdl:operation name="student">
+<wsdl:input message="tns:studentRequestMsg" name="studentRequest"/>
+<wsdl:output message="tns:studentResponseMsg" name="studentResponse"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="StudentServiceHttpBinding" type="tns:StudentService">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="student">
+<soap:operation soapAction="http://StudentService/student"/>
+<wsdl:input name="studentRequest">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="studentResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="StudentServiceHttpService">
+<wsdl:port binding="tns:StudentServiceHttpBinding" name="StudentServiceHttpPort">
+<soap:address location="http://192.168.0.101:7800/StudentService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

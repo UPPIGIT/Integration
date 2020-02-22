@@ -1,0 +1,1 @@
+LocalEnvironment.Wildcard.WildcardMatch contains the value of a wildcard that you can set in the File name property on the FileInput node. The sample uses the value from LocalEnvironment.Wildcard.WildcardMatch to set the values for the output file name and directory in the FileOutput node. The sample demonstrates the following tasks:

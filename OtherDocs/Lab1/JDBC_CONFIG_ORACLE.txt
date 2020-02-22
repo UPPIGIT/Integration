@@ -1,0 +1,109 @@
+JDBC for ORACLE
+
+C:\Program Files\IBM\IIB\10.0.0.9>JDBC for ORACLE
+'JDBC' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_ezone -c JDBCProviders -a -o AllReportableEntityNames
+
+JDBCProviders
+  DB2
+  Informix
+  Informix_With_Date_Format
+  Microsoft_SQL_Server
+  MySQL
+  Oracle
+  Sybase_JConnect6_05
+  Teradata
+  solidDB
+  xe
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_ezone -c JDBCProviders -o Oracle -r
+
+JDBCProviders
+  Oracle
+    connectionUrlFormat='jdbc:oracle:thin:[user]/[password]@[serverName]:[portNumber]:[connectionUrlFormatAttr1]'
+    connectionUrlFormatAttr1='<SID>'
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='default_Database_Name'
+    databaseType='Oracle'
+    databaseVersion='default_Database_Version'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='<ORACLE HOME>\jdbc\lib'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='1521'
+    securityIdentity='default_User@default_Server'
+    serverName='default_Database_Server_Name'
+    type4DatasourceClassName='oracle.jdbc.xa.client.OracleXADataSource'
+    type4DriverClassName='oracle.jdbc.OracleDriver'
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsideleteconfigurableservice TESTNODE_ezone -c JDBCProviders -o DEVDB
+BIP8984W: Configurable service object name 'JDBCProviders : DEVDB' was not found.
+The user has tried to delete or modify a configurable service object name that does not exist, or is not valid for UserDefined types.
+Check the names of the existing configurable services using the mqsireportproperties command. Then modify the external resource object name and reissue the command.
+
+BIP8036E: Negative response received.
+This command sends an internal configuration message to the integration node. The response received indicated that the internal configuration message was unsuccessful.
+Check the system log for further information.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsideleteconfigurableservice TESTNODE_ezone -c JDBCProviders -o xe
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsicreateconfigurableservice TESTNODE_ezone -c JDBCProviders -o xe -n connectionUrlFormat,connectionUrlFormatAttr1,description,jarsURL,portNumber,serverName,type4DatasourceClassName,type4DriverClassName,databaseName -v "jdbc:oracle:thin:[RISUSER_OWNER]/[RISUSER_OWNER]@[serverName]:[portNumber]:[connectionUrlFormatAttr1],xe,Simplified Database Routing Sample Database,C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib,1523,localhost,oracle.jdbc.xa.client.OracleXADataSource,oracle.jdbc.OracleDriver,xe"
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_ezone -c JDBCProviders -o xe -r
+
+JDBCProviders
+  xe
+    connectionUrlFormat='jdbc:oracle:thin:[RISUSER_OWNER]/[RISUSER_OWNER]@[serverName]:[portNumber]:[connectionUrlFormatAttr1]'
+    connectionUrlFormatAttr1='xe'
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='xe'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='default_Database_Type'
+    databaseVersion='default_Database_Version'
+    description='Simplified Database Routing Sample Database'
+    environmentParms='default_none'
+    jarsURL='C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib'
+    jdbcProviderXASupport='jdbcProviderXASupport'
+    maxConnectionPoolSize='0'
+    portNumber='1523'
+    securityIdentity='default_User@default_Server'
+    serverName='localhost'
+    type4DatasourceClassName='oracle.jdbc.xa.client.OracleXADataSource'
+    type4DriverClassName='oracle.jdbc.OracleDriver'
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms TESTNODE_ezone -n jdbc::xe -u RISUSER_OWNER -p RISUSER_OWNER
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms TESTNODE_ezone -n jdbc::mySecurityId -u RISUSER_OWNER -p RISUSER_OWNER
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsichangeproperties TESTNODE_ezone -c JDBCProviders -o xe -n securityIdentity -v mySecurityId
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+mqsireload TESTNODE_ezone
+
+
+mqsireportproperties TESTNODE_ezone -c JDBCProviders -o xe -r
+
+Service Query URL	http://192.168.0.101:7800/StudentService?wsdl

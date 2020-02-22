@@ -1,0 +1,249 @@
+Welcome to:
+
+_/\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\\__________/\\\_____/\\\\\\\____
+_\/////\\\///__\/////\\\///__\/\\\/////////\\\____/\\\\\\\___/\\\/////\\\__
+ _____\/\\\_________\/\\\_____\/\\\_______\/\\\___\/////\\\__/\\\____\//\\\_
+  _____\/\\\_________\/\\\_____\/\\\\\\\\\\\\\\________\/\\\_\/\\\_____\/\\\_
+   _____\/\\\_________\/\\\_____\/\\\/////////\\\_______\/\\\_\/\\\_____\/\\\_
+    _____\/\\\_________\/\\\_____\/\\\_______\/\\\_______\/\\\_\/\\\_____\/\\\_
+     _____\/\\\_________\/\\\_____\/\\\_______\/\\\_______\/\\\_\//\\\____/\\\_
+      __/\\\\\\\\\\\__/\\\\\\\\\\\_\/\\\\\\\\\\\\\/________\/\\\__\///\\\\\\\/_
+       _\///////////__\///////////__\/////////////__________\///_____\///////__
+
+
+Enter an Integration Bus command e.g.
+IIB toolkit, IIB help
+
+C:\Program Files\IBM\IIB\10.0.0.0>cd c:
+C:\Program Files\IBM\IIB\10.0.0.0
+
+C:\Program Files\IBM\IIB\10.0.0.0>cd C:/
+
+C:\>CD C:\labfiles\Lab04-IntSvcs\resources
+
+C:\labfiles\Lab04-IntSvcs\resources>ConfigureJDBC.cmd
+mqsiprofile repetition disallowed
+Usage: ConfigureJDBC [DatabaseName] [BrokerName]
+C:\labfiles\Lab04-IntSvcs\resources>ConfigureJDBC.cmd TESTNODE_iibadmin SAMPLE
+mqsiprofile repetition disallowed
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsicreateconfigurableservice TESTNODE_iibad
+min -c JDBCProviders -o SAMPLE -n databaseName -v SAMPLE
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n databaseType -v DB2
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n connectionUrlFormat -v "jdbc:db2://[serverName]:[portNu
+mber]/[databaseName]:user=[user];password=[password];"
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n serverName -v localhost
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n portNumber -v 50000
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n jarsURL -v "C:\Program Files\IBM\SQLLIB\java"
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n type4DatasourceClassName -v com.ibm.db2.jcc.DB2XADataSo
+urce
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsichangeproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -n type4DriverClassName -v com.ibm.db2.jcc.DB2Driver
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsisetdbparms TESTNODE_iibadmin -n SAMPLE -
+u iibadmin -p web1sphere
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsisetdbparms TESTNODE_iibadmin -n jdbc::JD
+BC -u iibadmin -p web1sphere
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsistop TESTNODE_iibadmin
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsistart TESTNODE_iibadmin
+BIP8096I: Successful command initiation, check the system log to ensure that the
+ component started without problem and that it continues to run without problem.
+
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsireportproperties TESTNODE_iibadmin -c JD
+BCProviders -o SAMPLE -r
+
+JDBCProviders
+  SAMPLE
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:use
+r=[user];password=[password];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='SAMPLE'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2'
+    databaseVersion='default_Database_Version'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='jdbcProviderXASupport'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='default_User@default_Server'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>
+C:\labfiles\Lab04-IntSvcs\resources>
+
+
+C:\labfiles\Lab04-IntSvcs\resources>mqsicvp TESTNODE_iibadmin -n SAMPLE
+
+BIP8270I: Connected to Datasource 'SAMPLE' as user 'iibadmin'. The datasource pl
+atform is 'DB2/NT64', version '10.01.0000'.
+===========================
+databaseProviderVersion      = 10.01.0000
+driverVersion                = 10.01.0000
+driverOdbcVersion            = 03.51
+driverManagerVersion         = 03.80.7601.0000
+driverManagerOdbcVersion     = 03.80.0000
+databaseProviderName         = DB2/NT64
+datasourceServerName         = DB2
+databaseName                 = SAMPLE
+odbcDatasourceName           = SAMPLE
+driverName                   = DB2CLI.DLL
+supportsStoredProcedures     = Yes
+procedureTerm                = stored procedure
+accessibleTables             = No
+accessibleProcedures         = No
+identifierQuote              = "
+specialCharacters            = None
+describeParameter            = Yes
+schemaTerm                   = schema
+tableTerm                    = table
+sqlSubqueries                = 31
+activeEnvironments           = 1
+maxDriverConnections         = 0
+maxCatalogNameLength         = 0
+maxColumnNameLength          = 128
+maxSchemaNameLength          = 128
+maxStatementLength           = 2097152
+maxTableNameLength           = 128
+supportsDecimalType          = Yes
+supportsDateType             = Yes
+supportsTimeType             = Yes
+supportsTimeStampType        = Yes
+supportsIntervalType         = No
+supportsAbsFunction          = Yes
+supportsAcosFunction         = Yes
+supportsAsinFunction         = Yes
+supportsAtanFunction         = Yes
+supportsAtan2Function        = Yes
+supportsCeilingFunction      = Yes
+supportsCosFunction          = Yes
+supportsCotFunction          = Yes
+supportsDegreesFunction      = Yes
+supportsExpFunction          = Yes
+supportsFloorFunction        = Yes
+supportsLogFunction          = Yes
+supportsLog10Function        = Yes
+supportsModFunction          = Yes
+supportsPiFunction           = Yes
+supportsPowerFunction        = Yes
+supportsRadiansFunction      = Yes
+supportsRandFunction         = Yes
+supportsRoundFunction        = Yes
+supportsSignFunction         = Yes
+supportsSinFunction          = Yes
+supportsSqrtFunction         = Yes
+supportsTanFunction          = Yes
+supportsTruncateFunction     = Yes
+supportsConcatFunction       = Yes
+supportsInsertFunction       = Yes
+supportsLcaseFunction        = Yes
+supportsLeftFunction         = Yes
+supportsLengthFunction       = Yes
+supportsLTrimFunction        = Yes
+supportsPositionFunction     = No
+supportsRepeatFunction       = Yes
+supportsReplaceFunction      = Yes
+supportsRightFunction        = Yes
+supportsRTrimFunction        = Yes
+supportsSpaceFunction        = Yes
+supportsSubstringFunction    = Yes
+supportsUcaseFunction        = Yes
+supportsExtractFunction      = No
+supportsCaseExpression       = Yes
+supportsCastFunction         = Yes
+supportsCoalesceFunction     = Yes
+supportsNullIfFunction       = Yes
+supportsConvertFunction      = Yes
+supportsSumFunction          = Yes
+supportsMaxFunction          = Yes
+supportsMinFunction          = Yes
+supportsCountFunction        = Yes
+supportsBetweenPredicate     = Yes
+supportsExistsPredicate      = Yes
+supportsInPredicate          = Yes
+supportsLikePredicate        = Yes
+supportsNullPredicate        = Yes
+supportsNotNullPredicate     = Yes
+supportsLikeEscapeClause     = Yes
+supportsClobType             = Yes
+supportsBlobType             = Yes
+charDatatypeName             = CHAR
+varCharDatatypeName          = VARCHAR
+longVarCharDatatypeName      = LONG VARCHAR
+clobDatatypeName             = CLOB
+timeStampDatatypeName        = TIMESTAMP
+binaryDatatypeName           = CHAR (1) FOR BIT DATA
+varBinaryDatatypeName        = VARCHAR (1) FOR BIT DATA
+longVarBinaryDatatypeName    = LONG VARCHAR FOR BIT DATA
+blobDatatypeName             = BLOB
+intDatatypeName              = INTEGER
+doubleDatatypeName           = DOUBLE
+varCharMaxLength             = 0
+longVarCharMaxLength         = 0
+clobMaxLength                = 0
+varBinaryMaxLength           = 0
+longVarBinaryMaxLength       = 0
+blobMaxLength                = 0
+timeStampMaxLength           = 0
+identifierCase               = Upper
+escapeCharacter              = \
+longVarCharDatatype          = -1
+clobDatatype                 = -99
+longVarBinaryDatatype        = -4
+blobDatatype                 = -98
+
+BIP8273I: The following datatypes and functions are not natively supported by da
+tasource 'SAMPLE' using this ODBC driver: Unsupported datatypes: 'INTERVAL' Unsu
+pported functions: 'POSITION, EXTRACT'
+Examine the specific datatypes and functions not supported natively by this data
+source using this ODBC driver.
+When using these datatypes and functions within ESQL, the associated data proces
+sing is done within IBM Integration Bus rather than being processed by the datab
+ase provider.
+
+Note that "functions" within this message can refer to functions or predicates.
+
+
+
+BIP8071I: Successful command completion.
+
+C:\labfiles\Lab04-IntSvcs\resources>
+
+

@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ord="http://www.acmeOrders.com/OrderService">
+<soapenv:Header> 
+<wsse:Security soapenv:actor="" mustUnderstand="1" 
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"> 
+<wsse:UsernameToken> 
+<wsse:Username xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="unt_907818524">wmbuser1</wsse:Username> 
+<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">user1pw</wsse:Password> 
+</wsse:UsernameToken> 
+</wsse:Security> 
+</soapenv:Header>
+   <soapenv:Body>
+      <ord:submitPORequest>
+         <partNo>A12</partNo>
+         <partQuantity>10</partQuantity>
+         <personName>
+            <firstName>Upender</firstName>
+            <lastName>Tadewar</lastName>
+         </personName>
+         <address>
+            <street>Hinjewadi</street>
+            <city>pune</city>
+            <zipCode>411025</zipCode>
+         </address>
+      </ord:submitPORequest>
+   </soapenv:Body>
+
+</soapenv:Envelope>

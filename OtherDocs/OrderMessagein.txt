@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><OrderMessage>
+  <localElement>
+    <FirstName>Message</FirstName>
+    <LastName>Broker</LastName>
+    <Street>IBM</Street>
+    <City>IBM</City>
+    <ZipCode>IBM</ZipCode>
+    <PartNumber>SomePart</PartNumber>
+    <Quantity>1</Quantity>
+  </localElement>
+</OrderMessage>

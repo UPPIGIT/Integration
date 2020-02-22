@@ -1,0 +1,17 @@
+	
+	change replay :-
+	code in compute node before sopa replay--- with below code response send to other destination
+	==================================================================================
+	SET OutputLocalEnvironment.Destination.SOAP.Reply.WSA.To =
+ 'http://localhost:7800/test1';
+	SET OutputLocalEnvironment.Destination.SOAP.Reply.WSA.ReplyTo =
+ 'http://localhost:7800/test1';
+ ============================================================================================
+ 
+ in compute node Before sope request node 
+ 
+ now request will be send to other provider
+ =============================================================================================
+ SET OutputLocalEnvironment.Destination.SOAP.Request.WSA.To =
+ 'http://localhost:7800/test2';
+ ========================================================================

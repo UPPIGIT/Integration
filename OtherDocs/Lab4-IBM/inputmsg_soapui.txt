@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:emp1="http://training.ibm.com/Employee">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:getEmployee>
+       <employee>
+        <emp1:EmpNo>200340</emp1:EmpNo>
+        <emp1:GivenName>GivenName</emp1:GivenName>
+        <emp1:Initial>Initial</emp1:Initial>
+        <emp1:FamilyName>FamilyName</emp1:FamilyName>
+        <emp1:Department>Department</emp1:Department>
+        <emp1:Phone>Phone</emp1:Phone>
+        <emp1:Role>Role</emp1:Role>
+        <emp1:HireDate>HireDate</emp1:HireDate>
+        <emp1:Salary>Salary</emp1:Salary>
+        <emp1:Bonus>Bonus</emp1:Bonus>
+        <emp1:Commission>Commission</emp1:Commission>
+      </employee>
+      </emp:getEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>
+

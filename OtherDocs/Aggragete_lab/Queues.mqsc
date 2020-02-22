@@ -1,0 +1,4 @@
+define ql(Customer.in);
+define ql(Customer.Replay);
+define ql(Customer.out);
+define ql(Customer.finalout);

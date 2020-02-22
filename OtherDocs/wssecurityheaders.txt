@@ -1,0 +1,18 @@
+LocalEnvironment
+	Destination
+			SOAP
+					Reply
+							ReplyIdentifier:BLOB:[B@25c114f8
+			RouterList
+					DestinationData
+							labelName:CHARACTER:submitPO
+	SOAP
+			Input
+					Transport
+							HTTP
+									MaxClientWaitTime:INTEGER:180
+					WSS
+							Identities
+									usernameAndPassword
+											username:CHARACTER:wmbuser3
+											password:CHARACTER:****

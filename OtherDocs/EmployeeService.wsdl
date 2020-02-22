@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="EmployeeService" targetNamespace="http://www.mycompany.com/EmployeeService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.mycompany.com/EmployeeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <wsdl:message name="EmployeeInfoResponse">
+    <wsdl:part element="tns:EmployeeInfoResponse" name="EmployeeInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="EmployeeInfoRequest">
+    <wsdl:part element="tns:EmployeeInfoRequest" name="EmployeeInfoRequest"/>
+  </wsdl:message>
+  <wsdl:portType name="EmployeeService">
+    <wsdl:operation name="queryEmployeeInfo">
+      <wsdl:input message="tns:EmployeeInfoRequest"/>
+      <wsdl:output message="tns:EmployeeInfoResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeServiceBinding" type="tns:EmployeeService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="queryEmployeeInfo">
+      <soap:operation soapAction="http://www.mycompany.com/EmployeeService"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeService">
+    <wsdl:port binding="tns:EmployeeServiceBinding" name="EmployeeServiceBinding">
+      <soap:address location="http://www.mycompany.com/EmployeeService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

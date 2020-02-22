@@ -1,0 +1,4 @@
+define ql(WSCLIENT1_IN1) boqname(DLQ)
+define ql(WSHOST1_OUT1) boqname(DLQ)
+define ql(WSHOST1_STATE1) boqname(DLQ)
+define ql(WSHOST1_IN1) boqname(DLQ)

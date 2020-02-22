@@ -1,0 +1,49 @@
+2c5d679a-e9d3-461b-a28c-d69e259e6e88
+
+lB0oI8tW8jK2wH3qN6hI5mT2hS0aH0cR7sP3kP0wG6aK7aB8kB
+
+An existing REST API in the Drafts section of the IBM API Connect system was found. The existing REST API will be updated in IBM API Connect with the following details:
+Title: Employee Service
+Version: 1.0.0
+Description: This is the Employee Service used by the IIB BetaWorks REST API example
+Base URL: http://192.168.0.100:7083/TestWebApp/resources
+
+
+Connecting to IBM API Connect on host 'au.apiconnect.ibmcloud.com' and port '443' ...
+Connected to IBM API Connect on host 'au.apiconnect.ibmcloud.com' and port '443'.
+IBM API Connect system appears to be version '5'.
+Replacing API ...
+Title: Employee Service
+Version: 1.0.0
+Description: This is the Employee Service used by the IIB BetaWorks REST API example
+Base URL: http://192.168.0.100:7083/TestWebApp/resources
+Success.
+
+https://192.168.0.100/apimanager
+
+cap-au-sg-prd-01.integration.ibmcloud.com
+
+cap-au-sg-prd-02.integration.ibmcloud.com:15554
+au.apiconnect.ibmcloud.com
+
+TESTNODE_ezone
+Destination ID
+V8ZiJ7cKmDN_dm5BN
+Cloud Host : Port
+cap-au-sg-prd-02.integration.ibmcloud.com:15601
+Resource Host : Port
+192.168.0.100:7083
+Created by
+at 8/17/2017, 5:22:18 PM
+Last modified by
+at 8/17/2017, 5:22:18 PM
+Security
+Protocol: TCP
+Download Authentication Files
+
+V8ZiJ7cKmDN_prod_au-syd
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiVjhaaUo3Y0ttRE5fcHJvZF9hdS1zeWQiLCJyZWdpb24iOiJhdS1zeWQiLCJpYXQiOjE1MDI5NzA2NjAsImV4cCI6MTUxMDc0NjY2MH0.ltYfRQ1Utr1RFb_WAUkjizZlbZdeid5pEsCEKHvSqMU
+
+
+Base URL: http://192.168.0.102:7083/TestWebApp/resources

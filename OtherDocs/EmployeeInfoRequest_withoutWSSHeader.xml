@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:ns="http://www.mycompany.com/EmployeeService" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<soapenv:Header>
+ </soapenv:Header> 
+ <soapenv:Body> 
+ <ns:employeeInfoRequest> 
+ <id>12345</id>
+ </ns:employeeInfoRequest>
+ </soapenv:Body>
+</soapenv:Envelope>

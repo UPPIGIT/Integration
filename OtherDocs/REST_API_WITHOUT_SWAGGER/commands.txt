@@ -1,0 +1,89 @@
+mqsichangeproperties TESTNODE_iibuser -e default -o HTTPConnector -n corsEnabled -v true
+
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsichangeproperties TESTNODE_iibuser -e default -o HTTPConnector -n corsEnabled -v true
+BIP8071I: Successful command completion.
+
+mqsicreateconfigurableservice TESTNODE_iibuser -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsicreateconfigurableservice TESTNODE_iibuser -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+BIP8071I: Successful command completion.
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_iibuser -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+
+mqsisetdbparms TESTNODE_iibuser -n jdbc::HRDB -u ezone -p sruthiuppi
+
+mqsisetdbparms TESTNODE_iibuser -n jdbc::mySecurityId -u ezone -p sruthiuppi
+
+mqsireportproperties TESTNODE_iibuser -o HRDB -c JDBCProviders -r
+
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms TESTNODE_iibuser -n jdbc::HRDB -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsisetdbparms TESTNODE_iibuser -n jdbc::mySecurityId -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_iibuser -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\Program Files\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+
+mqsistop TESTNODE_iibuser
+mqsistart TESTNODE_iibuser

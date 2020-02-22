@@ -1,0 +1,142 @@
+dn: dc=ibm,dc=com
+objectclass: domain
+objectclass: top
+dc: ibm,dc=com
+dc: ibm
+
+dn: cn=users,dc=ibm,dc=com
+objectclass: container
+objectclass: top
+cn: users
+
+dn: cn=groups,dc=ibm,dc=com
+objectclass: top
+objectclass: container
+cn: groups
+
+dn: uid=wpsadmin,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: wpsadmin
+userpassword: wpsadmin
+sn: admin
+givenName: wps
+cn: wps admin
+
+dn: uid=santosh,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: santosh
+userpassword: santosh
+sn: santosh
+givenName: wps
+cn: wps santosh
+
+dn: uid=vijaya,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: vijaya
+userpassword: vijaya
+sn: vijaya
+givenName: wps
+cn: wps vijaya
+
+dn: uid=mihika,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: mihika
+userpassword: mihika
+sn: mihika
+givenName: wps
+cn: wps mihika
+
+dn: uid=siva,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: siva
+userpassword: siva
+sn: siva
+givenName: wps
+cn: wps siva
+
+dn: uid=ganesh,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: ganesh
+userpassword: ganesh
+sn: ganesh
+givenName: wps
+cn: wps ganesh
+
+dn: uid=cognosadm,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: cognosadm
+userpassword: cognosadm
+sn: cognosadm
+givenName: wps
+cn: wps cognosadm
+
+dn: uid=webadmin,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: webadmin
+userpassword: webadmin
+sn: webadmin
+givenName: wps
+cn: wps webadmin
+
+dn: uid=shiva,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: shiva
+userpassword: shiva
+sn: shiva
+givenName: wps
+cn: wps shiva
+
+dn: uid=wpsadmin,cn=users,dc=ibm,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: wpsadmin
+userpassword: wpsadmin
+sn: admin
+givenName: wps
+cn: wps admin
+
+dn: uid=wpsbind,cn=users,dc=ibm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+uid: wpsbind
+userpassword: wpsbind
+sn: bind
+givenName: wps
+cn: wps bind
+
+dn: cn=wpsadmins,cn=groups,dc=ibm,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+uniquemember: uid=wpsadmin,cn=users,dc=ibm,dc=com
+cn: wpsadmins

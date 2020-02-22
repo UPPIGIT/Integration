@@ -1,0 +1,81 @@
+Message
+	Properties
+			MessageSet:CHARACTER:Webservice_MSET
+			MessageType:CHARACTER:
+			MessageFormat:CHARACTER:
+			Encoding:INTEGER:546
+			CodedCharSetId:INTEGER:1208
+			Transactional:BOOLEAN:false
+			Persistence:BOOLEAN:false
+			CreationTime:TIMESTAMP:java.util.GregorianCalendar[time=1532150669450,areFieldsSet=true,areAllFieldsSet=false,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Asia/Calcutta",offset=19800000,dstSavings=0,useDaylight=false,transitions=6,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=?,YEAR=2018,MONTH=6,WEEK_OF_YEAR=?,WEEK_OF_MONTH=?,DAY_OF_MONTH=21,DAY_OF_YEAR=?,DAY_OF_WEEK=?,DAY_OF_WEEK_IN_MONTH=?,AM_PM=0,HOUR=10,HOUR_OF_DAY=10,MINUTE=54,SECOND=29,MILLISECOND=450,ZONE_OFFSET=?,DST_OFFSET=?]
+			ExpirationTime:INTEGER:-1
+			Priority:INTEGER:0
+			ReplyIdentifier:BLOB:[B@c49ba30a
+			ReplyProtocol:CHARACTER:SOAP-AXIS2
+			Topic:UNKNOWN:null
+			ContentType:CHARACTER:text/xml;charset=UTF-8
+			IdentitySourceType:CHARACTER:
+			IdentitySourceToken:CHARACTER:
+			IdentitySourcePassword:CHARACTER:
+			IdentitySourceIssuedBy:CHARACTER:
+			IdentityMappedType:CHARACTER:
+			IdentityMappedToken:CHARACTER:
+			IdentityMappedPassword:CHARACTER:
+			IdentityMappedIssuedBy:CHARACTER:
+	HTTPInputHeader
+			X-Original-HTTP-Command:CHARACTER:POST http://localhost:7800/acmeOrders/WADDR/ProcessOrders HTTP/1.1
+			Accept-Encoding:CHARACTER:gzip,deflate
+			Content-Type:CHARACTER:text/xml;charset=UTF-8
+			SOAPAction:CHARACTER:"http://www.acmeOrders.com/OrderService"
+			Content-Length:CHARACTER:624
+			Host:CHARACTER:localhost:7800
+			Connection:CHARACTER:Keep-Alive
+			User-Agent:CHARACTER:Apache-HttpClient/4.1.1 (java 1.5)
+			X-Remote-Addr:CHARACTER:127.0.0.1
+			X-Remote-Host:CHARACTER:127.0.0.1
+			X-Server-Name:CHARACTER:localhost
+			X-Server-Port:CHARACTER:7800
+			X-Scheme:CHARACTER:http
+	SOAP
+			Context
+					operation:CHARACTER:submitPO
+					operationType:CHARACTER:REQUEST_RESPONSE
+					portType:CHARACTER:OrderService
+					portTypeNamespace:CHARACTER:http://www.acmeOrders.com/OrderService
+					port:CHARACTER:OrderServiceSOAP
+					service:CHARACTER:OrderService
+					fileName:CHARACTER:Webservice_MSET/com/acmeorders/www/orderservice/OrderService.wsdl
+					SOAP_Version:CHARACTER:1.1
+					Namespace
+							soapenv:CHARACTER:http://schemas.xmlsoap.org/soap/envelope/
+							ord:CHARACTER:http://www.acmeOrders.com/OrderService
+			Header
+			Body
+					submitPORequest
+							partNo:CHARACTER:A12
+							partQuantity:INTEGER:1
+							personName
+									firstName:CHARACTER:Upender
+									lastName:CHARACTER:Tadewar
+							address
+									street:CHARACTER:Hinjewadi
+									city:CHARACTER:pune
+									zipCode:CHARACTER:411025
+									
+	
+
+
+LocalEnvironment
+	Destination
+			SOAP
+					Reply
+							ReplyIdentifier:BLOB:[B@11b1d62f
+			RouterList
+					DestinationData
+							labelName:CHARACTER:submitPO
+	SOAP
+			Input
+					Transport
+							HTTP
+									MaxClientWaitTime:INTEGER:180	
+									

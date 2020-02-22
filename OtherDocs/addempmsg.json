@@ -1,0 +1,136 @@
+{
+		"employeeNumber": "9999",
+        "dateOfBirth": "1988-08-15",
+        "commission": 555.22,
+        "educationLevel": 18,
+        "firstName" : "MANI",
+        "hireDate" : "2017-06-11",
+        "job" : "SR",
+        "lastName" : "DEEP", 
+        "middleInitial" : "T",
+        "phoneNumber" : "2254",
+        "salary" : 5222.88,
+        "sex" :"M"
+		}
+		
+		https://168.1.46.229:443/upendertcognizantcom-myspace/sb/TestWebApp/resources/employees/5647'
+		
+		{
+		"EMPLOYEE":{
+			"EMPNO":"43618",
+            "FIRSTNME" :"ssss",
+            "MIDINIT " :"A",
+            "LASTNAME":"Smith",
+            "WORKDEPT":"BTW",
+            "PHONENO":"1234",
+            "HIREDATE":"2002-01-01",
+            "JOB":"K",
+            "EDLEVEL":"9",
+            "SEX" :"M",
+            "BIRTHDATE" :"2002-01-01",
+            "SALARY" :"5482",
+            "BONUS" :"5550",
+            "COMM" :"4440"
+			}
+		}
+		
+		
+		{"EmployeeResponse": {
+   "DBResp":    {
+      "UserReturnCode": 0,
+      "RowsRetrieved": 4,
+      "RowsAdded": 0,
+      "RowsUpdated": 0,
+      "RowsDeleted": 0,
+      "SQLCode_ErrorCode": 0,
+      "SQLState_SQLState": null,
+      "SQL_Error_Message": null
+   },
+   "EMPLOYEE":    [
+            {
+         "EMPNO": "000051",
+         "FIRSTNME": "John",
+         "MIDINIT": "A",
+         "LASTNAME": "Smith",
+         "WORKDEPT": "BTW",
+         "PHONENO": "1234",
+         "HIREDATE": "2002-01-01",
+         "JOB": "K       ",
+         "EDLEVEL": 9,
+         "SEX": "M",
+         "BIRTHDATE": "2002-01-01",
+         "SALARY": 6660,
+         "BONUS": 5550,
+         "COMM": 4440
+      },
+            {
+         "EMPNO": "000051",
+         "FIRSTNME": "John",
+         "MIDINIT": "A",
+         "LASTNAME": "Smith",
+         "WORKDEPT": "BTW",
+         "PHONENO": "1234",
+         "HIREDATE": "2002-01-01",
+         "JOB": "K       ",
+         "EDLEVEL": 9,
+         "SEX": "M",
+         "BIRTHDATE": "2002-01-01",
+         "SALARY": 6660,
+         "BONUS": 5550,
+         "COMM": 4440
+      },
+            {
+         "EMPNO": "000051",
+         "FIRSTNME": "John",
+         "MIDINIT": "A",
+         "LASTNAME": "Smith",
+         "WORKDEPT": "BTW",
+         "PHONENO": "1234",
+         "HIREDATE": "2002-01-01",
+         "JOB": "K       ",
+         "EDLEVEL": 9,
+         "SEX": "M",
+         "BIRTHDATE": "2002-01-01",
+         "SALARY": 6660,
+         "BONUS": 5550,
+         "COMM": 4440
+      },
+            {
+         "EMPNO": "000051",
+         "FIRSTNME": "John",
+         "MIDINIT": "A",
+         "LASTNAME": "Smith",
+         "WORKDEPT": "BTW",
+         "PHONENO": "1234",
+         "HIREDATE": "2002-01-01",
+         "JOB": "K       ",
+         "EDLEVEL": 9,
+         "SEX": "M",
+         "BIRTHDATE": "2002-01-01",
+         "SALARY": 6660,
+         "BONUS": 5550,
+         "COMM": 4440
+      }
+   ]
+}}
+		
+		
+	
+            "EMPNO":"43618",
+            "FIRSTNME" :"ssss",
+            "MIDINIT " :"A",
+            "LASTNAME":"Smith",
+            "WORKDEPT":"BTW",
+            "PHONENO":"1234",
+            "HIREDATE":"2002-01-01",
+            "JOB":"K",
+            "EDLEVEL":"9",
+            "SEX" :"M",
+            "BIRTHDATE" :"2002-01-01",
+            "SALARY" :"5482",
+            "BONUS" :"5550",
+            "COMM" :"4440"
+         </iib:EMPLOYEE>
+      </emp:updEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>

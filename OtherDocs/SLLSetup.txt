@@ -1,0 +1,43 @@
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmJVMManager -n keystoreFile -v C:\Users\ezone\Desktop\IIB10-TRAINING\MYLABS\wskeys\wmbkeystore.jks
+
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmJVMManager -n keystoreType -v JKS
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmJVMManager -n keystorePass -v default::keystorepass
+
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmJVMManager -n truststoreFile -v C:\Users\ezone\Desktop\IIB10-TRAINING\MYLABS\wskeys\wmbkeystore.jks
+
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmJVMManager -n truststoreType -v JKS
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmJVMManager -n truststorePass -v default::truststorepass
+
+mqsisetdbparms TESTNODE_iibuser -n default::keystorepass -u any -p wmbv7pw
+mqsisetdbparms TESTNODE_iibuser -n default::truststorepass -u any -p wmbv7pw
+
+mqsireportproperties TESTNODE_iibuser -o ComIbmJVMManager -a -e default
+
+
+
+mqsireportproperties TESTNODE_iibuser   -e default   -o ComIbmJVMManager   -r
+mqsichangeproperties TESTNODE_iibuser  -e default -o HTTPSConnector  -n sslProtocol -v SSL
+mqsireportproperties TESTNODE_iibuser   -e default -o HTTPSConnector  -r 
+mqsireportproperties TESTNODE_iibuser   -e default   -o ComIbmJVMManager   -r
+
+
+
+mqsichangeproperties TESTNODE_iibadmin -e default -o ComIbmJVMManager -n keystoreFile -v C:\Users\ezone\Desktop\IIB10-TRAINING\MYLABS\wskeys\wmbclientkeystore.jks
+
+mqsichangeproperties TESTNODE_iibadmin -e default -o ComIbmJVMManager -n keystoreType -v JKS
+mqsichangeproperties TESTNODE_iibadmin -e default -o ComIbmJVMManager -n keystorePass -v default::keystorepass
+
+mqsichangeproperties TESTNODE_iibadmin -e default -o ComIbmJVMManager -n truststoreFile -v C:\Users\ezone\Desktop\IIB10-TRAINING\MYLABS\wskeys\wmbclientkeystore.jks
+
+mqsichangeproperties TESTNODE_iibadmin -e default -o ComIbmJVMManager -n truststoreType -v JKS
+mqsichangeproperties TESTNODE_iibadmin -e default -o ComIbmJVMManager -n truststorePass -v default::truststorepass
+
+
+mqsireportproperties TESTNODE_iibadmin   -e default   -o ComIbmJVMManager   -r
+mqsichangeproperties TESTNODE_iibadmin  -e default -o HTTPSConnector  -n sslProtocol -v SSL
+mqsireportproperties TESTNODE_iibadmin   -e default -o HTTPSConnector  -r 
+mqsireportproperties TESTNODE_iibadmin   -e default   -o ComIbmJVMManager   -r
+
+
+mqsireportproperties TESTNODE_iibuser   -e default   -o ComIbmJVMManager   -r
+mqsireportproperties TESTNODE_iibadmin   -e default   -o ComIbmJVMManager   -r

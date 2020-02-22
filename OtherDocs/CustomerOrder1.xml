@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This test message is for the scenario of identity extraction from HTTP header -->
+<!-- For example, use basic authenication UserName: wmbuser1, Password: user1pw  -->
+<!-- Authentication: Basic d21idXNlcjE6dXNlcjFwdw== -->
+<RequestMsg>
+    <CustomerOrder>	
+        <PORequest>
+            <ItemNo>200</ItemNo>
+            <ItemQuantity>5</ItemQuantity>
+            <PersonName>
+                <FirstName>John</FirstName>
+                <LastName>Doe</LastName>
+            </PersonName>
+            <Address>
+                <Street>8501 IBM Dr</Street>
+                <City>Charlotte</City>
+                <ZipCode>28262</ZipCode>
+            </Address>
+        </PORequest>
+    </CustomerOrder>
+</RequestMsg>

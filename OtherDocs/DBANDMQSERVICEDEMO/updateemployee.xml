@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NS1:updateEmployee xmlns:NS1="http://DatabaseService">
+  <empno>999999</empno>
+  <where>
+    <w_empno>436185</w_empno>
+  </where>
+</NS1:updateEmployee>

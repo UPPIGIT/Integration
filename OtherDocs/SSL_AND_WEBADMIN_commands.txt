@@ -1,0 +1,375 @@
+  uuid='ComIbmJVMManager'
+  userTraceLevel='none'
+  traceLevel='none'
+  userTraceFilter='none'
+  traceFilter='none'
+  vrmfIntroducedAt='7.0.0.0'
+  resourceStatsReportingOn='inactive'
+  resourceStatsMeasurements='<ResourceStatsSwitches ResourceType="JVM" version='1'> <Measurement name="InitialMemoryInMB" collect="on" /> <Measurement name="UsedMemoryInMB" collect="on" /> <Measurement name="CommittedMemoryInMB" collect="on" /> <Measurement name="MaxMemoryInMB" collect="on" /> <Measurement name="CumulativeGCTimeInSeconds" collect="on" /> <Measurement name="CumulativeNumberOfGCCollections" collect="on" /> </ResourceStatsSwitches>'
+  activityLogSupported='no'
+  jvmVerboseOption='none'
+  jvmDisableClassGC='false'
+  jvmShareClasses='false'
+  jvmNativeStackSize='-1'
+  jvmJavaOSStackSize='-1'
+  jvmMinHeapSize='-1'
+  jvmMaxHeapSize='-1'
+  jvmDebugPort='1456'
+  jvmSystemProperty=''
+  keystoreType='JKS'
+  keystoreFile='C:\Users\ezone\Desktop\IIB10-TRAINING\MYLABS\wskeys\wmbclientkeystore.jks'
+  keystorePass='default::keystorepass'
+  truststoreType='JKS'
+  truststoreFile='C:\Users\ezone\Desktop\IIB10-TRAINING\MYLABS\wskeys\wmbclientkeystore.jks'
+  truststorePass='default::truststorepass'
+  crlFileList=''
+  enableCRLDP=''
+  allowSSLv3=''
+  kerberosConfigFile=''
+  kerberosKeytabFile=''
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>cd c:
+C:\Program Files\IBM\IIB\10.0.0.9
+
+C:\Program Files\IBM\IIB\10.0.0.9>cd c:/
+
+c:\>cd student10
+
+c:\student10>cd Integration_service_MessageFlowSecurity
+
+c:\student10\Integration_service_MessageFlowSecurity>cd commands
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>ls -lrt
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>CreateNodes.cmd
+This command file must be run within an Integration Bus Command Console.
+Enter IIB Node name (default is IB10NODE_MFS_P):
+Enter port for "IB10NODE_MFS_P" web admin https listener (default is 4432):
+Enter server name for "IB10NODE_MFS_P" (default is PROVIDER):
+Enter IIB Node name (default is IB10NODE_MFS_C):
+Enter port for "IB10NODE_MFS_C" web admin https listener (default is 4431):
+Enter server name for "IB10NODE_MFS_C" (default is CONSUMER):
+Thankyou, using following values:
+PROVIDER ( "IB10NODE_MFS_P", 4432, PROVIDER);
+CONSUMER ( "IB10NODE_MFS_C", 4431, CONSUMER);
+... Ok to proceed? Use Ctrl-C to terminate.
+Press any key to continue . . .
+Stopping IIB Node "IB10NODE_MFS_P"
+BIP8013E: Integration node 'IB10NODE_MFS_P' does not exist.
+An integration node can be used only if it has already been created.
+No user action required.
+Deleting IIB Node "IB10NODE_MFS_P"
+BIP8868W: 'IB10NODE_MFS_P' is not a known component.  However, an attempt will be made to delete resources associated with this component name. Make sure that you spelt the component name correctly, and that you ran the command on the right computer.  Also make sure that the component was created by, or was migrated to, the current version of IBM Integration Bus.
+BIP8071I: Successful command completion.
+Creating IIB Node "IB10NODE_MFS_P"
+^CTerminate batch job (Y/N)? Y
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>
+c:\student10\Integration_service_MessageFlowSecurity\commands>CreateNodes.cmd
+This command file must be run within an Integration Bus Command Console.
+Enter IIB Node name (default is IB10NODE_MFS_P):
+Enter port for "IB10NODE_MFS_P" web admin https listener (default is 4432):
+Enter server name for "IB10NODE_MFS_P" (default is PROVIDER):
+Enter IIB Node name (default is IB10NODE_MFS_C):
+Enter port for "IB10NODE_MFS_C" web admin https listener (default is 4431):
+Enter server name for "IB10NODE_MFS_C" (default is CONSUMER):
+Thankyou, using following values:
+PROVIDER ( "IB10NODE_MFS_P", 4432, PROVIDER);
+CONSUMER ( "IB10NODE_MFS_C", 4431, CONSUMER);
+... Ok to proceed? Use Ctrl-C to terminate.
+Press any key to continue . . .
+Stopping IIB Node "IB10NODE_MFS_P"
+BIP8013E: Integration node 'IB10NODE_MFS_P' does not exist.
+An integration node can be used only if it has already been created.
+No user action required.
+Deleting IIB Node "IB10NODE_MFS_P"
+BIP8868W: 'IB10NODE_MFS_P' is not a known component.  However, an attempt will be made to delete resources associated with this component name. Make sure that you spelt the component name correctly, and that you ran the command on the right computer.  Also make sure that the component was created by, or was migrated to, the current version of IBM Integration Bus.
+BIP8071I: Successful command completion.
+Creating IIB Node "IB10NODE_MFS_P"
+BIP8071I: Successful command completion.
+Stopping IIB Node "IB10NODE_MFS_C"
+BIP8013E: Integration node 'IB10NODE_MFS_C' does not exist.
+An integration node can be used only if it has already been created.
+No user action required.
+Deleting IIB Node "IB10NODE_MFS_C"
+BIP8868W: 'IB10NODE_MFS_C' is not a known component.  However, an attempt will be made to delete resources associated with this component name. Make sure that you spelt the component name correctly, and that you ran the command on the right computer.  Also make sure that the component was created by, or was migrated to, the current version of IBM Integration Bus.
+BIP8071I: Successful command completion.
+Creating IIB Node "IB10NODE_MFS_C"
+BIP8071I: Successful command completion.
+Starting node "IB10NODE_MFS_P"
+BIP8096I: Successful command initiation, check the system log to ensure that the component started without problem and that it continues to run without problem.
+Starting node "IB10NODE_MFS_C"
+BIP8096I: Successful command initiation, check the system log to ensure that the component started without problem and that it continues to run without problem.
+Node "IB10NODE_MFS_P" and "IB10NODE_MFS_C" must be fully started to proceed to the next stage, where we create the Integtration servers.  echo Press enter when both nodes are started to proceed..... (Use Ctrl-C to terminate)
+Press any key to continue . . .
+Creating server "PROVIDER" on node "IB10NODE_MFS_P"
+BIP1124I: Creating integration server 'PROVIDER' on integration node 'IB10NODE_MFS_P'...
+BIP1117I: The integration server was created successfully.
+
+The integration node has initialized the integration server.
+BIP8071I: Successful command completion.
+Creating server "CONSUMER" on node "IB10NODE_MFS_C"
+BIP1124I: Creating integration server 'CONSUMER' on integration node 'IB10NODE_MFS_C'...
+BIP1117I: The integration server was created successfully.
+
+The integration node has initialized the integration server.
+BIP8071I: Successful command completion.
+-
+-----  Set up JDBC config to allow access to HRDB database from "IB10NODE_MFS_P"
+-----  Set MySecurityID  --------
+Creating MySecurityID for IB10NODE_MFS_P for HRDB database.
+BIP8071I: Successful command completion.
+-----  Set JDBC Configuration -------
+Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+BIP8071I: Successful command completion.
+Creating DB security for IB10NODE_MFS_P for HRDB database
+BIP8071I: Successful command completion.
+-----  Set ODBC Configuration ------
+Creating ODBC database security for IB10NODE_MFS_P (HRDB database).
+BIP8071I: Successful command completion.
+-
+-----  Create https listener and SSL Truststore config for Web Admin on "IB10NODE_MFS_P"  ------
+Setting web admin http (or https) listener to 4432
+
+--- Setting web admin https listener to 4432
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_P -b webadmin -o HTTPSConnector -n port -v 4432
+BIP8071I: Successful command completion.
+
+--- Setting web admin keystore to IIB.jks
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_P -b webadmin -o HTTPSConnector -n keystoreFile -v c:\student10\webadmin\keystore\IIB.jks
+BIP8071I: Successful command completion.
+
+--- Setting keystore password for IB10NODE_MFS_P
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_P -b webadmin -o HTTPSConnector -n keystorePass -v passw0rd
+BIP8071I: Successful command completion.
+
+--- Setting web admin listener to use SSL
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_P -b webadmin -o server -n enabled,enableSSL -v true,true
+BIP8071I: Successful command completion.
+
+--- Setting protocol to TLS (SSLV3 not available in V10)
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_P -b webadmin -o HTTPSConnector -n sslProtocol -v TLS
+BIP8071I: Successful command completion.
+
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo Now for CONSUMER node
+Now for CONSUMER node
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo off
+Setting web admin http (or https) listener to 4431
+
+--- Setting web admin https listener to 4431
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_C -b webadmin -o HTTPSConnector -n port -v 4431
+BIP8071I: Successful command completion.
+
+--- Setting web admin keystore to IIB.jks
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_C -b webadmin -o HTTPSConnector -n keystoreFile -v c:\student10\webadmin\keystore\IIB.jks
+BIP8071I: Successful command completion.
+
+--- Setting keystore password for IB10NODE_MFS_C
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_C -b webadmin -o HTTPSConnector -n keystorePass -v passw0rd
+BIP8071I: Successful command completion.
+
+--- Setting web admin listener to use SSL
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_C -b webadmin -o server -n enabled,enableSSL -v true,true
+BIP8071I: Successful command completion.
+
+--- Setting protocol to TLS (SSLV3 not available in V10)
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties IB10NODE_MFS_C -b webadmin -o HTTPSConnector -n sslProtocol -v TLS
+BIP8071I: Successful command completion.
+
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo -
+-
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM ***************************************
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM * Set HTTP listener ports as follows:
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM * Both nodes use embedded listeners. Node-wide listener disabled
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM * IB10NODE_MSF_P/PROVIDER ports:
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM *    HTTP:   7090
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM *    HTTPS:  7091
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM * IB10NODE_MSF_C/CONSUMER ports:
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM *    HTTP:   7086
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM *    HTTPS:  7087 (though we won't use this port)
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -e PROVIDER -o ExecutionGroup -n soapNodesUseEmbeddedListener -v true
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -e PROVIDER -o ExecutionGroup -n httpNodesUseEmbeddedListener -v true
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -e PROVIDER -o HTTPConnector -n explicitlySetPortNumber -v 7090
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -e PROVIDER -o HTTPSConnector -n explicitlySetPortNumber -v 7091
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -b httplistener -o HTTPListener -n startListener -v false
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -b httplistener -o HTTPListener -n enableSSLConnector -v true
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_P" -e PROVIDER -o HTTPSConnector -n clientAuth -v true
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_C" -e CONSUMER -o ExecutionGroup -n soapNodesUseEmbeddedListener -v true
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_C" -e CONSUMER -o ExecutionGroup -n httpNodesUseEmbeddedListener -v true
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_C" -e CONSUMER -o HTTPConnector -n explicitlySetPortNumber -v 7086
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_C" -e CONSUMER -o HTTPSConnector -n explicitlySetPortNumber -v 7087
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsichangeproperties "IB10NODE_MFS_C" -b httplistener -o HTTPListener -n startListener -v false
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM ****************************************************************
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM ********  PART 8 - Restart nodes for changes to take effect. ***
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>REM ****************************************************************
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>Echo Restart nodes to make WebUI changes effective ....
+Restart nodes to make WebUI changes effective ....
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo Stopping IIB Node "IB10NODE_MFS_C"
+Stopping IIB Node "IB10NODE_MFS_C"
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsistop "IB10NODE_MFS_C"
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo Stopping IIB Node "IB10NODE_MFS_P"
+Stopping IIB Node "IB10NODE_MFS_P"
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsistop "IB10NODE_MFS_P"
+BIP8071I: Successful command completion.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo Starting IIB Node "IB10NODE_MFS_P"
+Starting IIB Node "IB10NODE_MFS_P"
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsistart "IB10NODE_MFS_P"
+BIP8096I: Successful command initiation, check the system log to ensure that the component started without problem and that it continues to run without problem.
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>echo Starting IIB Node "IB10NODE_MFS_C"
+Starting IIB Node "IB10NODE_MFS_C"
+
+c:\student10\Integration_service_MessageFlowSecurity\commands>mqsistart "IB10NODE_MFS_C"
+BIP8096I: Successful command initiation, check the system log to ensure that the component started without problem and that it continues to run without problem.
+c:\student10\Integration_service_MessageFlowSecurity\commands>
+
+
+ mqsistop IB10NODE_MFS_P 
+ mqsichangebroker IB10NODE_MFS_P -s active 
+ mqsistart IB10NODE_MFS_P
+ 
+ 
+ 
+ mqsistop IB10NODE_MFS_C 
+ mqsichangebroker IB10NODE_MFS_C -s active 
+ mqsistart IB10NODE_MFS_C
+ 
+ 
+ 
+ mqsichangeproperties IB10NODE_MFS_C -b webadmin -o HTTPSConnector -n sslProtocol -v SSL
+  
+ mqsichangeproperties IB10NODE_MFS_P -b webadmin -o HTTPSConnector -n sslProtocol -v SSL
+ 
+ mqsireportproperties IB10NODE_MFS_C -b webadmin -o server -a
+ 
+ mqsireportproperties IB10NODE_MFS_P -b webadmin -o server -a
+ 
+ 
+mqsireportproperties IB10NODE_MFS_P -b webadmin -o HTTPSConnector -a
+
+
+mqsireportproperties IB10NODE_MFS_C -b webadmin -o HTTPSConnector -a
+
+
+mqsichangeproperties IB10NODE_MFS_P -b httplistener -o HTTPSConnector -n sslProtocol -v TLSv1.2
+mqsichangeproperties IB10NODE_MFS_P -e default -o HTTPSConnector -n sslProtocol -v TLSv1.2
+mqsireportproperties IB10NODE_MFS_P  -b httplistener -o HTTPSConnector  -a
+mqsistop IB10NODE_MFS_P
+mqsichangebroker IB10NODE_MFS_P -s active
+mqsistart IB10NODE_MFS_P
+
+
+
+mqsichangeproperties IB10NODE_MFS_C -b httplistener -o HTTPSConnector -n sslProtocol -v TLSv1.2
+mqsichangeproperties IB10NODE_MFS_C -e default -o HTTPSConnector -n sslProtocol -v TLSv1.2
+mqsireportproperties IB10NODE_MFS_C  -b httplistener -o HTTPSConnector  -a
+mqsistop IB10NODE_MFS_C
+mqsichangebroker IB10NODE_MFS_C -s active
+mqsistart IB10NODE_MFS_C
+
+mqsiwebuseradmin IB10NODE_MFS_P -l
+
+mqsiwebuseradmin IB10NODE_MFS_C -l
+
+mqsiwebuseradmin IB10NODE_MFS_C -c -u ezone -r ezone -a sruthiuppi
+
+mqsiwebuseradmin IB10NODE_MFS_P -c -u ezone -r ezone -a sruthiuppi
+
+mqsiwebuseradmin IB10NODE_MFS_C -d -u webadmin2 -a Uppi!@#456 -r  webadmin
+mqsiwebuseradmin IB10NODE_MFS_P -d -u webadmin2 -a Uppi!@#456 -r  webadmin
+mqsiwebuseradmin IB10NODE_MFS_C -d -u ezone -a sruthiuppi -r  webadmin
+mqsiwebuseradmin IB10NODE_MFS_P -d -u ezone -a sruthiuppi -r  webadmin
+
+ mqsireportproperties IB10NODE_MFS_C -b webadmin -o HTTPConnector -n port
+ 
+ mqsireportproperties IB10NODE_MFS_P -b webadmin -o HTTPConnector -n port
+ 
+ 
+ 
+ ===========================================
+ 
+ check jdbc
+ 
+ mqsireportproperties IB10NODE_MFS_P -o HRDB -c JDBCProviders -r
+
+
+mqsireportproperties IB10NODE_MFS_P -o HRDB -c JDBCProviders -r
+
+mqsideleteconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB
+
+mqsicreateconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+mqsistop IB10NODE_MFS_P
+mqsisetdbparms IB10NODE_MFS_P -n jdbc::HRDB -u ezone -p sruthiuppi
+
+mqsisetdbparms IB10NODE_MFS_P -n jdbc::mySecurityId -u ezone -p sruthiuppi
+mqsistart IB10NODE_MFS_P
+mqsireportproperties IB10NODE_MFS_P -o HRDB -c JDBCProviders -r
+
+Configure the IIB node to connect to the LDAP Server
+mqsisetdbparms IB10NODE_MFS_P -n ldap::LDAP -u cn=root -p sruthiuppi
+stop and start broker
+
+
+
+

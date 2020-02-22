@@ -1,0 +1,206 @@
+
+Welcome to:
+
+_/\\\\\\\\\\\__/\\\\\\\\\\\__/\\\\\\\\\\\\\__________/\\\_____/\\\\\\\____
+_\/////\\\///__\/////\\\///__\/\\\/////////\\\____/\\\\\\\___/\\\/////\\\__
+ _____\/\\\_________\/\\\_____\/\\\_______\/\\\___\/////\\\__/\\\____\//\\\_
+  _____\/\\\_________\/\\\_____\/\\\\\\\\\\\\\\________\/\\\_\/\\\_____\/\\\_
+   _____\/\\\_________\/\\\_____\/\\\/////////\\\_______\/\\\_\/\\\_____\/\\\_
+    _____\/\\\_________\/\\\_____\/\\\_______\/\\\_______\/\\\_\/\\\_____\/\\\_
+     _____\/\\\_________\/\\\_____\/\\\_______\/\\\_______\/\\\_\//\\\____/\\\_
+      __/\\\\\\\\\\\__/\\\\\\\\\\\_\/\\\\\\\\\\\\\/________\/\\\__\///\\\\\\\/_
+       _\///////////__\///////////__\/////////////__________\///_____\///////__
+
+
+Enter an Integration Bus command e.g.
+IIB toolkit, IIB help
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2058
+
+C:\Program Files\IBM\IIB\10.0.0.9>set MQSERVER=CHN/TCP/localhost(1414)
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsput IN TEST_QM
+Sample AMQSPUT0 start
+target queue is IN
+test
+ksdksjdlks'
+
+Sample AMQSPUT0 end
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>display qmgr CONNAUTH
+'display' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\IBM\IIB\10.0.0.9>runmqsc TEST_QM
+5724-H72 (C) Copyright IBM Corp. 1994, 2015.
+Starting MQSC for queue manager TEST_QM.
+
+
+display qmgr CONNAUTH
+     1 : display qmgr CONNAUTH
+AMQ8408: Display Queue Manager details.
+   QMNAME(TEST_QM)
+   CONNAUTH(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+display authinfo(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+     2 : display authinfo(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+AMQ8566: Display authentication information details.
+   AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+   AUTHTYPE(IDPWOS)                        ADOPTCTX(NO)
+   DESCR( )                                CHCKCLNT(REQDADM)
+   CHCKLOCL(OPTIONAL)                      FAILDLAY(1)
+   ALTDATE(2017-08-29)                     ALTTIME(19.54.44)
+display authinfo(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+     3 : display authinfo(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+AMQ8566: Display authentication information details.
+   AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
+   AUTHTYPE(IDPWOS)                        ADOPTCTX(NO)
+   DESCR( )                                CHCKCLNT(REQDADM)
+   CHCKLOCL(OPTIONAL)                      FAILDLAY(1)
+   ALTDATE(2017-08-29)                     ALTTIME(19.54.44)
+3 MQSC commands read.
+No commands have a syntax error.
+All valid MQSC commands were processed.
+
+C:\Program Files\IBM\IIB\10.0.0.9>runmqsc TEST_QM
+5724-H72 (C) Copyright IBM Corp. 1994, 2015.
+Starting MQSC for queue manager TEST_QM.
+
+
+display qmgr CONNAUTH^C
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsput IN TEST_QM
+Sample AMQSPUT0 start
+target queue is IN
+ksdksjdlks'
+
+Sample AMQSPUT0 end
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>set MQSERVER=CHN/TCP/localhost(1414)
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM
+Sample AMQSPUT0 start
+MQCONNX ended with reason code 2035
+
+C:\Program Files\IBM\IIB\10.0.0.9>ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(OPTIONAL) REFRESH SECURITY TYPE(CONNAUTH)
+'ALTER' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\IBM\IIB\10.0.0.9>runmqsc TEST_QM
+5724-H72 (C) Copyright IBM Corp. 1994, 2015.
+Starting MQSC for queue manager TEST_QM.
+
+
+ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(OPTIONAL) REFRESH SECURITY TYPE(CONNAUTH)
+     1 : ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(OPTIONAL) REFRESH SECURITY TYPE(CONNAUTH)
+AMQ8405: Syntax error detected at or near end of command segment below:-
+ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(OPTIONAL) REFRESH
+
+AMQ8427: Valid syntax for the MQSC command:
+
+  ALTER AUTHINFO( authinfo_name )
+     AUTHTYPE( IDPWOS )
+
+   [ ADOPTCTX( NO | YES ) ]
+   [ AUTHENMD( OS | PAM ) ]
+   [ CHCKCLNT( OPTIONAL | NONE | REQDADM | REQUIRED ) ]
+   [ CHCKLOCL( OPTIONAL | NONE | REQDADM | REQUIRED ) ]
+   [ DESCR( string ) ]
+   [ FAILDLAY( integer ) ]
+ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(OPTIONAL)
+     2 : ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(OPTIONAL)
+AMQ8567: WebSphere MQ authentication information changed.
+ REFRESH SECURITY TYPE(CONNAUTH)
+     3 :  REFRESH SECURITY TYPE(CONNAUTH)
+AMQ8560: WebSphere MQ security cache refreshed.
+end
+     4 : end
+3 MQSC commands read.
+One command has a syntax error.
+All valid MQSC commands were processed.
+
+C:\Program Files\IBM\IIB\10.0.0.9>amqsputc IN TEST_QM 
+Sample AMQSPUT0 start
+target queue is IN
+assdjhsdjhsjadhsj
+sadjsdsa
+kjkjsd
+askdjkasjdska
+
+Sample AMQSPUT0 end
+
+C:\Program Files\IBM\IIB\10.0.0.9>
+C:\Program Files\IBM\IIB\10.0.0.9>

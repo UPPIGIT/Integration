@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://hrdb/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:addEmployee>
+         <iib:EMPLOYEE>
+           <EMPNO>112233</EMPNO>
+               <FIRSTNME>UPPI</FIRSTNME>
+               <MIDINIT>A</MIDINIT>
+               <LASTNAME>TADEWAR</LASTNAME>
+               <WORKDEPT>BTW</WORKDEPT>
+               <PHONENO>1234</PHONENO>
+               <HIREDATE>2002-01-01</HIREDATE>
+               <JOB>K</JOB>
+               <EDLEVEL>9</EDLEVEL>
+               <SEX>M</SEX>
+               <BIRTHDATE>2002-01-01</BIRTHDATE>
+               <SALARY>5482</SALARY>
+               <BONUS>5550</BONUS>
+               <COMM>4440</COMM>
+         </iib:EMPLOYEE>
+      </emp:addEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>

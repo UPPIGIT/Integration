@@ -1,0 +1,20 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ord="http://www.acmeOrders.com/OrderService">
+   <soapenv:Header/>
+	
+   <soapenv:Body>
+      <ord:submitPORequest>
+         <partNo>A12</partNo>
+         <partQuantity>10</partQuantity>
+         <personName>
+            <firstName>Upender</firstName>
+            <lastName>Tadewar</lastName>
+         </personName>
+         <address>
+            <street>Hinjewadi</street>
+            <city>pune</city>
+            <zipCode>411025</zipCode>
+         </address>
+      </ord:submitPORequest>
+   </soapenv:Body>
+
+</soapenv:Envelope>

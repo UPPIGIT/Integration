@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="DatabaseService" targetNamespace="http://DatabaseService" xmlns:connector="http://www.ibm.com/wmb/connector/" xmlns:db="http://www.ibm.com/wmb/connector/DBConnector" xmlns:tns="http://DatabaseService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true"/>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://DatabaseService">
+      <xsd:include schemaLocation="DatabaseService.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmployeeRequest">
+    <wsdl:part element="tns:getEmployee" name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="getEmployeeResponse">
+    <wsdl:part element="tns:getEmployeeResponse" name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="createEmployeeRequest">
+    <wsdl:part element="tns:createEmployee" name="parameter"/>
+  </wsdl:message>
+  <wsdl:portType name="EMPLOYEE_OPS_GROUP">
+    <wsdl:operation name="getEmployee">
+      <wsdl:input message="tns:getEmployeeRequest"/>
+      <wsdl:output message="tns:getEmployeeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="createEmployee">
+      <wsdl:input message="tns:createEmployeeRequest"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EMPLOYEE_OPS_GROUPDBBind" type="tns:EMPLOYEE_OPS_GROUP">
+    <ns2:dbBinding xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" dbmFile="xe.dbm" xmlns="http://www.ibm.com/wmb/connector/">
+      <ns2:tableMap>
+        <ns2:table mappedElementName="" name="RISUSER_OWNER.EMPLOYEE" var="tbl-employee"/>
+      </ns2:tableMap>
+    </ns2:dbBinding>
+    <wsdl:operation name="getEmployee">
+      <ns2:dbOperation xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" distinct="false" type="SELECT" xmlns="http://www.ibm.com/wmb/connector/">
+        <ns2:criteria>
+          <ns2:where clause="RISUSER_OWNER.EMPLOYEE.EMPNO = :empno"/>
+        </ns2:criteria>
+      </ns2:dbOperation>
+      <wsdl:input>
+        <ns2:dbOperationInput xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" xmlns="http://www.ibm.com/wmb/connector/">
+          <ns2:column mapFrom="empno" name="RISUSER_OWNER.EMPLOYEE.EMPNO"/>
+        </ns2:dbOperationInput>
+      </wsdl:input>
+      <wsdl:output>
+        <ns2:dbOperationOutput xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" xmlns="http://www.ibm.com/wmb/connector/">
+          <ns2:column mapTo="$rootElement/$tbl-employee/EMPNO" name="RISUSER_OWNER.EMPLOYEE.EMPNO"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/FIRSTNME" name="RISUSER_OWNER.EMPLOYEE.FIRSTNME"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/MIDINIT" name="RISUSER_OWNER.EMPLOYEE.MIDINIT"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/LASTNAME" name="RISUSER_OWNER.EMPLOYEE.LASTNAME"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/WORKDEPT" name="RISUSER_OWNER.EMPLOYEE.WORKDEPT"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/PHONENO" name="RISUSER_OWNER.EMPLOYEE.PHONENO"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/HIREDATE" name="RISUSER_OWNER.EMPLOYEE.HIREDATE"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/JOB" name="RISUSER_OWNER.EMPLOYEE.JOB"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/EDLEVEL" name="RISUSER_OWNER.EMPLOYEE.EDLEVEL"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/SEX" name="RISUSER_OWNER.EMPLOYEE.SEX"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/BIRTHDATE" name="RISUSER_OWNER.EMPLOYEE.BIRTHDATE"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/SALARY" name="RISUSER_OWNER.EMPLOYEE.SALARY"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/BONUS" name="RISUSER_OWNER.EMPLOYEE.BONUS"/>
+          <ns2:column mapTo="$rootElement/$tbl-employee/COMM" name="RISUSER_OWNER.EMPLOYEE.COMM"/>
+        </ns2:dbOperationOutput>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createEmployee">
+      <ns2:dbOperation xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" type="INSERT" xmlns="http://www.ibm.com/wmb/connector/">
+        <ns2:specifiedValues/>
+      </ns2:dbOperation>
+      <wsdl:input>
+        <ns2:dbOperationInput xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" xmlns="http://www.ibm.com/wmb/connector/">
+          <ns2:column mapFrom="empno" name="RISUSER_OWNER.EMPLOYEE.EMPNO"/>
+          <ns2:column mapFrom="firstnme" name="RISUSER_OWNER.EMPLOYEE.FIRSTNME"/>
+          <ns2:column mapFrom="midinit" name="RISUSER_OWNER.EMPLOYEE.MIDINIT"/>
+          <ns2:column mapFrom="lastname" name="RISUSER_OWNER.EMPLOYEE.LASTNAME"/>
+          <ns2:column mapFrom="workdept" name="RISUSER_OWNER.EMPLOYEE.WORKDEPT"/>
+          <ns2:column mapFrom="phoneno" name="RISUSER_OWNER.EMPLOYEE.PHONENO"/>
+          <ns2:column mapFrom="hiredate" name="RISUSER_OWNER.EMPLOYEE.HIREDATE"/>
+          <ns2:column mapFrom="job" name="RISUSER_OWNER.EMPLOYEE.JOB"/>
+          <ns2:column mapFrom="edlevel" name="RISUSER_OWNER.EMPLOYEE.EDLEVEL"/>
+          <ns2:column mapFrom="sex" name="RISUSER_OWNER.EMPLOYEE.SEX"/>
+          <ns2:column mapFrom="birthdate" name="RISUSER_OWNER.EMPLOYEE.BIRTHDATE"/>
+          <ns2:column mapFrom="salary" name="RISUSER_OWNER.EMPLOYEE.SALARY"/>
+          <ns2:column mapFrom="bonus" name="RISUSER_OWNER.EMPLOYEE.BONUS"/>
+          <ns2:column mapFrom="comm" name="RISUSER_OWNER.EMPLOYEE.COMM"/>
+        </ns2:dbOperationInput>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DatabaseService">
+    <wsdl:port binding="tns:EMPLOYEE_OPS_GROUPDBBind" name="EMPLOYEE_OPS_GROUPDBBind">
+      <ns2:dbAddress xmlns:ns2="http://www.ibm.com/wmb/connector/DBConnector" location="odbc:dsn:xe" xmlns="http://www.ibm.com/wmb/connector/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

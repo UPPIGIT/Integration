@@ -1,0 +1,446 @@
+Displaying properties associated with broker components
+The following examples include the -b parameter to specify the component to view.
+Check if the broker-wide listener is active for deployed HTTP and SOAP nodes in one or more execution groups:
+mqsireportproperties MB8BROKER -b httplistener -o HTTPListener -n startListener
+Display the properties for the cache manager:
+mqsireportproperties MB8BROKER -b cachemanager -o CacheManager -r
+Display all the current HTTPListener settings associated with HTTP and SOAP nodes (defined in the httplistener component):
+mqsireportproperties MB8BROKER -b httplistener -o HTTPListener -a
+Display the HTTPSConnector port setting for the HTTP nodes (defined in the httplistener component):
+mqsireportproperties MB8BROKER -b httplistener -o HTTPSConnector -n port
+Display all Service Federation object properties and their values:
+mqsichangeproperties MB8BROKER -b servicefederation -o AllReportableEntityNames -r
+Displaying properties associated with execution groups
+The following examples include the -e parameter to specify the execution group to view.
+Display the FTE agent name for execution group FTESAMPLE in broker MB8BROKER:
+mqsireportproperties MB8BROKER -e FTESAMPLE -o FTEAgent -n agentName
+If the agent has been created, the command returns the agent name. If the agent has not been created, the command returns an empty string.
+Check if the deployed HTTP nodes are using the execution group embedded listener:
+mqsireportproperties MB8BROKER -e exgroup1 -o ExecutionGroup -n httpNodesUseEmbeddedListener
+Check if the deployed SOAP nodes are using the execution group (embedded) listener:
+mqsireportproperties MB8BROKER -e exgroup1 -o ExecutionGroup -n soapNodesUseEmbeddedListener
+Display the properties that control the creation of an SFM proxy for an execution group that is to be used as an SFM Connectivity Provider:
+mqsireportproperties MB8BROKER -e exgroup1 -o ServiceFederationManager -a
+The result of this command has the following format:
+ServiceFederationManager
+  uuid='ServiceFederationManager'
+  userTraceLevel='none'
+  traceLevel='none'
+  userTraceFilter='none'
+  traceFilter='none'
+  port='8811'
+  securePort='8844'
+  maxWaitTime='180'
+  proxyURLHostName=' mbhost.ibm.com '
+  proxyPathPrefix='proxy'
+  proxyPathPrefixesEnabled='TRUE'
+  creationTime='2009-09-11 15:37:52.639219'
+  nextProxyPathPrefixCount='8'
+  ownedProxyGroupCount='2'
+Displaying properties associated with configurable services
+The following examples include the -c parameter to specify the configurable service to view. For a list of supplied configurable services, and their properties and values, see Configurable services properties.
+Display all Aggregation configurable services:
+mqsireportproperties MB8BROKER -c Aggregation -o AllReportableEntityNames -r
+Display all configurable services for Connect:Direct® server (that you have defined to this broker with the mqsicreateconfigurableservice command)
+mqsireportproperties MB8BROKER -c CDServer -o AllReportableEntityNames -r
+The result of this command has the following format:
+CDServer
+  Default
+    hostname='localhost'
+    port='1363'
+    brokerPathToStagingDir=''
+    cdPathToStagingDir=''
+    brokerPathToInputDir=''
+    cdPathToInputDir=''
+    queuePrefix= ''
+    securityIdentity=”Default”
+Display all properties of the FtpServer configurable service called TEST1:
+mqsireportproperties MB8BROKER -c FtpServer -o TEST1 -r
+Display the protocol property setting of the FtpServer configurable service called TEST1:
+mqsireportproperties MB8BROKER -c FtpServer -o TEST1 -n protocol
+Report the properties of the Oracle JDBCProvider configurable service:
+mqsireportproperties MB8BROKER -c JDBCProviders -o Oracle -r
+Display the properties for all the broker's JMS provider resources (default JMS provider resources and those configurable services that you have defined by using the mqsicreateconfigurableservice command):
+mqsireportproperties MB8BROKER -c JMSProviders 
+     -o AllReportableEntityNames -r
+Display the properties for all the JMS provider resources of WebSphere MQ.
+mqsireportproperties MB8BROKER -c JMSProviders 
+     -o WebSphere_MQ -r
+Display the properties for all the JMS provider resources (default JMS provider resources and those configurable services that you have defined to this broker with the mqsicreateconfigurableservice command):
+mqsireportproperties MB8BROKER -c JMSProviders 
+     -o BEA_WebLogic –r
+The result of this command has the following format:
+ReportableEntityName=''
+JMSProviders
+  BEA_Weblogic=''
+    jarsURL='default_Path'
+    nativeLibs='default_Path'
+    proprietaryAPIAttr1='weblogic.jndi.WLInitialContextFactory'
+    proprietaryAPIAttr2='t3://9.20.94.16:7001'
+    proprietaryAPIAttr3='BEAServerName'
+    proprietaryAPIAttr4='default_none'
+    proprietaryAPIAttr5='default_none'proprietaryAPIHandler='BEAWebLogicAPIHandler.jar'
+Export policy set Policy_2 in broker MB8BROKER to file policyset.xml:
+mqsireportproperties MB8BROKER -c PolicySets 
+     -o Policy_2 -n ws-security -p policyset.xml
+You can use the output file to move policy sets between brokers, and for backup.
+Export a policy set bindings from a broker to a file:
+mqsireportproperties MB8BROKER -c PolicySetBindings 
+     -o Bindings_2 -n ws-security -p bindings.xml
+This command writes the Policy Set Bindings file Bindings_2 in broker MB8BROKER to file bindings.xml. You can use this file to move policy set bindings between brokers, and for backup.
+Display the properties for all the security profiles (default security profiles and any that you have defined on this broker by using the mqsicreateconfigurableservice command):
+mqsireportproperties MB8BROKER -c SecurityProfiles 
+     -o AllReportableEntityNames -r
+The result of this command has the following format:
+ReportableEntityName=''
+SecurityProfiles
+
+	Default_Propagation=''
+		authentication = 'NONE'
+		authenticationConfig = ''
+		authorization = 'NONE'
+		authorizationConfig = ''
+		idToPropagateToTransport = 'Message ID'
+		keyStore = 'Reserved for future use'
+		mapping = 'NONE'
+		mappingConfig = ''
+		passwordValue = 'PLAIN'
+		propagation = 'TRUE'
+		rejectBlankpassword = 'FALSE'
+		transportPropagationConfig = ''
+		trustStore = 'Reserved for future use'
+Display the properties for the security profile called MyFirstSecurityProfile:
+mqsireportproperties MB8BROKER -c SecurityProfiles 
+     -o MyFirstSecurityProfile -r
+The result of this command has the following format:
+ReportableEntityName=''
+SecurityProfiles
+	MyFirstSecurityProfile=''
+		authentication = 'LDAP'
+		authenticationConfig = 'ldap://localhost:389/ou=users,o=ibm'
+		authorization = 'NONE'
+		authorizationConfig = ''
+		idToPropagateToTransport = 'Message ID'
+		keyStore = 'Reserved for future use'
+		mapping = 'TFIM'
+		mappingConfig = 'http://tfimhost1:80'
+		passwordValue = 'PLAIN'
+		propagation = 'TRUE'
+		rejectBlankpassword = 'FALSE'
+		transportPropagationConfig = ''
+		trustStore = 'Reserved for future use'
+	Create a JDBC provider entry for the database:
+Start the broker and ensure that an execution group has been deployed to the broker. For example, to start a broker, open a command console window in which you can run WebSphere Message Broker commands, and enter the following command:
+mqsistart MB8BROKER
+Open a new document in a text editor, copy and paste the following script, which creates the JDBC provider entry SIMPLERROUTEDB to provide JDBC database access for the Simplified Database Routing sample, into a text editor.
+You must replace the following place holders in the script with values appropriate to your environment.
+<SID> The Oracle System identifier that identifies the database containing the tables used by this sample.
+<JARS URL> The local directory path, on the system on which the broker is running, where the JAR file that contains the type 4 driver class is located.
+On Windows: <ORACLE HOME>\jdbc\lib
+On Linux: <ORACLE HOME>/jdbc/lib/
+<PORT NUMBER> The port number on which the database server is listening. The Oracle default is 1521.
+<SERVER NAME> The name of the host on which Oracle is running; for example localhost.
+mqsideleteconfigurableservice MB8BROKER -c JDBCProviders -o SIMPLERROUTEDB
+mqsicreateconfigurableservice MB8BROKER -c JDBCProviders -o SIMPLERROUTEDB 
+-n connectionUrlFormat,connectionUrlFormatAttr1,description,jarsURL,portNumber,
+serverName,type4DatasourceClassName,type4DriverClassName 
+-v "jdbc:oracle:thin:[user]/[password]@[serverName]:[portNumber]:[connectionUrlFormatAttr1],
+<SID>,Simplified Database Routing Sample Database,<JARS URL>,<PORT NUMBER>,
+<SERVER NAME>,oracle.jdbc.xa.client.OracleXADataSource,oracle.jdbc.OracleDriver" 
+Save the file. The following instructions assume that you have called the file simplifieddbrouting.bat
+In the command console, navigate to the folder that contains simplifieddbrouting.bat, and enter the following command to run the script:
+simplifieddbrouting.bat
+When you run the script, it performs the following tasks:
+Deletes any existing JDBCProvider entry named SIMPLERROUTEDB
+Creates a new JDBCProvider entry named SIMPLERROUTEDB for use by the Simplified Database Routing sample
+Wait for the script to finish running. If you are running the script for the first time, the following message is displayed:
+BIP8984W: Configurable service object name 'JDBCProviders : SIMPLERROUTEDB' was not found.
+The user has tried to delete or modify a configurable service object name that does not exist.
+Check the names of the existing configurable services using the mqsireportproperties command. 
+Then modify the external resource object name and reissue the command.
+
+BIP2087E: Broker MB8BROKER was unable to process the internal configuration message.
+The entire internal configuration message failed to be processed successfully.
+The internal configuration message failed to be processed, 
+use the messages following this message to determine the reasons for the failure.
+
+BIP8036E: Negative response received.
+This command sends an internal configuration message to the broker, the response received 
+indicated that the internal configuration message was unsuccessful.
+Check that the WebSphere MQ transport is available. Check the system log for further information.
+Ignore this message. The message is displayed because the script attempts to delete an existing JDBCProvider registry entry called SIMPLERROUTEDB before it re-creates the entry. If you have not run the script before, the entry is not found in the registry.
+You can enter the following command to check that the default broker registry was correctly updated with the sample SIMPLERROUTEDB JDBCProvider entry:
+mqsireportproperties MB8BROKER -o SIMPLERROUTEDB -c JDBCProviders -r
+If the update was successful, the reported property output from the command matches the following example:
+JDBCProviders
+  SIMPLERROUTEDB
+    connectionUrlFormat='jdbc:oracle:thin:[user]/[password]@[serverName]:[portNumber]:[connectionUrlFormatAttr1]'
+    connectionUrlFormatAttr1='orc1'
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='default_Database_Name'
+    databaseType='default_Database_Type'
+    databaseVersion='default_Database_Version'
+    description='Simplified Database Routing Sample Database'
+    environmentParms='default_none'
+    jarsURL='C:\oracle\oraxx\jdbc\lib'
+    portNumber='1521'
+    securityIdentity='default_User@default_Server'
+    serverName='localhost'
+    type4DatasourceClassName='oracle.jdbc.xa.client.OracleXADataSource'
+    type4DriverClassName='oracle.jdbc.OracleDriver'
+
+BIP8071I: Successful command completion.
+Specify the user identifier and password to associate with the JDBC provider SIMPLERROUTEDB:
+Use the mqsisetdbparms and mqsichangeproperties commands to specify a user identifier and password for the broker to use with JDBC provider SIMPLERROUTEDB. This user identifier must be the same user identifier that you used when you created the database.
+Enter the following command to associate the user identifier and password with a security identity:
+mqsisetdbparms MB8BROKER -n jdbc::mySecurityIdentity -u <user ID> -p <password>
+Enter the following command to associate the security identity, which you defined in the preceding step, with the securityIdentity property of the JDBC provider SIMPLERROUTEDB:
+mqsichangeproperties MB8BROKER -c JDBCProviders -o SIMPLERROUTEDB -n securityIdentity -v mySecurityIdentity
+You must stop and restart the broker for the changes to the JDBC provider to become available to a message flow that is already deployed. If you have already deployed the sample, stop and restart the broker.
+For further information, see Enabling JDBC connections to the databases in the WebSphere Message Broker documentation and the "Making the JDBC provider service available to the DatabaseRoute node" section in DatabaseRoute node in the WebSphere Message Broker documentation.
+Back to Setting up Oracle
+
+Back to Setting up the database
+
+Back to sample home
+
+
+  integratedWindowsAuthentication=''
+  iwaTimeoutSeconds='300'
+  serverName=''
+  corsEnabled='false'
+  corsAllowOrigins='*'
+  corsAllowCredentials='false'
+  corsExposeHeaders='Content-Type'
+  corsMaxAge='-1'
+  corsAllowMethods='GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS'
+  corsAllowHeaders='Accept,Accept-Language,Content-Language,Content-Type'
+  algorithm=''
+  clientAuth=''
+  keystoreFile=''
+  keystorePass=''
+  keystoreType=''
+  truststoreFile=''
+  truststorePass=''
+  truststoreType=''
+  sslProtocol=''
+  ciphers=''
+  keypass=''
+  keyAlias=''
+  sslSessionTimeout=''
+  crlFile=''
+  propagateClientCert=''
+  sessionCacheSize=''
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>mqsireportproperties TESTNODE_ezone -b httplistener -o HTTPSConnector -n port
+
+7083
+
+BIP8071I: Successful command completion.
+
+C:\Program Files\IBM\IIB\10.0.0.9>cd C:\Users\ezone\Desktop\DB
+
+C:\Users\ezone\Desktop\DB>3_Create_JDBC_for_HRDB.cmd
+Enter IIB Node name (default is TESTNODE_ezone): IB10NODE_MFS_P
+Ok to proceed? Use Ctrl-C to terminate.
+Press any key to continue . . .
+
+C:\Users\ezone\Desktop\DB>echo Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+
+C:\Users\ezone\Desktop\DB>mqsicreateconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\IBM\SQLLIB\java","true","0","50000","HRDB_SecurityID","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+BIP8983W: Configurable service object name 'JDBCProviders : HRDB' already exists.
+The user has tried to create a configurable service object name that already exists.
+Check the names of the existing configurable services using the mqsireportproperties command. Then modify the external resource object name and reissue the command.
+
+BIP8036E: Negative response received.
+This command sends an internal configuration message to the integration node. The response received indicated that the internal configuration message was unsuccessful.
+Check the system log for further information.
+
+C:\Users\ezone\Desktop\DB>echo Creating DB security for IB10NODE_MFS_P for HRDB database
+Creating DB security for IB10NODE_MFS_P for HRDB database
+
+C:\Users\ezone\Desktop\DB>mqsisetdbparms IB10NODE_MFS_P -n jdbc::HRDB -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>mqsireportproperties IB10NODE_MFS_P -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>mqsireportproperties TESTNODE_ezone -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='HRDB_SecurityID'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>mqsireportproperties IB10NODE_MFS_P -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='mySecurityId'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>mqsideleteconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o SIMPLERROUTEDB
+BIP8984W: Configurable service object name 'JDBCProviders : SIMPLERROUTEDB' was not found.
+The user has tried to delete or modify a configurable service object name that does not exist, or is not valid for UserDefined types.
+Check the names of the existing configurable services using the mqsireportproperties command. Then modify the external resource object name and reissue the command.
+
+BIP8036E: Negative response received.
+This command sends an internal configuration message to the integration node. The response received indicated that the internal configuration message was unsuccessful.
+Check the system log for further information.
+
+C:\Users\ezone\Desktop\DB>mqsideleteconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>3_Create_JDBC_for_HRDB.cmd
+Enter IIB Node name (default is TESTNODE_ezone): IB10NODE_MFS_P
+Ok to proceed? Use Ctrl-C to terminate.
+Press any key to continue . . .
+
+C:\Users\ezone\Desktop\DB>echo Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+
+C:\Users\ezone\Desktop\DB>mqsicreateconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\IBM\SQLLIB\java","true","0","50000","HRDB_SecurityID","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>echo Creating DB security for IB10NODE_MFS_P for HRDB database
+Creating DB security for IB10NODE_MFS_P for HRDB database
+
+C:\Users\ezone\Desktop\DB>mqsisetdbparms IB10NODE_MFS_P -n jdbc::HRDB -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>4_Create_HRDB_SecurityId.cmd
+Enter IIB Node name (default is TESTNODE_ezone: IB10NODE_MFS_P
+
+C:\Users\ezone\Desktop\DB>echo Creating HRDB_SecurityID for IB10NODE_MFS_P for HRDB database.
+Creating HRDB_SecurityID for IB10NODE_MFS_P for HRDB database.
+
+C:\Users\ezone\Desktop\DB>mqsisetdbparms IB10NODE_MFS_P -n jdbc::HRDB_SecurityId -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>mqsideleteconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>3_Create_JDBC_for_HRDB.cmd
+Enter IIB Node name (default is TESTNODE_ezone): IB10NODE_MFS_P
+Ok to proceed? Use Ctrl-C to terminate.
+Press any key to continue . . .
+
+C:\Users\ezone\Desktop\DB>echo Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+Creating JDBC connections for IB10NODE_MFS_P for HRDB database
+
+C:\Users\ezone\Desktop\DB>mqsicreateconfigurableservice IB10NODE_MFS_P -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\IBM\SQLLIB\java","true","0","50000","HRDB_SecurityID","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>echo Creating DB security for IB10NODE_MFS_P for HRDB database
+Creating DB security for IB10NODE_MFS_P for HRDB database
+
+C:\Users\ezone\Desktop\DB>mqsisetdbparms IB10NODE_MFS_P -n jdbc::HRDB -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>4_Create_HRDB_SecurityId.cmd
+Enter IIB Node name (default is TESTNODE_ezone: IB10NODE_MFS_P
+
+C:\Users\ezone\Desktop\DB>echo Creating HRDB_SecurityID for IB10NODE_MFS_P for HRDB database.
+Creating HRDB_SecurityID for IB10NODE_MFS_P for HRDB database.
+
+C:\Users\ezone\Desktop\DB>mqsisetdbparms IB10NODE_MFS_P -n jdbc::HRDB_SecurityId -u ezone -p sruthiuppi
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>mqsireportproperties IB10NODE_MFS_P -o HRDB -c JDBCProviders -r
+
+JDBCProviders
+  HRDB
+    connectionUrlFormat='jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];'
+    connectionUrlFormatAttr1=''
+    connectionUrlFormatAttr2=''
+    connectionUrlFormatAttr3=''
+    connectionUrlFormatAttr4=''
+    connectionUrlFormatAttr5=''
+    databaseName='HRDB'
+    databaseSchemaNames='useProvidedSchemaNames'
+    databaseType='DB2 Universal Database'
+    databaseVersion='10.1'
+    description='default_Description'
+    environmentParms='default_none'
+    jarsURL='C:\IBM\SQLLIB\java'
+    jdbcProviderXASupport='true'
+    maxConnectionPoolSize='0'
+    portNumber='50000'
+    securityIdentity='HRDB_SecurityID'
+    serverName='localhost'
+    type4DatasourceClassName='com.ibm.db2.jcc.DB2XADataSource'
+    type4DriverClassName='com.ibm.db2.jcc.DB2Driver'
+
+BIP8071I: Successful command completion.
+
+C:\Users\ezone\Desktop\DB>

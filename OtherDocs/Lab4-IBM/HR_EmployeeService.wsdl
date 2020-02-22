@@ -1,0 +1,46 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://hrdb/iibadmin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://HR_EmployeeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HR_EmployeeService" targetNamespace="http://HR_EmployeeService">
+<wsdl:documentation>
+<wsdl:appinfo source="WMQI_APPINFO">
+<MRWSDLAppInfo imported="true">
+<binding hasEncoding="false" imported="true" name="HR_EmployeeServiceHttpBinding" originalBindingStyle="document"/>
+<generatedXSD location="HR_EmployeeService_InlineSchema1.xsd"/>
+</MRWSDLAppInfo>
+</wsdl:appinfo>
+</wsdl:documentation>
+<wsdl:types>
+<xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" targetNamespace="http://HR_EmployeeService">
+<xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.0.101:7800/HR_EmployeeService?xsd=xsd0"/>
+<xsd:import schemaLocation="http://192.168.0.101:7800/HR_EmployeeService?xsd=xsd1"/>
+<xsd:include schemaLocation="http://192.168.0.101:7800/HR_EmployeeService?xsd=xsd2"/>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="getEmployeeRequestMsg">
+<wsdl:part element="tns:getEmployee" name="getEmployeeParameters"/>
+</wsdl:message>
+<wsdl:message name="getEmployeeResponseMsg">
+<wsdl:part element="tns:getEmployeeResponse" name="getEmployeeResult"/>
+</wsdl:message>
+<wsdl:portType name="HR_EmployeeService">
+<wsdl:operation name="getEmployee">
+<wsdl:input message="tns:getEmployeeRequestMsg" name="getEmployeeRequest"/>
+<wsdl:output message="tns:getEmployeeResponseMsg" name="getEmployeeResponse"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="HR_EmployeeServiceHttpBinding" type="tns:HR_EmployeeService">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="getEmployee">
+<soap:operation soapAction="http://HR_EmployeeService/getEmployee"/>
+<wsdl:input name="getEmployeeRequest">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getEmployeeResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="HR_EmployeeServiceHttpService">
+<wsdl:port binding="tns:HR_EmployeeServiceHttpBinding" name="HR_EmployeeServiceHttpPort">
+<soap:address location="http://192.168.0.101:7800/HR_EmployeeService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

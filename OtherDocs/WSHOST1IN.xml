@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope 	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+ 	xmlns:c="http://www.brokersamplewshost.ibm.com"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<c:IA81CONFIN>
+			<MessageId>IA81CONF</MessageId>
+			<OrderNumber>ON4002</OrderNumber>
+			<ItemReference>IY4003</ItemReference>
+			<ItemQuantity>4</ItemQuantity>
+			<CustomerNumber>CY4004</CustomerNumber>
+			<DeliveryRef> </DeliveryRef>
+			<Confirm> </Confirm>
+			<filler1> </filler1>
+		</c:IA81CONFIN>
+	</soapenv:Body>
+</soapenv:Envelope>

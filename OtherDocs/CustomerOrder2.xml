@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This test message is for the scenario of extraction of identty from the message body -->
+<RequestMsg>
+    <Security>
+        <!-- The UserId and UserPassword need to be changed for various tests-->
+        <UserId>wmbuser1</UserId>
+        <UserPassword>user1pw</UserPassword>
+    </Security>
+    <CustomerOrder>	
+        <PORequest>
+            <ItemNo>200</ItemNo>
+            <ItemQuantity>5</ItemQuantity>
+            <PersonName>
+                <FirstName>John</FirstName>
+                <LastName>Doe</LastName>
+            </PersonName>
+            <Address>
+                <Street>8501 IBM Dr</Street>
+                <City>Charlotte</City>
+                <ZipCode>28262</ZipCode>
+            </Address>
+        </PORequest>
+    </CustomerOrder>
+</RequestMsg>

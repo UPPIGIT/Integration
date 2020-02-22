@@ -1,0 +1,1660 @@
+Root:   ( ['MQROOT' : 0x14b42427530]
+  (0x01000000:Name):Properties               = ( ['MQPROPERTYPARSER' : 0x14b48b98f00]
+    (0x03000000:NameValue):MessageSet             = NULL
+    (0x03000000:NameValue):MessageType            = NULL
+    (0x03000000:NameValue):MessageFormat          = NULL
+    (0x03000000:NameValue):Encoding               = NULL
+    (0x03000000:NameValue):CodedCharSetId         = NULL
+    (0x03000000:NameValue):Transactional          = NULL
+    (0x03000000:NameValue):Persistence            = NULL
+    (0x03000000:NameValue):CreationTime           = NULL
+    (0x03000000:NameValue):ExpirationTime         = NULL
+    (0x03000000:NameValue):Priority               = NULL
+    (0x03000000:NameValue):ReplyIdentifier        = NULL
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = NULL
+    (0x03000000:NameValue):IdentitySourceType     = NULL
+    (0x03000000:NameValue):IdentitySourceToken    = NULL
+    (0x03000000:NameValue):IdentitySourcePassword = NULL
+    (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+    (0x03000000:NameValue):IdentityMappedType     = NULL
+    (0x03000000:NameValue):IdentityMappedToken    = NULL
+    (0x03000000:NameValue):IdentityMappedPassword = NULL
+    (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+  )
+  (0x01000000:Name):ComIbmAggregateReplyBody = (
+    (0x01000000:Name):Request1 = ( ['MQROOT' : 0x14b42428520]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b984f0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:42:46.800' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd418' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a470]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d40' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd418' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:42:46.800' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9270]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request3 = ( ['MQROOT' : 0x14b424281f0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b95cb0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:42:46.800' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd419' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a810]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d41' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd419' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:42:46.800' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d80f0]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request2 = ( ['MQROOT' : 0x14b42428850]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b952a0]
+        (0x03000000:NameValue):MessageSet             = '' (CHARACTER)
+        (0x03000000:NameValue):MessageType            = '' (CHARACTER)
+        (0x03000000:NameValue):MessageFormat          = '' (CHARACTER)
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:42:46.800' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd41a' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = NULL
+        (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885b2f0]
+        (0x03000000:NameValue):SourceQueue      = 'Customer.out' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d42' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd41a' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:42:46.800' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d7d70]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+LocalEnvironment:  
+ExceptionList:  ( ['MQROOT' : 0x14b48ed8db0]
+  (0x01000000:Name):RecoverableException = (
+    (0x03000000:NameValue):File                 = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\MessageServices\ImbDataFlowNode.cpp' (CHARACTER)
+    (0x03000000:NameValue):Line                 = 1251 (INTEGER)
+    (0x03000000:NameValue):Function             = 'ImbDataFlowNode::createExceptionList' (CHARACTER)
+    (0x03000000:NameValue):Type                 = 'ComIbmAggregateReplyNode' (CHARACTER)
+    (0x03000000:NameValue):Name                 = 'FAN_IN_MF#FCMComposite_1_6' (CHARACTER)
+    (0x03000000:NameValue):Label                = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    (0x03000000:NameValue):Catalog              = 'BIPmsgs' (CHARACTER)
+    (0x03000000:NameValue):Severity             = 3 (INTEGER)
+    (0x03000000:NameValue):Number               = 2230 (INTEGER)
+    (0x03000000:NameValue):Text                 = 'Node throwing exception' (CHARACTER)
+    (0x01000000:Name     ):Insert               = (
+      (0x03000000:NameValue):Type = 14 (INTEGER)
+      (0x03000000:NameValue):Text = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    )
+    (0x01000000:Name     ):RecoverableException = (
+      (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\TemplateNodes\ImbOutputTemplateNode.cpp' (CHARACTER)
+      (0x03000000:NameValue):Line            = 303 (INTEGER)
+      (0x03000000:NameValue):Function        = 'ImbOutputTemplateNode::processMessageAssemblyToFailure' (CHARACTER)
+      (0x03000000:NameValue):Type            = 'ComIbmMQOutputNode' (CHARACTER)
+      (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_2' (CHARACTER)
+      (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+      (0x03000000:NameValue):Severity        = 3 (INTEGER)
+      (0x03000000:NameValue):Number          = 2230 (INTEGER)
+      (0x03000000:NameValue):Text            = 'Caught exception and rethrowing' (CHARACTER)
+      (0x01000000:Name     ):Insert          = (
+        (0x03000000:NameValue):Type = 14 (INTEGER)
+        (0x03000000:NameValue):Text = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      )
+      (0x01000000:Name     ):ParserException = (
+        (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCParser.cpp' (CHARACTER)
+        (0x03000000:NameValue):Line            = 930 (INTEGER)
+        (0x03000000:NameValue):Function        = 'ImbXMLNSCParser::refreshBitStreamFromElementsCommon' (CHARACTER)
+        (0x03000000:NameValue):Type            = 'ComIbmMQInputNode' (CHARACTER)
+        (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_1' (CHARACTER)
+        (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Input' (CHARACTER)
+        (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+        (0x03000000:NameValue):Severity        = 3 (INTEGER)
+        (0x03000000:NameValue):Number          = 5010 (INTEGER)
+        (0x03000000:NameValue):Text            = 'XML Writing Errors have occurred' (CHARACTER)
+        (0x01000000:Name     ):ParserException = (
+          (0x03000000:NameValue):File     = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCWriter.cpp' (CHARACTER)
+          (0x03000000:NameValue):Line     = 1015 (INTEGER)
+          (0x03000000:NameValue):Function = 'ImbXMLNSCWriter::writeMisc' (CHARACTER)
+          (0x03000000:NameValue):Type     = '' (CHARACTER)
+          (0x03000000:NameValue):Name     = '' (CHARACTER)
+          (0x03000000:NameValue):Label    = '' (CHARACTER)
+          (0x03000000:NameValue):Catalog  = 'BIPmsgs' (CHARACTER)
+          (0x03000000:NameValue):Severity = 3 (INTEGER)
+          (0x03000000:NameValue):Number   = 5016 (INTEGER)
+          (0x03000000:NameValue):Text     = 'Unexpected XML type at this point in document.' (CHARACTER)
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'Request3' (CHARACTER)
+          )
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'folderType' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+Root:   ( ['MQROOT' : 0x14b42427530]
+  (0x01000000:Name):Properties               = ( ['MQPROPERTYPARSER' : 0x14b48b98f00]
+    (0x03000000:NameValue):MessageSet             = NULL
+    (0x03000000:NameValue):MessageType            = NULL
+    (0x03000000:NameValue):MessageFormat          = NULL
+    (0x03000000:NameValue):Encoding               = NULL
+    (0x03000000:NameValue):CodedCharSetId         = NULL
+    (0x03000000:NameValue):Transactional          = NULL
+    (0x03000000:NameValue):Persistence            = NULL
+    (0x03000000:NameValue):CreationTime           = NULL
+    (0x03000000:NameValue):ExpirationTime         = NULL
+    (0x03000000:NameValue):Priority               = NULL
+    (0x03000000:NameValue):ReplyIdentifier        = NULL
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = NULL
+    (0x03000000:NameValue):IdentitySourceType     = NULL
+    (0x03000000:NameValue):IdentitySourceToken    = NULL
+    (0x03000000:NameValue):IdentitySourcePassword = NULL
+    (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+    (0x03000000:NameValue):IdentityMappedType     = NULL
+    (0x03000000:NameValue):IdentityMappedToken    = NULL
+    (0x03000000:NameValue):IdentityMappedPassword = NULL
+    (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+  )
+  (0x01000000:Name):ComIbmAggregateReplyBody = (
+    (0x01000000:Name):Request1 = ( ['MQROOT' : 0x14b42428520]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b984f0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:42:53.100' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd41f' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a470]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d43' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd41f' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:42:53.100' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9270]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request3 = ( ['MQROOT' : 0x14b424281f0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b95cb0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:42:53.100' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd420' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a810]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d44' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd420' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:42:53.100' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d80f0]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request2 = ( ['MQROOT' : 0x14b42428850]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b952a0]
+        (0x03000000:NameValue):MessageSet             = '' (CHARACTER)
+        (0x03000000:NameValue):MessageType            = '' (CHARACTER)
+        (0x03000000:NameValue):MessageFormat          = '' (CHARACTER)
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:42:53.100' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd421' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = NULL
+        (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885b2f0]
+        (0x03000000:NameValue):SourceQueue      = 'Customer.out' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d45' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd421' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:42:53.100' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d7d70]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+LocalEnvironment:  
+ExceptionList:  ( ['MQROOT' : 0x14b48ed80f0]
+  (0x01000000:Name):RecoverableException = (
+    (0x03000000:NameValue):File                 = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\MessageServices\ImbDataFlowNode.cpp' (CHARACTER)
+    (0x03000000:NameValue):Line                 = 1251 (INTEGER)
+    (0x03000000:NameValue):Function             = 'ImbDataFlowNode::createExceptionList' (CHARACTER)
+    (0x03000000:NameValue):Type                 = 'ComIbmAggregateReplyNode' (CHARACTER)
+    (0x03000000:NameValue):Name                 = 'FAN_IN_MF#FCMComposite_1_6' (CHARACTER)
+    (0x03000000:NameValue):Label                = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    (0x03000000:NameValue):Catalog              = 'BIPmsgs' (CHARACTER)
+    (0x03000000:NameValue):Severity             = 3 (INTEGER)
+    (0x03000000:NameValue):Number               = 2230 (INTEGER)
+    (0x03000000:NameValue):Text                 = 'Node throwing exception' (CHARACTER)
+    (0x01000000:Name     ):Insert               = (
+      (0x03000000:NameValue):Type = 14 (INTEGER)
+      (0x03000000:NameValue):Text = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    )
+    (0x01000000:Name     ):RecoverableException = (
+      (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\TemplateNodes\ImbOutputTemplateNode.cpp' (CHARACTER)
+      (0x03000000:NameValue):Line            = 303 (INTEGER)
+      (0x03000000:NameValue):Function        = 'ImbOutputTemplateNode::processMessageAssemblyToFailure' (CHARACTER)
+      (0x03000000:NameValue):Type            = 'ComIbmMQOutputNode' (CHARACTER)
+      (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_2' (CHARACTER)
+      (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+      (0x03000000:NameValue):Severity        = 3 (INTEGER)
+      (0x03000000:NameValue):Number          = 2230 (INTEGER)
+      (0x03000000:NameValue):Text            = 'Caught exception and rethrowing' (CHARACTER)
+      (0x01000000:Name     ):Insert          = (
+        (0x03000000:NameValue):Type = 14 (INTEGER)
+        (0x03000000:NameValue):Text = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      )
+      (0x01000000:Name     ):ParserException = (
+        (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCParser.cpp' (CHARACTER)
+        (0x03000000:NameValue):Line            = 930 (INTEGER)
+        (0x03000000:NameValue):Function        = 'ImbXMLNSCParser::refreshBitStreamFromElementsCommon' (CHARACTER)
+        (0x03000000:NameValue):Type            = 'ComIbmMQInputNode' (CHARACTER)
+        (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_1' (CHARACTER)
+        (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Input' (CHARACTER)
+        (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+        (0x03000000:NameValue):Severity        = 3 (INTEGER)
+        (0x03000000:NameValue):Number          = 5010 (INTEGER)
+        (0x03000000:NameValue):Text            = 'XML Writing Errors have occurred' (CHARACTER)
+        (0x01000000:Name     ):ParserException = (
+          (0x03000000:NameValue):File     = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCWriter.cpp' (CHARACTER)
+          (0x03000000:NameValue):Line     = 1015 (INTEGER)
+          (0x03000000:NameValue):Function = 'ImbXMLNSCWriter::writeMisc' (CHARACTER)
+          (0x03000000:NameValue):Type     = '' (CHARACTER)
+          (0x03000000:NameValue):Name     = '' (CHARACTER)
+          (0x03000000:NameValue):Label    = '' (CHARACTER)
+          (0x03000000:NameValue):Catalog  = 'BIPmsgs' (CHARACTER)
+          (0x03000000:NameValue):Severity = 3 (INTEGER)
+          (0x03000000:NameValue):Number   = 5016 (INTEGER)
+          (0x03000000:NameValue):Text     = 'Unexpected XML type at this point in document.' (CHARACTER)
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'Request3' (CHARACTER)
+          )
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'folderType' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+Root:   ( ['MQROOT' : 0x14b42428b80]
+  (0x01000000:Name):Properties               = ( ['MQPROPERTYPARSER' : 0x14b48b984f0]
+    (0x03000000:NameValue):MessageSet             = NULL
+    (0x03000000:NameValue):MessageType            = NULL
+    (0x03000000:NameValue):MessageFormat          = NULL
+    (0x03000000:NameValue):Encoding               = NULL
+    (0x03000000:NameValue):CodedCharSetId         = NULL
+    (0x03000000:NameValue):Transactional          = NULL
+    (0x03000000:NameValue):Persistence            = NULL
+    (0x03000000:NameValue):CreationTime           = NULL
+    (0x03000000:NameValue):ExpirationTime         = NULL
+    (0x03000000:NameValue):Priority               = NULL
+    (0x03000000:NameValue):ReplyIdentifier        = NULL
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = NULL
+    (0x03000000:NameValue):IdentitySourceType     = NULL
+    (0x03000000:NameValue):IdentitySourceToken    = NULL
+    (0x03000000:NameValue):IdentitySourcePassword = NULL
+    (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+    (0x03000000:NameValue):IdentityMappedType     = NULL
+    (0x03000000:NameValue):IdentityMappedToken    = NULL
+    (0x03000000:NameValue):IdentityMappedPassword = NULL
+    (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+  )
+  (0x01000000:Name):ComIbmAggregateReplyBody = (
+    (0x01000000:Name):Request1 = ( ['MQROOT' : 0x14b42425880]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b95cb0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:43:40.110' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd426' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a810]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d46' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd426' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:43:40.110' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9970]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request3 = ( ['MQROOT' : 0x14b42425bb0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b952a0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:43:40.110' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd427' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885b2f0]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d47' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd427' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:43:40.110' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488da070]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request2 = ( ['MQROOT' : 0x14b42425ee0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b97ae0]
+        (0x03000000:NameValue):MessageSet             = '' (CHARACTER)
+        (0x03000000:NameValue):MessageType            = '' (CHARACTER)
+        (0x03000000:NameValue):MessageFormat          = '' (CHARACTER)
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:43:40.110' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd428' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = NULL
+        (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4269a3d0]
+        (0x03000000:NameValue):SourceQueue      = 'Customer.out' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d48' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd428' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:43:40.110' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9270]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+LocalEnvironment:  
+ExceptionList:  ( ['MQROOT' : 0x14b49988550]
+  (0x01000000:Name):RecoverableException = (
+    (0x03000000:NameValue):File                 = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\MessageServices\ImbDataFlowNode.cpp' (CHARACTER)
+    (0x03000000:NameValue):Line                 = 1251 (INTEGER)
+    (0x03000000:NameValue):Function             = 'ImbDataFlowNode::createExceptionList' (CHARACTER)
+    (0x03000000:NameValue):Type                 = 'ComIbmAggregateReplyNode' (CHARACTER)
+    (0x03000000:NameValue):Name                 = 'FAN_IN_MF#FCMComposite_1_6' (CHARACTER)
+    (0x03000000:NameValue):Label                = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    (0x03000000:NameValue):Catalog              = 'BIPmsgs' (CHARACTER)
+    (0x03000000:NameValue):Severity             = 3 (INTEGER)
+    (0x03000000:NameValue):Number               = 2230 (INTEGER)
+    (0x03000000:NameValue):Text                 = 'Node throwing exception' (CHARACTER)
+    (0x01000000:Name     ):Insert               = (
+      (0x03000000:NameValue):Type = 14 (INTEGER)
+      (0x03000000:NameValue):Text = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    )
+    (0x01000000:Name     ):RecoverableException = (
+      (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\TemplateNodes\ImbOutputTemplateNode.cpp' (CHARACTER)
+      (0x03000000:NameValue):Line            = 303 (INTEGER)
+      (0x03000000:NameValue):Function        = 'ImbOutputTemplateNode::processMessageAssemblyToFailure' (CHARACTER)
+      (0x03000000:NameValue):Type            = 'ComIbmMQOutputNode' (CHARACTER)
+      (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_2' (CHARACTER)
+      (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+      (0x03000000:NameValue):Severity        = 3 (INTEGER)
+      (0x03000000:NameValue):Number          = 2230 (INTEGER)
+      (0x03000000:NameValue):Text            = 'Caught exception and rethrowing' (CHARACTER)
+      (0x01000000:Name     ):Insert          = (
+        (0x03000000:NameValue):Type = 14 (INTEGER)
+        (0x03000000:NameValue):Text = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      )
+      (0x01000000:Name     ):ParserException = (
+        (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCParser.cpp' (CHARACTER)
+        (0x03000000:NameValue):Line            = 930 (INTEGER)
+        (0x03000000:NameValue):Function        = 'ImbXMLNSCParser::refreshBitStreamFromElementsCommon' (CHARACTER)
+        (0x03000000:NameValue):Type            = 'ComIbmMQInputNode' (CHARACTER)
+        (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_1' (CHARACTER)
+        (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Input' (CHARACTER)
+        (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+        (0x03000000:NameValue):Severity        = 3 (INTEGER)
+        (0x03000000:NameValue):Number          = 5010 (INTEGER)
+        (0x03000000:NameValue):Text            = 'XML Writing Errors have occurred' (CHARACTER)
+        (0x01000000:Name     ):ParserException = (
+          (0x03000000:NameValue):File     = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCWriter.cpp' (CHARACTER)
+          (0x03000000:NameValue):Line     = 1015 (INTEGER)
+          (0x03000000:NameValue):Function = 'ImbXMLNSCWriter::writeMisc' (CHARACTER)
+          (0x03000000:NameValue):Type     = '' (CHARACTER)
+          (0x03000000:NameValue):Name     = '' (CHARACTER)
+          (0x03000000:NameValue):Label    = '' (CHARACTER)
+          (0x03000000:NameValue):Catalog  = 'BIPmsgs' (CHARACTER)
+          (0x03000000:NameValue):Severity = 3 (INTEGER)
+          (0x03000000:NameValue):Number   = 5016 (INTEGER)
+          (0x03000000:NameValue):Text     = 'Unexpected XML type at this point in document.' (CHARACTER)
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'Request3' (CHARACTER)
+          )
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'folderType' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+Root:   ( ['MQROOT' : 0x14b42428b80]
+  (0x01000000:Name):Properties               = ( ['MQPROPERTYPARSER' : 0x14b48b984f0]
+    (0x03000000:NameValue):MessageSet             = NULL
+    (0x03000000:NameValue):MessageType            = NULL
+    (0x03000000:NameValue):MessageFormat          = NULL
+    (0x03000000:NameValue):Encoding               = NULL
+    (0x03000000:NameValue):CodedCharSetId         = NULL
+    (0x03000000:NameValue):Transactional          = NULL
+    (0x03000000:NameValue):Persistence            = NULL
+    (0x03000000:NameValue):CreationTime           = NULL
+    (0x03000000:NameValue):ExpirationTime         = NULL
+    (0x03000000:NameValue):Priority               = NULL
+    (0x03000000:NameValue):ReplyIdentifier        = NULL
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = NULL
+    (0x03000000:NameValue):IdentitySourceType     = NULL
+    (0x03000000:NameValue):IdentitySourceToken    = NULL
+    (0x03000000:NameValue):IdentitySourcePassword = NULL
+    (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+    (0x03000000:NameValue):IdentityMappedType     = NULL
+    (0x03000000:NameValue):IdentityMappedToken    = NULL
+    (0x03000000:NameValue):IdentityMappedPassword = NULL
+    (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+  )
+  (0x01000000:Name):ComIbmAggregateReplyBody = (
+    (0x01000000:Name):Request1 = ( ['MQROOT' : 0x14b42425880]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b95cb0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:48:11.890' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd42d' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a810]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d49' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd42d' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:48:11.890' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9970]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request3 = ( ['MQROOT' : 0x14b42425bb0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b952a0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:48:11.890' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd42e' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885b2f0]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d4a' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd42e' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:48:11.890' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488da070]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request2 = ( ['MQROOT' : 0x14b42425ee0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b97ae0]
+        (0x03000000:NameValue):MessageSet             = '' (CHARACTER)
+        (0x03000000:NameValue):MessageType            = '' (CHARACTER)
+        (0x03000000:NameValue):MessageFormat          = '' (CHARACTER)
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:48:11.890' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd42f' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = NULL
+        (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4269a3d0]
+        (0x03000000:NameValue):SourceQueue      = 'Customer.out' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d4b' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd42f' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:48:11.890' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9270]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+LocalEnvironment:  
+ExceptionList:  ( ['MQROOT' : 0x14b49989210]
+  (0x01000000:Name):RecoverableException = (
+    (0x03000000:NameValue):File                 = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\MessageServices\ImbDataFlowNode.cpp' (CHARACTER)
+    (0x03000000:NameValue):Line                 = 1251 (INTEGER)
+    (0x03000000:NameValue):Function             = 'ImbDataFlowNode::createExceptionList' (CHARACTER)
+    (0x03000000:NameValue):Type                 = 'ComIbmAggregateReplyNode' (CHARACTER)
+    (0x03000000:NameValue):Name                 = 'FAN_IN_MF#FCMComposite_1_6' (CHARACTER)
+    (0x03000000:NameValue):Label                = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    (0x03000000:NameValue):Catalog              = 'BIPmsgs' (CHARACTER)
+    (0x03000000:NameValue):Severity             = 3 (INTEGER)
+    (0x03000000:NameValue):Number               = 2230 (INTEGER)
+    (0x03000000:NameValue):Text                 = 'Node throwing exception' (CHARACTER)
+    (0x01000000:Name     ):Insert               = (
+      (0x03000000:NameValue):Type = 14 (INTEGER)
+      (0x03000000:NameValue):Text = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    )
+    (0x01000000:Name     ):RecoverableException = (
+      (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\TemplateNodes\ImbOutputTemplateNode.cpp' (CHARACTER)
+      (0x03000000:NameValue):Line            = 303 (INTEGER)
+      (0x03000000:NameValue):Function        = 'ImbOutputTemplateNode::processMessageAssemblyToFailure' (CHARACTER)
+      (0x03000000:NameValue):Type            = 'ComIbmMQOutputNode' (CHARACTER)
+      (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_2' (CHARACTER)
+      (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+      (0x03000000:NameValue):Severity        = 3 (INTEGER)
+      (0x03000000:NameValue):Number          = 2230 (INTEGER)
+      (0x03000000:NameValue):Text            = 'Caught exception and rethrowing' (CHARACTER)
+      (0x01000000:Name     ):Insert          = (
+        (0x03000000:NameValue):Type = 14 (INTEGER)
+        (0x03000000:NameValue):Text = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      )
+      (0x01000000:Name     ):ParserException = (
+        (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCParser.cpp' (CHARACTER)
+        (0x03000000:NameValue):Line            = 930 (INTEGER)
+        (0x03000000:NameValue):Function        = 'ImbXMLNSCParser::refreshBitStreamFromElementsCommon' (CHARACTER)
+        (0x03000000:NameValue):Type            = 'ComIbmMQInputNode' (CHARACTER)
+        (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_1' (CHARACTER)
+        (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Input' (CHARACTER)
+        (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+        (0x03000000:NameValue):Severity        = 3 (INTEGER)
+        (0x03000000:NameValue):Number          = 5010 (INTEGER)
+        (0x03000000:NameValue):Text            = 'XML Writing Errors have occurred' (CHARACTER)
+        (0x01000000:Name     ):ParserException = (
+          (0x03000000:NameValue):File     = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCWriter.cpp' (CHARACTER)
+          (0x03000000:NameValue):Line     = 1015 (INTEGER)
+          (0x03000000:NameValue):Function = 'ImbXMLNSCWriter::writeMisc' (CHARACTER)
+          (0x03000000:NameValue):Type     = '' (CHARACTER)
+          (0x03000000:NameValue):Name     = '' (CHARACTER)
+          (0x03000000:NameValue):Label    = '' (CHARACTER)
+          (0x03000000:NameValue):Catalog  = 'BIPmsgs' (CHARACTER)
+          (0x03000000:NameValue):Severity = 3 (INTEGER)
+          (0x03000000:NameValue):Number   = 5016 (INTEGER)
+          (0x03000000:NameValue):Text     = 'Unexpected XML type at this point in document.' (CHARACTER)
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'Request3' (CHARACTER)
+          )
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'folderType' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+Root:   ( ['MQROOT' : 0x14b42428b80]
+  (0x01000000:Name):Properties               = ( ['MQPROPERTYPARSER' : 0x14b48b984f0]
+    (0x03000000:NameValue):MessageSet             = NULL
+    (0x03000000:NameValue):MessageType            = NULL
+    (0x03000000:NameValue):MessageFormat          = NULL
+    (0x03000000:NameValue):Encoding               = NULL
+    (0x03000000:NameValue):CodedCharSetId         = NULL
+    (0x03000000:NameValue):Transactional          = NULL
+    (0x03000000:NameValue):Persistence            = NULL
+    (0x03000000:NameValue):CreationTime           = NULL
+    (0x03000000:NameValue):ExpirationTime         = NULL
+    (0x03000000:NameValue):Priority               = NULL
+    (0x03000000:NameValue):ReplyIdentifier        = NULL
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = NULL
+    (0x03000000:NameValue):IdentitySourceType     = NULL
+    (0x03000000:NameValue):IdentitySourceToken    = NULL
+    (0x03000000:NameValue):IdentitySourcePassword = NULL
+    (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+    (0x03000000:NameValue):IdentityMappedType     = NULL
+    (0x03000000:NameValue):IdentityMappedToken    = NULL
+    (0x03000000:NameValue):IdentityMappedPassword = NULL
+    (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+  )
+  (0x01000000:Name):ComIbmAggregateReplyBody = (
+    (0x01000000:Name):Request1 = ( ['MQROOT' : 0x14b42425880]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b95cb0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:48:51.510' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd434' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885a810]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d4c' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd434' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:48:51.510' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9970]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request3 = ( ['MQROOT' : 0x14b42425bb0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b952a0]
+        (0x03000000:NameValue):MessageSet             = NULL
+        (0x03000000:NameValue):MessageType            = NULL
+        (0x03000000:NameValue):MessageFormat          = NULL
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:48:51.510' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd435' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = '' (CHARACTER)
+        (0x03000000:NameValue):ContentType            = NULL
+        (0x03000000:NameValue):IdentitySourceType     = NULL
+        (0x03000000:NameValue):IdentitySourceToken    = NULL
+        (0x03000000:NameValue):IdentitySourcePassword = NULL
+        (0x03000000:NameValue):IdentitySourceIssuedBy = NULL
+        (0x03000000:NameValue):IdentityMappedType     = NULL
+        (0x03000000:NameValue):IdentityMappedToken    = NULL
+        (0x03000000:NameValue):IdentityMappedPassword = NULL
+        (0x03000000:NameValue):IdentityMappedIssuedBy = NULL
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4885b2f0]
+        (0x03000000:NameValue):SourceQueue      = '' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d4d' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd435' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:48:51.510' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488da070]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+    (0x01000000:Name):Request2 = ( ['MQROOT' : 0x14b42425ee0]
+      (0x01000000:Name  ):Properties = ( ['MQPROPERTYPARSER' : 0x14b48b97ae0]
+        (0x03000000:NameValue):MessageSet             = '' (CHARACTER)
+        (0x03000000:NameValue):MessageType            = '' (CHARACTER)
+        (0x03000000:NameValue):MessageFormat          = '' (CHARACTER)
+        (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+        (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+        (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2018-07-18 14:48:51.510' (GMTTIMESTAMP)
+        (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+        (0x03000000:NameValue):Priority               = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyIdentifier        = X'414d5120544553545f514d2020202020c83a4e5b231cd436' (BLOB)
+        (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+        (0x03000000:NameValue):Topic                  = NULL
+        (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+        (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+      )
+      (0x01000000:Name  ):MQMD       = ( ['MQHMD' : 0x14b4269a3d0]
+        (0x03000000:NameValue):SourceQueue      = 'Customer.out' (CHARACTER)
+        (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+        (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+        (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+        (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+        (0x03000000:NameValue):Version          = 2 (INTEGER)
+        (0x03000000:NameValue):Report           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgType          = 2 (INTEGER)
+        (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+        (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+        (0x03000000:NameValue):Priority         = 0 (INTEGER)
+        (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+        (0x03000000:NameValue):MsgId            = X'414d5120544553545f514d2020202020c83a4e5b23181d4e' (BLOB)
+        (0x03000000:NameValue):CorrelId         = X'414d5120544553545f514d2020202020c83a4e5b231cd436' (BLOB)
+        (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+        (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+        (0x03000000:NameValue):ReplyToQMgr      = 'TEST_QM                                         ' (CHARACTER)
+        (0x03000000:NameValue):UserIdentifier   = 'ezone       ' (CHARACTER)
+        (0x03000000:NameValue):AccountingToken  = X'160105150000006d023f074b7c95cfc697b436e903000000000000000000000b' (BLOB)
+        (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+        (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+        (0x03000000:NameValue):PutApplName      = 'b softwares\ih03\rfhutil.exe' (CHARACTER)
+        (0x03000000:NameValue):PutDate          = DATE '2018-07-18' (DATE)
+        (0x03000000:NameValue):PutTime          = GMTTIME '14:48:51.510' (GMTTIME)
+        (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+        (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+        (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+        (0x03000000:NameValue):Offset           = 0 (INTEGER)
+        (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+        (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+      )
+      (0x01000000:Folder):XMLNSC     = ( ['xmlnsc' : 0x14b488d9270]
+        (0x01000000:Folder):customer = (
+          (0x03000000:PCDataField):tag1            = 'personal' (CHARACTER)
+          (0x03000000:PCDataField):tag2            = 'address' (CHARACTER)
+          (0x03000000:PCDataField):tag3            = 'company' (CHARACTER)
+          (0x01000000:Folder     ):personaldetails = (
+            (0x03000000:PCDataField):firstname = 'upender' (CHARACTER)
+            (0x03000000:PCDataField):lastname  = 'tadewar' (CHARACTER)
+          )
+          (0x01000000:Folder     ):addressdetails  = (
+            (0x03000000:PCDataField):area  = 'hinjewadi' (CHARACTER)
+            (0x03000000:PCDataField):city  = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state = 'maharastra' (CHARACTER)
+          )
+          (0x01000000:Folder     ):comanydetails   = (
+            (0x03000000:PCDataField):comanyname = 'cognizant' (CHARACTER)
+            (0x03000000:PCDataField):city       = 'pune' (CHARACTER)
+            (0x03000000:PCDataField):state      = 'maharastra' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)
+LocalEnvironment:  
+ExceptionList:  ( ['MQROOT' : 0x14b49987ef0]
+  (0x01000000:Name):RecoverableException = (
+    (0x03000000:NameValue):File                 = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\MessageServices\ImbDataFlowNode.cpp' (CHARACTER)
+    (0x03000000:NameValue):Line                 = 1251 (INTEGER)
+    (0x03000000:NameValue):Function             = 'ImbDataFlowNode::createExceptionList' (CHARACTER)
+    (0x03000000:NameValue):Type                 = 'ComIbmAggregateReplyNode' (CHARACTER)
+    (0x03000000:NameValue):Name                 = 'FAN_IN_MF#FCMComposite_1_6' (CHARACTER)
+    (0x03000000:NameValue):Label                = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    (0x03000000:NameValue):Catalog              = 'BIPmsgs' (CHARACTER)
+    (0x03000000:NameValue):Severity             = 3 (INTEGER)
+    (0x03000000:NameValue):Number               = 2230 (INTEGER)
+    (0x03000000:NameValue):Text                 = 'Node throwing exception' (CHARACTER)
+    (0x01000000:Name     ):Insert               = (
+      (0x03000000:NameValue):Type = 14 (INTEGER)
+      (0x03000000:NameValue):Text = 'FAN_IN_MF.Aggregate Reply' (CHARACTER)
+    )
+    (0x01000000:Name     ):RecoverableException = (
+      (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\DataFlowEngine\TemplateNodes\ImbOutputTemplateNode.cpp' (CHARACTER)
+      (0x03000000:NameValue):Line            = 303 (INTEGER)
+      (0x03000000:NameValue):Function        = 'ImbOutputTemplateNode::processMessageAssemblyToFailure' (CHARACTER)
+      (0x03000000:NameValue):Type            = 'ComIbmMQOutputNode' (CHARACTER)
+      (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_2' (CHARACTER)
+      (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+      (0x03000000:NameValue):Severity        = 3 (INTEGER)
+      (0x03000000:NameValue):Number          = 2230 (INTEGER)
+      (0x03000000:NameValue):Text            = 'Caught exception and rethrowing' (CHARACTER)
+      (0x01000000:Name     ):Insert          = (
+        (0x03000000:NameValue):Type = 14 (INTEGER)
+        (0x03000000:NameValue):Text = 'FAN_IN_MF.MQ Output' (CHARACTER)
+      )
+      (0x01000000:Name     ):ParserException = (
+        (0x03000000:NameValue):File            = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCParser.cpp' (CHARACTER)
+        (0x03000000:NameValue):Line            = 930 (INTEGER)
+        (0x03000000:NameValue):Function        = 'ImbXMLNSCParser::refreshBitStreamFromElementsCommon' (CHARACTER)
+        (0x03000000:NameValue):Type            = 'ComIbmMQInputNode' (CHARACTER)
+        (0x03000000:NameValue):Name            = 'FAN_IN_MF#FCMComposite_1_1' (CHARACTER)
+        (0x03000000:NameValue):Label           = 'FAN_IN_MF.MQ Input' (CHARACTER)
+        (0x03000000:NameValue):Catalog         = 'BIPmsgs' (CHARACTER)
+        (0x03000000:NameValue):Severity        = 3 (INTEGER)
+        (0x03000000:NameValue):Number          = 5010 (INTEGER)
+        (0x03000000:NameValue):Text            = 'XML Writing Errors have occurred' (CHARACTER)
+        (0x01000000:Name     ):ParserException = (
+          (0x03000000:NameValue):File     = 'F:\build\S1000_slot1\S1000_P\src\MTI\MTIforBroker\GenXmlParser4\ImbXMLNSCWriter.cpp' (CHARACTER)
+          (0x03000000:NameValue):Line     = 1015 (INTEGER)
+          (0x03000000:NameValue):Function = 'ImbXMLNSCWriter::writeMisc' (CHARACTER)
+          (0x03000000:NameValue):Type     = '' (CHARACTER)
+          (0x03000000:NameValue):Name     = '' (CHARACTER)
+          (0x03000000:NameValue):Label    = '' (CHARACTER)
+          (0x03000000:NameValue):Catalog  = 'BIPmsgs' (CHARACTER)
+          (0x03000000:NameValue):Severity = 3 (INTEGER)
+          (0x03000000:NameValue):Number   = 5016 (INTEGER)
+          (0x03000000:NameValue):Text     = 'Unexpected XML type at this point in document.' (CHARACTER)
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'Request3' (CHARACTER)
+          )
+          (0x01000000:Name     ):Insert   = (
+            (0x03000000:NameValue):Type = 5 (INTEGER)
+            (0x03000000:NameValue):Text = 'folderType' (CHARACTER)
+          )
+        )
+      )
+    )
+  )
+)

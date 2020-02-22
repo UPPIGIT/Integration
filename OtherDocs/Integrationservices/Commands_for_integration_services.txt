@@ -1,0 +1,22 @@
+check jdbc configuration
+
+===================================================================================
+mqsireportproperties TESTNODE_ezone -c JDBCProviders -o HRDB -r
+
+mqsicreateconfigurableservice TESTNODE_ezone -c JDBCProviders -o HRDB -n connectionUrlFormat,connectionUrlFormatAttr1,connectionUrlFormatAttr2,connectionUrlFormatAttr3,connectionUrlFormatAttr4,connectionUrlFormatAttr5,databaseName,databaseType,databaseVersion,description,environmentParms,jarsURL,jdbcProviderXASupport,maxConnectionPoolSize,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName  -v "jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[ezone];password=[sruthiuppi];","","","","","","HRDB","DB2 Universal Database","10.1","default_Description","default_none","C:\Program Files\IBM\SQLLIB\java","true","0","50000","mySecurityId","localhost","com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver"
+
+
+mqsireportproperties TESTNODE_ezone -o HRDB -c JDBCProviders -r
+
+mqsisetdbparms TESTNODE_ezone -n jdbc::HRDB -u ezone -p sruthiuppi
+mqsisetdbparms TESTNODE_ezone -n jdbc::mySecurityId -u ezone -p sruthiuppi
+mqsistop TESTNODE_ezone
+mqsistart TESTNODE_ezone
+
+=================================================================================
+
+mqsireportproperties TESTNODE_ezone -e default -o HTTPConnector -r
+
+Service Query URL	http://192.168.0.100:7800/Employeeresponse?wsdl
+
+
