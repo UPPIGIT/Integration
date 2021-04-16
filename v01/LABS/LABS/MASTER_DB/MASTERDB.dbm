@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_sFHp8ec4EeO3LNHaesxm9A" name="MASTERDB" vendor="DB2 UDB" version="V9.7" schemas="_sFO-sOc4EeO3LNHaesxm9A _sFPlwuc4EeO3LNHaesxm9A">
+    <eAnnotations xmi:id="_sFHp8uc4EeO3LNHaesxm9A" source="ConnectionURI">
+      <details xmi:id="_sFHp8-c4EeO3LNHaesxm9A" key="ConnectionKey" value="MASTERDB"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_sFO-sOc4EeO3LNHaesxm9A" name="DB2SCHEMA" tables="_sFO-sec4EeO3LNHaesxm9A" database="_sFHp8ec4EeO3LNHaesxm9A"/>
+  <LUW:LUWTable xmi:id="_sFO-sec4EeO3LNHaesxm9A" name="MASTER_TABLE" schema="_sFO-sOc4EeO3LNHaesxm9A" index="_sFPlwOc4EeO3LNHaesxm9A" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-suc4EeO3LNHaesxm9A" name="EMPNAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-s-c4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-tOc4EeO3LNHaesxm9A" name="EMPNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_sFO-tec4EeO3LNHaesxm9A" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-tuc4EeO3LNHaesxm9A" name="AGE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_sFO-t-c4EeO3LNHaesxm9A" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-uOc4EeO3LNHaesxm9A" name="SEX">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-uec4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-uuc4EeO3LNHaesxm9A" name="MARITAL_STATUS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-u-c4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-vOc4EeO3LNHaesxm9A" name="NATIONALITY">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-vec4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-vuc4EeO3LNHaesxm9A" name="TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-v-c4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-wOc4EeO3LNHaesxm9A" name="DEPT">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-wec4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-wuc4EeO3LNHaesxm9A" name="YEARS_OF_EXP">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_sFO-w-c4EeO3LNHaesxm9A" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-xOc4EeO3LNHaesxm9A" name="CATEGORY">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_sFO-xec4EeO3LNHaesxm9A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="2"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-xuc4EeO3LNHaesxm9A" name="SALARY">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_sFO-x-c4EeO3LNHaesxm9A" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-yOc4EeO3LNHaesxm9A" name="HRA">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_sFO-yec4EeO3LNHaesxm9A" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-yuc4EeO3LNHaesxm9A" name="CONVEYENCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_sFO-y-c4EeO3LNHaesxm9A" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-zOc4EeO3LNHaesxm9A" name="RETIRALS">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_sFO-zec4EeO3LNHaesxm9A" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_sFO-zuc4EeO3LNHaesxm9A" name="OTHER_BENEFITS">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_sFO-z-c4EeO3LNHaesxm9A" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_sFO-0Oc4EeO3LNHaesxm9A" name="SQL140529184644850" members="_sFO-tOc4EeO3LNHaesxm9A"/>
+  </LUW:LUWTable>
+  <LUW:LUWIndex xmi:id="_sFPlwOc4EeO3LNHaesxm9A" name="SQL140529184644790" Schema="_sFPlwuc4EeO3LNHaesxm9A" fillFactor="10" unique="true" systemGenerated="true" table="_sFO-sec4EeO3LNHaesxm9A" systemRequired="true">
+    <members xmi:id="_sFPlwec4EeO3LNHaesxm9A" column="_sFO-tOc4EeO3LNHaesxm9A"/>
+  </LUW:LUWIndex>
+  <DB2Model:DB2Schema xmi:id="_sFPlwuc4EeO3LNHaesxm9A" name="SYSIBM" indices="_sFPlwOc4EeO3LNHaesxm9A" database="_sFHp8ec4EeO3LNHaesxm9A"/>
+</xmi:XMI>

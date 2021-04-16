@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="NNCPPCO002001" name="LAB12_MSGSET2" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd#/0/SOAP_Domain_Msg;XSDElementDeclaration$MRMessage" name="SOAP_Domain_Msg"/>
+    <element
+      href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd#/0/SOAP_Domain_Msg;XSDElementDeclaration"
+      name="SOAP_Domain_Msg" type="mset://LAB12_MSGSET2#/-/complexType{}SOAP_Msg_type"/>
+    <complexType
+      baseType="mset://LAB12_MSGSET2#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd#/0/MIME_Headers_type;XSDComplexTypeDefinition" name="MIME_Headers_type"/>
+    <complexType
+      baseType="mset://LAB12_MSGSET2#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd#/0/Attachment_type;XSDComplexTypeDefinition=1" name="Attachment_type"/>
+    <complexType
+      baseType="mset://LAB12_MSGSET2#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd#/0/SOAP_Msg_type;XSDComplexTypeDefinition=2" name="SOAP_Msg_type"/>
+    <group
+      href="platform:/resource/LAB12_MSGSET2/LAB12_MSGSET2/soap.mxsd#/0/MIME_header_fields;XSDModelGroupDefinition" name="MIME_header_fields"/>
+  </MRMsgCollection>
+</MRMessageSet>

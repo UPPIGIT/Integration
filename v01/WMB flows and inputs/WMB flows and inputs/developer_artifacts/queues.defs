@@ -1,0 +1,6 @@
+delete qlocal(SAVINGS_LOAN_IN)
+define qlocal(SAVINGS_LOAN_IN)
+delete qlocal(SAVINGS_LOAN_OUT)
+define qlocal(SAVINGS_LOAN_OUT)
+delete qlocal(SAVINGS_LOAN_FAILURE)
+define qlocal(SAVINGS_LOAN_FAILURE)

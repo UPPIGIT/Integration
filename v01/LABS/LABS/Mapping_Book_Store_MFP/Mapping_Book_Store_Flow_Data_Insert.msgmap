@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:maplang="http://www.ibm.com/wbi/2005/maplang" xmlns:msg="http://www.ibm.com/wbi/2005/msg" xmlns:rdb="http://www.ibm.com/wbi/2005/rdb">
+  <maplang:MapOperation name="Mapping_Book_Store_Flow_Data_Insert" version="7.0.200.v20101130_1524" prefixes="/0/@namespaces.0/@prefix /0/@namespaces.1/@prefix">
+    <blockContents xsi:type="rdb:InsertStatement" targetMapName="$db:insert" dsnName="BSTOREDB" schemaName="UPENDER" tableName="CUSTACCTB">
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="FIRST_NAME">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Personal_Details/First_Name"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="LAST_NAME">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Personal_Details/Last_Name"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="USERID">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Personal_Details/User_ID"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="PASSWORD">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Personal_Details/Password"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="EMAIL">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Email_Address"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="DAY_PHONE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Daytime_Telephone"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="EVE_PHONE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Evening_Telephone"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="SHIP_ADDRESS1">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Shipping_Address/Address_1"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="SHIP_ADDRESS2">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Shipping_Address/Address_2"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="SHIP_TOWN">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Shipping_Address/Town"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="SHIP_POSTCODE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Shipping_Address/Postcode"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="BILL_ADDRESS1">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Billing_Address/Address_1"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="BILL_ADDRESS2">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Billing_Address/Address_2"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="BILL_TOWN">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Billing_Address/Town"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="BILL_POSTCODE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Billing_Address/Postcode"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="CARDTYPE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Payment_Details/Card"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="CARDNUM">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Payment_Details/Card_Number"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="EXP_DATE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Payment_Details/Expiry_Date"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="ISS_DATE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Payment_Details/Issue_Date"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="ISS_NUM">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Payment_Details/Issue_Number"/>
+        </blockContents>
+      </blockContents>
+      <blockContents xsi:type="rdb:ColumnStatement" mappableName="SECCODE">
+        <blockContents xsi:type="maplang:MapFromStatement">
+          <value xsi:type="maplang:MappableReferenceExpression" name="$source" text="$source/Create_Customer_Account_MSG/Payment_Details/Security_Code"/>
+        </blockContents>
+      </blockContents>
+    </blockContents>
+    <eParameters xsi:type="msg:MsgSourceMapRoot" name="$source" eType="/1"/>
+    <namespaces namespaceName="http://www.w3.org/2001/XMLSchema">
+      <prefix prefixName="xsd"/>
+    </namespaces>
+    <namespaces namespaceName="http://www.w3.org/2001/XMLSchema-instance">
+      <prefix prefixName="xsi"/>
+    </namespaces>
+  </maplang:MapOperation>
+  <msg:MessageHandle messageSetName="Customer_Account" namespaceName="" simpleName="Create_Customer_Account_MSG" messageKind="assembly">
+    <headers name="Properties" rootElementName="Properties"/>
+  </msg:MessageHandle>
+</xmi:XMI>

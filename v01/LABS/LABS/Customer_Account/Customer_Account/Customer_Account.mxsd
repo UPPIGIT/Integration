@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Personal_Details">
+    <xsd:sequence>
+      <xsd:element name="First_Name" type="xsd:string"/>
+      <xsd:element name="Last_Name" type="xsd:string"/>
+      <xsd:element name="User_ID" type="xsd:string"/>
+      <xsd:element name="Password" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Shipping_Address">
+    <xsd:sequence>
+      <xsd:element name="Address_1" type="xsd:string"/>
+      <xsd:element name="Address_2" type="xsd:string"/>
+      <xsd:element name="Town" type="xsd:string"/>
+      <xsd:element name="Postcode" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Billing_Address">
+    <xsd:sequence>
+      <xsd:element name="Address_1" type="xsd:string"/>
+      <xsd:element name="Address_2" type="xsd:string"/>
+      <xsd:element name="Town" type="xsd:string"/>
+      <xsd:element name="Postcode" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Payment_Details">
+    <xsd:sequence>
+      <xsd:element name="Card" type="xsd:string"/>
+      <xsd:element name="Card_Number" type="xsd:string"/>
+      <xsd:element name="Expiry_Date" type="xsd:string"/>
+      <xsd:element name="Issue_Date" type="xsd:string"/>
+      <xsd:element name="Issue_Number" type="xsd:string"/>
+      <xsd:element name="Security_Code" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Create_Customer_Account_MSG">
+    <xsd:sequence>
+      <xsd:element name="Personal_Details" type="Personal_Details"/>
+      <xsd:element name="Email_Address" type="xsd:string"/>
+      <xsd:element name="Daytime_Telephone" type="xsd:string"/>
+      <xsd:element name="Evening_Telephone" type="xsd:string"/>
+      <xsd:element name="Shipping_Address" type="Shipping_Address"/>
+      <xsd:element name="Billing_Address" type="Billing_Address"/>
+      <xsd:element name="Payment_Details" type="Payment_Details"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Create_Customer_Account_MSG" type="Create_Customer_Account_MSG">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/Create_Customer_Account_MSG;XSDElementDeclaration$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

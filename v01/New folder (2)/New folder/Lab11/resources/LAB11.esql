@@ -1,0 +1,41 @@
+
+
+
+CREATE COMPUTE MODULE Compute_TimeoutRequest
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN		
+		SET OutputRoot=InputRoot;
+		
+		-- create TimeoutRequest structure in Environment
+		-- Action can be SET our CANCEL		
+		SET Environment.TimeoutRequest.Action='SET';
+		-- mandatory identifier - to match SET and CANCEL requests		
+		SET Environment.TimeoutRequest.Identifier='STOP_NOW';
+		
+		-- set the first timer directly after sending a first msg to the flow		
+		SET Environment.TimeoutRequest.StartDate='TODAY';			
+		SET Environment.TimeoutRequest.StartTime='NOW';
+		
+		-- every 2 minutes		
+		SET Environment.TimeoutRequest.Interval=120;
+		-- repeat endlessly		
+		SET Environment.TimeoutRequest.Count=-1;
+		
+		-- don't care about timeouts during broker or flow outages		
+		SET Environment.TimeoutRequest.IgnoreMissed='TRUE';
+		-- subsequent requests with a matching Identifier can overwrite this request		
+		SET Environment.TimeoutRequest.AllowOverwrite='TRUE';
+		
+		
+		
+		-- propagate to downstream nodes thru terminal 'out 1' (1) and keep output		
+		PROPAGATE TO TERMINAL 1 DELETE NONE;
+		
+		-- modify Identifier and StartTime, all other fields remain the same		
+		SET Environment.TimeoutRequest.Identifier='START_1_MIN_LATER';
+		SET Environment.TimeoutRequest.StartTime=CURRENT_TIME + INTERVAL '1' MINUTE;
+		-- leave node thru default terminal 'out' (0)		
+		RETURN TRUE;
+	END;
+
+END MODULE;

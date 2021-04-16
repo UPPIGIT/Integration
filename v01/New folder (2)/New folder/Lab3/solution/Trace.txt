@@ -1,0 +1,355 @@
+Trace at 2005-09-30 16:37:35.000904
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2005-09-30 14:37:34.980'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51204d5153492020202020202020bd053d4320023a03'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'MQSI                                            '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2005-09-30'
+    (0x03000000):PutTime          = GMTTIME '14:37:34.980'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x01000021):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		
+Trace at 2005-09-30 16:38:19.133321
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2005-09-30 14:38:19.120'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51204d5153492020202020202020bd053d4320023a04'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'MQSI                                            '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2005-09-30'
+    (0x03000000):PutTime          = GMTTIME '14:38:19.120'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x01000021):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		
+Trace at 2005-09-30 16:55:59.224786
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2005-09-30 14:55:59.200'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51204d5153492020202020202020bd053d4320023a05'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'MQSI                                            '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2005-09-30'
+    (0x03000000):PutTime          = GMTTIME '14:55:59.200'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x01000021):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		
+Trace at 2005-09-30 17:53:02.837236
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2005-09-30 15:52:58.390'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51204d5153492020202020202020bd053d4320023a09'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'MQSI                                            '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2005-09-30'
+    (0x03000000):PutTime          = GMTTIME '15:52:58.390'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x0100001B):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		
+Trace at 2005-09-30 17:54:44.846090
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2005-09-30 15:54:39.640'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51204d5153492020202020202020bd053d4320023a0a'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'MQSI                                            '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2005-09-30'
+    (0x03000000):PutTime          = GMTTIME '15:54:39.640'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x0100001B):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		

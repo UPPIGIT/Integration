@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_Sja0oeW0EeOKm4eg8TWBUA" name="RESERVDB" vendor="DB2 UDB" version="V9.7" schemas="_Sj9nMOW0EeOKm4eg8TWBUA _SkDGwuW0EeOKm4eg8TWBUA">
+    <eAnnotations xmi:id="_SjbbsOW0EeOKm4eg8TWBUA" source="ConnectionURI">
+      <details xmi:id="_SjbbseW0EeOKm4eg8TWBUA" key="ConnectionKey" value="RESERVDB"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_Sj9nMOW0EeOKm4eg8TWBUA" name="UPENDER" indices="_Sj-OQOW0EeOKm4eg8TWBUA" tables="_Sj-1UOW0EeOKm4eg8TWBUA _SkBRkOW0EeOKm4eg8TWBUA" database="_Sja0oeW0EeOKm4eg8TWBUA"/>
+  <LUW:LUWIndex xmi:id="_Sj-OQOW0EeOKm4eg8TWBUA" name="FLIGHT_UNIQ" Schema="_Sj9nMOW0EeOKm4eg8TWBUA" fillFactor="10" unique="true" systemGenerated="true" table="_Sj-1UOW0EeOKm4eg8TWBUA" systemRequired="true">
+    <members xmi:id="_Sj-OQeW0EeOKm4eg8TWBUA" column="_Sj-1UeW0EeOKm4eg8TWBUA"/>
+    <members xmi:id="_Sj-OQuW0EeOKm4eg8TWBUA" column="_Sj-1U-W0EeOKm4eg8TWBUA"/>
+  </LUW:LUWIndex>
+  <LUW:LUWTable xmi:id="_Sj-1UOW0EeOKm4eg8TWBUA" name="XMLFLIGHTTB" schema="_Sj9nMOW0EeOKm4eg8TWBUA" index="_Sj-OQOW0EeOKm4eg8TWBUA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj-1UeW0EeOKm4eg8TWBUA" name="FLIGHTDATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Sj-1UuW0EeOKm4eg8TWBUA" name="CHAR" length="8"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj-1U-W0EeOKm4eg8TWBUA" name="FLIGHTNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Sj-1VOW0EeOKm4eg8TWBUA" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj-1VeW0EeOKm4eg8TWBUA" name="ECONOMICCLASS" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj-1VuW0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj-1V-W0EeOKm4eg8TWBUA" name="FIRSTCLASS" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj-1WOW0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj-1WeW0EeOKm4eg8TWBUA" name="TOTALECONOMIC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj-1WuW0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj-1W-W0EeOKm4eg8TWBUA" name="TOTALFIRST" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj-1XOW0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj_cYOW0EeOKm4eg8TWBUA" name="ECONOMICPRICE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj_cYeW0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj_cYuW0EeOKm4eg8TWBUA" name="FIRSTPRICE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj_cY-W0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj_cZOW0EeOKm4eg8TWBUA" name="STARTPOINT" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Sj_cZeW0EeOKm4eg8TWBUA" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj_cZuW0EeOKm4eg8TWBUA" name="ENDPOINT" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Sj_cZ-W0EeOKm4eg8TWBUA" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Sj_caOW0EeOKm4eg8TWBUA" name="RESERVATIONSEQNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Sj_caeW0EeOKm4eg8TWBUA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_Sj_cauW0EeOKm4eg8TWBUA" name="FLIGHT_UNIQ" members="_Sj-1UeW0EeOKm4eg8TWBUA _Sj-1U-W0EeOKm4eg8TWBUA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_SkBRkOW0EeOKm4eg8TWBUA" name="XMLPASSENGERTB" schema="_Sj9nMOW0EeOKm4eg8TWBUA" index="_SkDGwOW0EeOKm4eg8TWBUA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_SkBRkeW0EeOKm4eg8TWBUA" name="LASTNAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_SkBRkuW0EeOKm4eg8TWBUA" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_SkBRk-W0EeOKm4eg8TWBUA" name="FIRSTNAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_SkBRlOW0EeOKm4eg8TWBUA" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_SkB4oOW0EeOKm4eg8TWBUA" name="FLIGHTNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_SkB4oeW0EeOKm4eg8TWBUA" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_SkB4ouW0EeOKm4eg8TWBUA" name="FLIGHTDATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_SkB4o-W0EeOKm4eg8TWBUA" name="CHAR" length="8"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_SkB4pOW0EeOKm4eg8TWBUA" name="CLASSTYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_SkB4peW0EeOKm4eg8TWBUA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_SkB4puW0EeOKm4eg8TWBUA" name="RESERVATIONNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_SkB4p-W0EeOKm4eg8TWBUA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_SkB4qOW0EeOKm4eg8TWBUA" name="SQL140527180019630" members="_SkB4puW0EeOKm4eg8TWBUA"/>
+  </LUW:LUWTable>
+  <LUW:LUWIndex xmi:id="_SkDGwOW0EeOKm4eg8TWBUA" name="SQL140527180019510" Schema="_SkDGwuW0EeOKm4eg8TWBUA" fillFactor="10" unique="true" systemGenerated="true" table="_SkBRkOW0EeOKm4eg8TWBUA" systemRequired="true">
+    <members xmi:id="_SkDGweW0EeOKm4eg8TWBUA" column="_SkB4puW0EeOKm4eg8TWBUA"/>
+  </LUW:LUWIndex>
+  <DB2Model:DB2Schema xmi:id="_SkDGwuW0EeOKm4eg8TWBUA" name="SYSIBM" indices="_SkDGwOW0EeOKm4eg8TWBUA" database="_Sja0oeW0EeOKm4eg8TWBUA"/>
+</xmi:XMI>

@@ -1,0 +1,280 @@
+CREATE PROCEDURE Mapping_Order_MF_Mapping(IN source REFERENCE,IN target REFERENCE,IN InputLocalEnvironment REFERENCE,IN OutputLocalEnvironment REFERENCE) BEGIN
+DECLARE stackPtr REFERENCE TO InputLocalEnvironment.SQL.MAP;
+CREATE FIELD stackPtr.LOCAL_STACK;
+DECLARE localStackPtr REFERENCE TO stackPtr.LOCAL_STACK;
+CREATE FIELD localStackPtr.SOURCE_STACK;
+DECLARE sourceStackPtr REFERENCE TO localStackPtr.SOURCE_STACK;
+CREATE FIELD sourceStackPtr.nestingLevel;
+DECLARE nestingLevel REFERENCE TO sourceStackPtr.nestingLevel;
+CREATE FIELD sourceStackPtr.occurrence;
+CREATE FIELD sourceStackPtr.sourceLiteral;
+DECLARE "#WBIMB_PARSER_CATEGORY_XMLNSC" CONSTANT INTEGER 2;
+DECLARE "#WBIMB_PARSER_CATEGORY_XML" CONSTANT INTEGER 1;
+DECLARE "#WBIMB_PARSER_CATEGORY_MRM" CONSTANT INTEGER 0;
+CREATE FIELD localStackPtr.field;
+DECLARE localStackPtrRef REFERENCE TO localStackPtr.field;
+DECLARE globalStackRef REFERENCE TO stackPtr.GLOBAL_STACK;
+IF (NOT LASTMOVE(globalStackRef)) THEN
+	CREATE FIELD stackPtr.GLOBAL_STACK;
+	DECLARE globalStackPtr REFERENCE TO stackPtr.GLOBAL_STACK;
+	CREATE FIELD globalStackPtr.frame;
+	CREATE FIELD globalStackPtr.frameDepth;
+	SET globalStackPtr.frameDepth = 0;
+END IF;
+DECLARE "xsd" NAMESPACE 'http://www.w3.org/2001/XMLSchema';
+DECLARE "xsi" NAMESPACE 'http://www.w3.org/2001/XMLSchema-instance';
+CREATE FIELD stackPtr.sourceParserCategory;
+DECLARE source_msg_root REFERENCE TO source;
+MOVE localStackPtrRef TO source;
+MOVE localStackPtrRef LASTCHILD;
+SET localStackPtr.field = FIELDNAME(localStackPtrRef);
+IF localStackPtr.field IN ('XMLNSC', 'SOAP', 'DataObject') THEN
+	MOVE source_msg_root FIRSTCHILD NAME FIELDNAME(localStackPtrRef);
+	SET stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC";
+ELSEIF localStackPtr.field IN ('XMLNS', 'XML', 'JMSMap', 'JMSStream') THEN
+	MOVE source_msg_root FIRSTCHILD NAME FIELDNAME(localStackPtrRef);
+	SET stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XML";
+ELSEIF localStackPtr.field IN ('MRM', 'BLOB') THEN
+	MOVE source_msg_root FIRSTCHILD NAME FIELDNAME(localStackPtrRef);
+	SET stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_MRM";
+ELSEIF localStackPtr.field IN ('LocalEnvironment', 'Properties', 'MQMD', 'MQPCF', 'MQCIH', 'MQDLH', 'MQIIH', 'MQMDE', 'MQRFH', 'MQRFH2', 'MQRFH2C', 'MQRFH2', 'MQRMH', 'MQSAPH', 'MQWIH', 'SMQ_BMH', 'EmailOutputHeader', 'HTTPInputHeader', 'HTTPReplyHeader', 'HTTPRequestHeader', 'HTTPResponseHeader', 'JMSTransport') THEN
+ELSE
+	MOVE source LASTCHILD;
+	THROW EXCEPTION SEVERITY 20 MESSAGE 4680 VALUES(FIELDNAME(source), MessageFlowLabel || '.' || NodeLabel);
+END IF;
+DECLARE source_body REFERENCE TO source_msg_root;
+IF localStackPtr.field IN ('XMLNSC', 'XMLNS', 'JMSMap', 'JMSStream', 'DataObject', 'BLOB', 'XML') THEN
+	MOVE source_body FIRSTCHILD  NAMESPACE '' NAME 'Create_Book_Order_MSG';
+END IF;
+IF FIELDNAME(source.MQRFH2C) IS NOT NULL THEN
+	CREATE LASTCHILD OF localStackPtr DOMAIN 'MQRFH2C' NAME 'MQRFH2';
+	SET localStackPtr.MQRFH2 = source.MQRFH2C;
+ELSEIF FIELDNAME(source.MQRFH2) IS NOT NULL THEN
+	CREATE LASTCHILD OF localStackPtr DOMAIN 'MQRFH2' NAME 'MQRFH2';
+	SET localStackPtr.MQRFH2 = source.MQRFH2;
+ELSE
+	CREATE FIELD localStackPtr.MQRFH2;
+END IF;
+DECLARE source_MQRFH2_or_MQRFH2C REFERENCE TO localStackPtr.MQRFH2;
+CREATE FIELD stackPtr.targetParserCategory;
+CREATE FIELD stackPtr.targetParser;
+DETACH target.Properties;
+SET stackPtr.targetParserCategory = "#WBIMB_PARSER_CATEGORY_MRM";
+MOVE target LASTCHILD NAME 'Properties';
+IF LASTMOVE(target) THEN
+	MOVE target PARENT;
+ELSE
+	CREATE LASTCHILD OF target DOMAIN 'Properties';
+END IF;
+SET target."Properties"."MessageSet" = 'Book_Order_Response';
+SET target."Properties"."MessageType" = '{}:Book_Order_Response_MSG';
+SET target."Properties"."Encoding" = source."Properties"."Encoding";
+SET target."Properties"."CodedCharSetId" = source."Properties"."CodedCharSetId";
+SET target."Properties"."Transactional" = source."Properties"."Transactional";
+SET target."Properties"."Persistence" = source."Properties"."Persistence";
+SET target."Properties"."CreationTime" = source."Properties"."CreationTime";
+SET target."Properties"."ExpirationTime" = source."Properties"."ExpirationTime";
+SET target."Properties"."Priority" = source."Properties"."Priority";
+SET target."Properties"."ReplyIdentifier" = source."Properties"."ReplyIdentifier";
+SET target."Properties"."ReplyProtocol" = source."Properties"."ReplyProtocol";
+SET target."Properties"."Topic" = source."Properties"."Topic";
+SET target."Properties"."ContentType" = source."Properties"."ContentType";
+SET target."Properties"."IdentitySourceType" = source."Properties"."IdentitySourceType";
+SET target."Properties"."IdentitySourceToken" = source."Properties"."IdentitySourceToken";
+SET target."Properties"."IdentitySourcePassword" = source."Properties"."IdentitySourcePassword";
+SET target."Properties"."IdentitySourceIssuedBy" = source."Properties"."IdentitySourceIssuedBy";
+SET target."Properties"."IdentityMappedType" = source."Properties"."IdentityMappedType";
+SET target."Properties"."IdentityMappedToken" = source."Properties"."IdentityMappedToken";
+SET target."Properties"."IdentityMappedPassword" = source."Properties"."IdentityMappedPassword";
+SET target."Properties"."IdentityMappedIssuedBy" = source."Properties"."IdentityMappedIssuedBy";
+MOVE localStackPtrRef TO target."Properties";
+IF LASTMOVE(localStackPtrRef) THEN
+	MOVE localStackPtrRef FIRSTCHILD;
+	IF (NOT LASTMOVE(localStackPtrRef)) AND (FIELDVALUE(localStackPtrRef) IS NULL) THEN
+		DELETE FIELD localStackPtrRef;
+	END IF;
+END IF;
+CALL sql.map.WBIMB_ESQL_SYS_LIB_CopyMessageHeaders(source, target);
+SET stackPtr.targetParser = 'XMLNSC';
+SET stackPtr.targetParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC";
+MOVE target LASTCHILD NAME 'XMLNSC';
+IF LASTMOVE(target) THEN
+	MOVE target PARENT;
+ELSE
+	CREATE LASTCHILD OF target DOMAIN 'XMLNSC';
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Customer_ID" = source_body.(XMLNSC.Element)"Customer_ID";
+ELSE
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Customer_ID" = source_body."Customer_ID";
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	CREATE FIELD localStackPtr.is_atom;
+CALL sql.map.xpath20.WBIMB_ESQL_SYS_LIB_is_atom(source_body.(XMLNSC.Element)"Customer_ID", source_body,localStackPtr);
+CALL sql.map.xpath20.WBIMB_ESQL_SYS_LIB_is_atom(source_body.(XMLNSC.Element)"Order_Date", source_body,localStackPtr);
+IF localStackPtr.is_atom.result[1] AND localStackPtr.is_atom.result[2] THEN
+SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Order_Number" = sql.map.xpath20.WBIMB_ESQL_SYS_LIB_concat(CAST( source_body.(XMLNSC.Element)"Customer_ID" AS CHARACTER), CAST( source_body.(XMLNSC.Element)"Order_Date" AS CHARACTER));
+ELSE
+	THROW USER EXCEPTION MESSAGE 2949 VALUES('The message path references multiple values', 'Ensure the message path refers to a single value', 'Check the message path does not have repeating segments or its repeating segments are bounded by a for statement');
+END IF;
+ELSE
+	CREATE FIELD localStackPtr.is_atom;
+CALL sql.map.xpath20.WBIMB_ESQL_SYS_LIB_is_atom(source_body."Customer_ID", source_body,localStackPtr);
+CALL sql.map.xpath20.WBIMB_ESQL_SYS_LIB_is_atom(source_body."Order_Date", source_body,localStackPtr);
+IF localStackPtr.is_atom.result[1] AND localStackPtr.is_atom.result[2] THEN
+SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Order_Number" = sql.map.xpath20.WBIMB_ESQL_SYS_LIB_concat(CAST( source_body."Customer_ID" AS CHARACTER), CAST( source_body."Order_Date" AS CHARACTER));
+ELSE
+	THROW USER EXCEPTION MESSAGE 2949 VALUES('The message path references multiple values', 'Ensure the message path refers to a single value', 'Check the message path does not have repeating segments or its repeating segments are bounded by a for statement');
+END IF;
+END IF;
+DELETE FIELD localStackPtr.is_atom;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Order_Date" = source_body.(XMLNSC.Element)"Order_Date";
+ELSE
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Order_Date" = source_body."Order_Date";
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	IF (source_body.(XMLNSC.Element)"First_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+ELSE
+	IF (source_body."First_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+END IF;
+IF localStackPtr.field THEN
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"First_Class" = source_body.(XMLNSC.Element)"First_Class";
+ELSE
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"First_Class" = source_body."First_Class";
+END IF;
+ELSE
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	IF (source_body.(XMLNSC.Element)"Second_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+ELSE
+	IF (source_body."Second_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+END IF;
+IF localStackPtr.field THEN
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Second_Class" = source_body.(XMLNSC.Element)"Second_Class";
+ELSE
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Second_Class" = source_body."Second_Class";
+END IF;
+ELSE
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	IF (source_body.(XMLNSC.Element)"Airmail") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+ELSE
+	IF (source_body."Airmail") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+END IF;
+IF localStackPtr.field THEN
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Airmail" = source_body.(XMLNSC.Element)"Airmail";
+ELSE
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Airmail" = source_body."Airmail";
+END IF;
+ELSE
+END IF;
+DECLARE "#sr0" REFERENCE TO source_body."Book_Details";
+IF LASTMOVE("#sr0") THEN
+	CALL sql.map.WBIMB_ESQL_SYS_LIB_SetCurrentSourcePosition(sourceStackPtr, '"#sr0"', 'source_body."Book_Details"');
+	WHILE (LASTMOVE("#sr0")) DO
+CREATE LASTCHILD OF target."XMLNSC"."Book_Order_Response_MSG" NAME 'Book_Details';
+SET target."XMLNSC"."Book_Order_Response_MSG"."Book_Details"[<] = "#sr0";
+		MOVE "#sr0" NEXTSIBLING REPEAT NAME;
+		IF LASTMOVE("#sr0") THEN
+			SET sourceStackPtr.occurrence[nestingLevel] = sourceStackPtr.occurrence[nestingLevel] + 1;
+		END IF;
+	END WHILE;
+	CALL sql.map.WBIMB_ESQL_SYS_LIB_RestoreCurrentSourcePosition(sourceStackPtr);
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	IF (source_body.(XMLNSC.Element)"First_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+ELSE
+	IF (source_body."First_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+END IF;
+IF localStackPtr.field THEN
+SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Delivery_Price" = 18.00;
+ELSE
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	IF (source_body.(XMLNSC.Element)"Airmail") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+ELSE
+	IF (source_body."Airmail") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+END IF;
+IF localStackPtr.field THEN
+SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Delivery_Price" = 12.00;
+ELSE
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	IF (source_body.(XMLNSC.Element)"Second_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+ELSE
+	IF (source_body."Second_Class") = ('Yes') THEN
+	SET localStackPtr.field = TRUE;
+ELSE
+	SET localStackPtr.field = FALSE;
+END IF;
+END IF;
+IF localStackPtr.field THEN
+SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Delivery_Price" = 6.00;
+ELSE
+END IF;
+END IF;
+END IF;
+IF stackPtr.sourceParserCategory = "#WBIMB_PARSER_CATEGORY_XMLNSC" THEN
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Total_Price" = (SELECT SUM(SELECT SUM(R0) FROM R1.(XMLNSC.Element)"Book_Price"[] AS R0) FROM source_body."Book_Details"[] AS R1);
+ELSE
+	SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Total_Price" = (SELECT SUM(SELECT SUM(R0) FROM R1."Book_Price"[] AS R0) FROM source_body."Book_Details"[] AS R1);
+END IF;
+SET target."XMLNSC"."Book_Order_Response_MSG".(XMLNSC.Field)"Order_Status" = 'Order Delivered';
+CALL sql.map.WBIMB_ESQL_SYS_LIB_PushGlobalStackFrame(stackPtr);
+PROPAGATE;
+CALL sql.map.WBIMB_ESQL_SYS_LIB_PopGlobalStackFrame(stackPtr);
+MOVE globalStackRef TO stackPtr.GLOBAL_STACK;
+IF (LASTMOVE(globalStackRef) AND globalStackRef.frameDepth = 0)THEN
+	DELETE FIELD stackPtr.GLOBAL_STACK;
+	DELETE FIELD stackPtr.LOCAL_STACK;
+	DELETE FIELD stackPtr.sourceParserCategory;
+	DELETE FIELD stackPtr.targetParserCategory;
+	DELETE FIELD stackPtr.targetParser;
+END IF;
+END;

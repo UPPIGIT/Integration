@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_-WfV4ObzEeO1-7q3MQ6wfw" name="SAVG_ACC" vendor="DB2 UDB" version="V9.7" schemas="_-WfV4-bzEeO1-7q3MQ6wfw _-WfV7ubzEeO1-7q3MQ6wfw">
+    <eAnnotations xmi:id="_-WfV4ebzEeO1-7q3MQ6wfw" source="ConnectionURI">
+      <details xmi:id="_-WfV4ubzEeO1-7q3MQ6wfw" key="ConnectionKey" value="SAVG_ACC"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_-WfV4-bzEeO1-7q3MQ6wfw" name="DB2SCHEMA" tables="_-WfV5ObzEeO1-7q3MQ6wfw _-WfV-ebzEeO1-7q3MQ6wfw _-WfV8ebzEeO1-7q3MQ6wfw _-WfWBObzEeO1-7q3MQ6wfw" database="_-WfV4ObzEeO1-7q3MQ6wfw"/>
+  <LUW:LUWTable xmi:id="_-WfV5ObzEeO1-7q3MQ6wfw" name="LOAN_ACCOUNT" schema="_-WfV4-bzEeO1-7q3MQ6wfw" index="_-WfV7ObzEeO1-7q3MQ6wfw" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV5ebzEeO1-7q3MQ6wfw" name="ACCOUNT_NO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-WfV5ubzEeO1-7q3MQ6wfw" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV5-bzEeO1-7q3MQ6wfw" name="ACCOUNT_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-WfV6ObzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV6ebzEeO1-7q3MQ6wfw" name="BALANCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_-WfV6ubzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_-WfV6-bzEeO1-7q3MQ6wfw" name="SQL140528123015900" members="_-WfV5ebzEeO1-7q3MQ6wfw"/>
+  </LUW:LUWTable>
+  <LUW:LUWIndex xmi:id="_-WfV7ObzEeO1-7q3MQ6wfw" name="SQL140528123015840" Schema="_-WfV7ubzEeO1-7q3MQ6wfw" fillFactor="10" unique="true" systemGenerated="true" table="_-WfV5ObzEeO1-7q3MQ6wfw" systemRequired="true">
+    <members xmi:id="_-WfV7ebzEeO1-7q3MQ6wfw" column="_-WfV5ebzEeO1-7q3MQ6wfw"/>
+  </LUW:LUWIndex>
+  <DB2Model:DB2Schema xmi:id="_-WfV7ubzEeO1-7q3MQ6wfw" name="SYSIBM" indices="_-WfV7ObzEeO1-7q3MQ6wfw _-WfV7-bzEeO1-7q3MQ6wfw" database="_-WfV4ObzEeO1-7q3MQ6wfw"/>
+  <LUW:LUWIndex xmi:id="_-WfV7-bzEeO1-7q3MQ6wfw" name="SQL140528120627630" Schema="_-WfV7ubzEeO1-7q3MQ6wfw" fillFactor="10" unique="true" systemGenerated="true" table="_-WfV8ebzEeO1-7q3MQ6wfw" systemRequired="true">
+    <members xmi:id="_-WfV8ObzEeO1-7q3MQ6wfw" column="_-WfV8ubzEeO1-7q3MQ6wfw"/>
+  </LUW:LUWIndex>
+  <LUW:LUWTable xmi:id="_-WfV8ebzEeO1-7q3MQ6wfw" name="SAVINGS_ACCOUNT" schema="_-WfV4-bzEeO1-7q3MQ6wfw" index="_-WfV7-bzEeO1-7q3MQ6wfw" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV8ubzEeO1-7q3MQ6wfw" name="ACCOUNT_NO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-WfV8-bzEeO1-7q3MQ6wfw" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV9ObzEeO1-7q3MQ6wfw" name="ACCOUNT_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-WfV9ebzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV9ubzEeO1-7q3MQ6wfw" name="BALANCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_-WfV9-bzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_-WfV-ObzEeO1-7q3MQ6wfw" name="SQL140528120627770" members="_-WfV8ubzEeO1-7q3MQ6wfw"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_-WfV-ebzEeO1-7q3MQ6wfw" name="LOAN_ACCOUNT_TRANSACTION" schema="_-WfV4-bzEeO1-7q3MQ6wfw" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV-ubzEeO1-7q3MQ6wfw" name="ACCOUNT_NO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-WfV--bzEeO1-7q3MQ6wfw" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV_ObzEeO1-7q3MQ6wfw" name="ACCOUNT_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-WfV_ebzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfV_ubzEeO1-7q3MQ6wfw" name="BALANCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_-WfV_-bzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWAObzEeO1-7q3MQ6wfw" name="TRANSACTION_AMOUNT">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_-WfWAebzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWAubzEeO1-7q3MQ6wfw" name="TRANSACTION_STATUS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-WfWA-bzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_-WfWBObzEeO1-7q3MQ6wfw" name="SAVINGS_ACCOUNT_TRANSACTION" schema="_-WfV4-bzEeO1-7q3MQ6wfw" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWBebzEeO1-7q3MQ6wfw" name="ACCOUNT_NO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-WfWBubzEeO1-7q3MQ6wfw" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWB-bzEeO1-7q3MQ6wfw" name="ACCOUNT_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-WfWCObzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWCebzEeO1-7q3MQ6wfw" name="BALANCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_-WfWCubzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWC-bzEeO1-7q3MQ6wfw" name="TRANSACTION_AMOUNT">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_-WfWDObzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_-WfWDebzEeO1-7q3MQ6wfw" name="TRANSACTION_STATUS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-WfWDubzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+  </LUW:LUWTable>
+</xmi:XMI>

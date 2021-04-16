@@ -1,0 +1,56 @@
+CREATE DATABASE MODULE UpdateFlightTb
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		/* populate the environment with flight information from the satabase */
+		
+		SET Environment.Variables = THE(SELECT T.* FROM Database.UPENDER.XMLFLIGHTTB  AS T 
+		WHERE  T.FLIGHTDATE = Root.XMLNSC.Reservation.FlightDetails.Date 
+		AND T.FLIGHTNO = Root.XMLNSC.Reservation.FlightDetails.Number);
+		
+		DECLARE ref REFERENCE TO Root.XMLNSC.Reservation.ListOfPassengers.PassengerDetails[1];
+		
+		SET Environment.Variables.EconomyClassRemain = CAST(Environment.Variables.TOTALECONOMIC AS INTEGER);
+		SET Environment.Variables.FirstClassRemain = CAST(Environment.Variables.TOTALFIRST AS INTEGER);
+		
+		SET Environment.Variables.NoPassengers = 0;
+		
+		WHILE (ref) DO
+			
+			IF ref.Class = 'F' THEN
+				
+				if Environment.Variables.EconomyClassRemain >= 1 THEN
+					
+					SET Environment.Variables.FirstClassRemain= Environment.Variables.FirstClassRemain - 1;
+					SET Environment.Variables.FIRSTCLASS = Environment.Variables.FIRSTCLASS +1;
+					SET Environment.Variables.NoPassengers = Environment.NoPassengers+1;
+					
+				
+				ELSE
+					THROW USER EXCEPTION MESSAGE 2949 VALUES('Number of passengers exceeds capacity');
+				END IF;
+			END IF;
+			
+		ELSE
+			
+			IF Environment.Variables.EconomyClassRemain>=1 THEN
+				
+				SET Environment.Variables.EconomyClassRemain = Environment.Variables.EconomyClassRemain - 1;
+				SET Environment.Variables.ECONOMICCLASS = Environment.Variables.ECONOMICCLASS -1;
+				SET Environment.Varibales.NoPassengers =Environment.Variables.NoPassengers+1;
+				
+			ELSE
+				THROW USER EXCEPTION MESSAGE 2949 VALUES('Number of passengers exceed capacity');
+				
+			
+				
+			END IF;
+			
+		END WHILE;
+		
+		
+	
+		RETURN TRUE;
+	END;
+
+END MODULE;

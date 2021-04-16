@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="Con7" userid="" password="" url="jdbc:db2:SAMPLE" host="localhost" driver="com.ibm.db2.jcc.DB2Driver" otherDriver="com.ibm.db2.jcc.DB2Driver" classLocation="C:\SW\SQLLIB\java\db2jcc.jar;C:\SW\SQLLIB\java\db2jcc_license_cisuz.jar" dbName="SAMPLE" jdkHome="C:\SW\SQLLIB\java\jdk" currentSchema="" packageOwner="" buildOwner="">
+  <database href="Con7_SAMPLE.dbxmi#/"/>
+  <filter languageType="15">
+    <filterElement text="MQSIUSER">
+      <targets target="SCHEMA"/>
+    </filterElement>
+  </filter>
+  <jdbcDriver href="DB2UDBNT_V82_Domain.xmi#JDBCDriver_6"/>
+</RDBSchema:RDBConnection>

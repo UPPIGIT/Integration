@@ -1,0 +1,46 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+--		DECLARE body REFERENCE TO InputRoot.SOAP.Body;
+--		
+--		InsertPerson :BEGIN ATOMIC
+--		
+--	DECLARE i INTEGER ;
+--	
+--	SET i = CARDINALITY(Tree.Persons[])+1;
+--	SET Tree.Persons[i] = body;
+--	END InsertPerson;
+--		
+--		
+--		
+--		
+
+  INSERT INTO Database.ADSDB.DB2ADMIN.ADDREESSBOOKTB ( NAME,CITY,STREET,PROVINCE,POSTALCODE,AREA,PREFIX,LOCAL) 
+  VALUES ( InputRoot.SOAP.Body.ns2:Person.ns2:Name,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:City,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:Street,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:Province,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PostalCode,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PhoneNumber.ns2:Area,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PhoneNumber.ns2:Prefix,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PhoneNumber.ns2:Local);
+   
+   
+   SET OutputRoot.SOAP.Body.ns2:SaveAddressResponse = TRUE;
+   
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;

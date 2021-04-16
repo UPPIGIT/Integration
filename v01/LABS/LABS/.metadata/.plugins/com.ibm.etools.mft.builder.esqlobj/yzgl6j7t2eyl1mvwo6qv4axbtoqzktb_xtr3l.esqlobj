@@ -1,0 +1,7 @@
+CREATE COMPUTE MODULE "IBM_WBIMB_Mapping_Order_MF_Mapping"
+CREATE FUNCTION MAIN() RETURNS BOOLEAN
+BEGIN
+CALL Mapping_Order_MF_Mapping(InputRoot, OutputRoot, InputLocalEnvironment, OutputLocalEnvironment);
+	RETURN FALSE;
+END;
+END MODULE;

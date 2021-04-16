@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		SET OutputRoot = InputRoot;
+		SET OutputRoot.Properties.MessageFormat = 'XML1';
+		PROPAGATE DELETE NONE;
+		SET OutputRoot.Properties.MessageFormat = 'Binary1';
+		PROPAGATE DELETE NONE;
+		SET OutputRoot.Properties.MessageFormat = 'Text1';
+		RETURN TRUE;
+	END;

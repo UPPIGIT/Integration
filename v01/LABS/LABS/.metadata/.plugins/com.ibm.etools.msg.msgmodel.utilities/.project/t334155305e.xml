@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="C5O689C002001" name="Book_Order" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/Book_Order/Book_Order/Book_Order.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/Book_Order/Book_Order/Book_Order.mxsd#/0/Create_Book_Order_MSG;XSDElementDeclaration$MRMessage" name="Create_Book_Order_MSG"/>
+    <element
+      href="platform:/resource/Book_Order/Book_Order/Book_Order.mxsd#/0/Create_Book_Order_MSG;XSDElementDeclaration"
+      name="Create_Book_Order_MSG" type="mset://Book_Order#/-/complexType{}Create_Book_Order_MSG"/>
+    <complexType
+      baseType="mset://Book_Order#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Book_Order/Book_Order/Book_Order.mxsd#/0/Create_Book_Order_MSG;XSDComplexTypeDefinition" name="Create_Book_Order_MSG"/>
+    <complexType
+      baseType="mset://Book_Order#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Book_Order/Book_Order/Book_Order.mxsd#/0/Book_Details;XSDComplexTypeDefinition=1" name="Book_Details"/>
+    <group
+      href="platform:/resource/Book_Order/Book_Order/Book_Order.mxsd#/0/Delivery_Method;XSDModelGroupDefinition" name="Delivery_Method"/>
+  </MRMsgCollection>
+</MRMessageSet>

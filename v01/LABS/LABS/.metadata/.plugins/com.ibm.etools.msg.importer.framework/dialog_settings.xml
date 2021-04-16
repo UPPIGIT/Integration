@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="select_external_locations">
+		<item value="C:\Users\IBM_ADMIN\IBM\wmbt70\Samples\AddressBookMessageSet\AddressBookMessageSet\addressbook\http\com\AddressBook.wsdl"/>
+		<item value="C:\Users\IBM_ADMIN\Desktop\WMB flows and inputs\AddressBook.wsdl"/>
+		<item value="C:\Users\IBM_ADMIN\Desktop\Labs\Labs\Lab12\resources\OrderService.wsdl"/>
+		<item value="C:\Users\IBM_ADMIN\Desktop\Labs\Labs\Lab7\data\COMPLAINT_OUT.xsd"/>
+		<item value="C:\Users\IBM_ADMIN\Desktop\Labs\Labs\Lab7\data\COMPLAINT_IN.cpy"/>
+		<item value=""/>
+		<item value=""/>
+	</list>
+</section>

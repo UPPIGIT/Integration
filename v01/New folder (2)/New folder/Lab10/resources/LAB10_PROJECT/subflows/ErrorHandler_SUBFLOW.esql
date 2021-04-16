@@ -1,0 +1,51 @@
+
+BROKER SCHEMA subflows
+
+-- Declare ErrorTopic as EXTERNAL
+-- then we can add it as UserDefinedProperty in Message Flow editor
+-- and configure it in BAR
+DECLARE ErrorTopic EXTERNAL CHAR 'FlowRuntimeError'; 
+
+
+CREATE COMPUTE MODULE Store_ExceptionList_in_RFH2
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyMessageHeaders();
+		
+		-- Publication should not be rolled back!		
+		SET OutputRoot.Properties.Transactional = false;
+		
+		-- build Topic tree which includes Broker Properties for identification		
+		SET OutputRoot.MQRFH2.psc.Topic=
+		ErrorTopic || '/' ||
+		BrokerName || '/' ||
+		ExecutionGroupLabel || '/' ||
+		MessageFlowLabel;
+		
+		-- Temporarily store ExceptionList in OutputRoot.XMLNSC
+		-- to profit from implicit casting of XML parser into CHAR
+		-- which is required for RFH2.usr		
+		SET OutputRoot.XMLNSC.ExceptionList=InputExceptionList; 
+		SET OutputRoot.MQRFH2.usr=OutputRoot.XMLNSC; 
+		-- Delete the temporary XML body		
+		DELETE FIELD OutputRoot.XMLNSC; 
+		
+		-- copy original message body		
+		SET OutputRoot.BLOB = InputBody; 	
+				
+		RETURN TRUE; 
+	END; 
+	
+	CREATE PROCEDURE CopyMessageHeaders() 
+	BEGIN
+		DECLARE I INTEGER;
+		DECLARE J INTEGER;
+		SET I = 1;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+	
+END MODULE;

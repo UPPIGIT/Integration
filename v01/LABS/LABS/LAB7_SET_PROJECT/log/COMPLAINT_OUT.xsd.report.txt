@@ -1,0 +1,12 @@
+
+
+Importing file: C:\Users\IBM_ADMIN\Desktop\Labs\Labs\Lab7\data\COMPLAINT_OUT.xsd
+
+
+Elapsed time processing this message definition file: 0.126 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

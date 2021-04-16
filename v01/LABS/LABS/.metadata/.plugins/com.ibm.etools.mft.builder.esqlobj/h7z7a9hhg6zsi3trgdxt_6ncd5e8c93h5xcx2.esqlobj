@@ -1,0 +1,7 @@
+CREATE COMPUTE MODULE "IBM_WBIMB_LAB7_Mapping"
+CREATE FUNCTION MAIN() RETURNS BOOLEAN
+BEGIN
+CALL LAB7_Mapping(InputRoot, OutputRoot, InputLocalEnvironment, OutputLocalEnvironment);
+	RETURN FALSE;
+END;
+END MODULE;

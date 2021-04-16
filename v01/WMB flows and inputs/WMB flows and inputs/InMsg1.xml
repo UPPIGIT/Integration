@@ -1,0 +1,29 @@
+<OrderMsg>
+	<OrderData>
+		<Nr>12345</Nr>
+		<Date>2011-11-05</Date>
+	</OrderData>
+	<Customer>
+		<FirstName>Andrew</FirstName>
+		<LastName>Smith</LastName>
+	</Customer>
+	
+	<OrderItem>
+		<Nr>111</Nr>
+		<Price>27.95</Price>
+		<InStock>100</InStock>
+		<Quantity>2</Quantity>
+	</OrderItem>
+	<OrderItem>
+		<Nr>222</Nr>
+		<Price>8765.12</Price>
+		<Quantity>2</Quantity>
+	</OrderItem>
+	<OrderItem>
+		<Nr>333</Nr>
+		<Price>3.75</Price>
+		<InStock>456</InStock>
+		<Quantity>2</Quantity>
+		<Discount>3</Discount>
+	</OrderItem>
+</OrderMsg>

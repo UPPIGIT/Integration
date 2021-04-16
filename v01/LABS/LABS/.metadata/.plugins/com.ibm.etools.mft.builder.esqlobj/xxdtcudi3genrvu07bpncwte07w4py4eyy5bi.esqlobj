@@ -1,0 +1,35 @@
+CREATE COMPUTE MODULE LAB12_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyMessageHeaders();
+		
+		SET OutputRoot.Properties.MessageSet ='JC9JLS8002001';
+		SET OutputRoot.Properties.MessageType = 'OrderMessage';
+		SET OutputRoot.Properties.MessageFormat ='XML1';
+		
+		
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.FirstName = InputRoot.XMLNSC.ns:submitPORequest.personName.firstName;
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.LastName = InputRoot.XMLNSC.ns:submitPORequest.personName.lastName;
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.Street = InputRoot.XMLNSC.ns:submitPORequest.address.street;
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.City = InputRoot.XMLNSC.ns:submitPORequest.address.city;
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.ZipCode =InputRoot.XMLNSC.ns:submitPORequest.address.zipCode;
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.PartNumber = InputRoot.XMLNSC.ns:submitPORequest.partNo;
+		SET OutputRoot.XMLNSC.OrderMessage.localElement.Quantity = InputRoot.XMLNSC.ns:submitPORequest.partQuantity;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

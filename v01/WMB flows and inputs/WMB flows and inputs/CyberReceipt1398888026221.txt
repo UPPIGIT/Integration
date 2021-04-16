@@ -1,0 +1,14 @@
+
+				Cyber Receipt		Date:30/04/2014 8:00 PM
+___________________________________________________________________________
+
+	  Reference id		: 804009
+      TimeStamp			: 30/04/2014 8:00 PM
+      Debit AccountId		: 913010027925788
+      Credit AccountId		: Subba rao g                   007501566019        ICIC0000401   
+      Transaction Amount	: 10000
+      Transaction Currency    	: INR
+     
+
+      
+ __________________________________________________________________________

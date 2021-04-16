@@ -1,0 +1,49 @@
+
+
+CREATE COMPUTE MODULE Book_Store_MP_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		INSERT INTO Database.UPENDER.CUSTACCTB (LAST_NAME,FIRST_NAME,USERID,PASSWORD,
+		EMAIL,DAY_PHONE,EVE_PHONE,
+		SHIP_ADDRESS1,SHIP_ADDRESS2,SHIP_TOWN,SHIP_POSTCODE,
+		BILL_ADDRESS1,BILL_ADDRESS2,
+		BILL_TOWN,BILL_POSTCODE,CARDTYPE,CARDNUM,EXP_DATE,ISS_NUM,SECCODE )
+		 VALUES (InputRoot.XMLNSC.Create_Customer_Account_MSG.Personal_Details.Last_Name ,
+		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Personal_Details.First_Name,
+		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Personal_Details.User_ID ,
+		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Personal_Details.Password,
+		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Email_Address,
+		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Daytime_Telephone,
+		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Evening_Telephone, 
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Shipping_Address.Address_1,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Shipping_Address.Address_2,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Shipping_Address.Town,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Shipping_Address.Postcode,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Billing_Address.Address_1,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Billing_Address.Address_2,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Billing_Address.Town,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Billing_Address.Postcode,
+ 		 InputRoot.XMLNSC.Create_Customer_Account_MSG.Payment_Details.Card,
+ 		 
+ 		 
+ 		 			
+		 );
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

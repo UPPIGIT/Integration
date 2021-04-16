@@ -1,0 +1,42 @@
+<TestCase description="This is my TestCase">
+<Identifier>ES03B305_T1</Identifier>
+<Sport>Football</Sport>
+<Date>01/02/2000</Date>
+<Type>LEAGUE</Type>
+<Division Number="Premiership">
+<Result Number="1">
+<Home>
+<Team>Liverpool</Team>
+<Score>4</Score>
+</Home>
+<Away>
+<Team>Everton</Team>
+<Score>0</Score>
+</Away>
+</Result>
+<Result Number="2">
+<Home>
+<Team>Manchester United</Team>
+<Score>2</Score>
+</Home>
+<Away>
+<Team>Arsenal</Team>
+<Score>3</Score>
+</Away>
+</Result>
+</Division>
+
+<Division Number="2">
+<Result Number="1">
+<Home>
+<Team>Port Vale</Team>
+<Score>9</Score>
+</Home>
+<Away>
+<Team>Brentford</Team>
+<Score>5</Score>
+</Away>
+</Result>
+</Division>
+</TestCase>
+

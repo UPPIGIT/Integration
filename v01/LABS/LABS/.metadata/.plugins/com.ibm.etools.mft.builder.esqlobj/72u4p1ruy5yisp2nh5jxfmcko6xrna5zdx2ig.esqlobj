@@ -1,0 +1,7 @@
+CREATE DATABASE MODULE "IBM_WBIMB_Mapping_Book_Store_Flow_Data Insert"
+CREATE FUNCTION MAIN() RETURNS BOOLEAN
+BEGIN
+CALL Mapping_Book_Store_Flow_Data_Insert(Root, LocalEnvironment);
+	RETURN TRUE;
+END;
+END MODULE;

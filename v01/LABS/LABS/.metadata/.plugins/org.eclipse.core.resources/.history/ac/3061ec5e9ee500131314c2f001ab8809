@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="PassengerReservationResponse">
+    <xsd:sequence>
+      <xsd:element name="ListOfConfirmations" type="ListOfConfirmations"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListOfConfirmations">
+    <xsd:sequence>
+      <xsd:element name="Confirmation" type="Confirmation"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Confirmation">
+    <xsd:sequence>
+      <xsd:element name="FirstName" type="xsd:string"/>
+      <xsd:element name="LastName" type="xsd:string"/>
+      <xsd:element name="Class" type="xsd:string"/>
+      <xsd:element name="ReservationNumber" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="PassengerReservationResponse" type="PassengerReservationResponse">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/PassengerReservationResponse;XSDElementDeclaration$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

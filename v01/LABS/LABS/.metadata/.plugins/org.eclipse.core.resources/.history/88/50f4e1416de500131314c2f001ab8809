@@ -1,0 +1,74 @@
+
+
+CREATE COMPUTE MODULE Book_Order_MsgFlow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.Properties.MessageSet ='Book_Order_Response';
+		SET OutputRoot.Properties.MessageType='Book_Order_Response_MSG';
+		SET OutputRoot.Properties.MessageFormat ='XML1';
+		
+		SET OutputRoot.XMLNSC.Book_Order_Response_MSG.Customer_ID = InputRoot.XMLNSC.Create_Book_Order_MSG.Customer_ID;
+		
+		DECLARE input TIMESTAMP InputRoot.XMLNSC.Create_Book_Order_MSG.Order_Date;
+		DECLARE pattern CHARACTER 'yyyyMMddHHmmss';
+		DECLARE orderDate CHARACTER CAST(input AS CHARACTER FORMAT pattern);
+		
+		SET OutputRoot.XMLNSC.Book_Order_Response_MSG.Order_Number = InputRoot.XMLNSC.Create_Book_Order_MSG.Customer_ID || orderDate;
+		SET OutputRoot.XMLNSC.Book_Order_Response_MSG.Order_Date = InputRoot.XMLNSC.Create_Book_Order_MSG.Order_Date;
+		
+		DECLARE deliveryPrice DECIMAL;
+		
+		IF InputRoot.XMLNSC.Create_Book_Order_MSG.First_Class = 'Yes' THEN
+			
+			SET deliveryPrice = 18.00;
+			
+		END IF;
+		
+		IF InputRoot.XMLNSC.Create_Book_Order_MSG.Second_Class = 'Yes' THEN
+			
+			SET deliveryPrice = 12.00;
+			
+		END IF;
+		
+		IF InputRoot.XMLNSC.Book_Order_Response_MSG.Airmail = 'Yes' THEN
+			
+			SET deliveryPrice = 8.00;
+			
+		END IF; 
+		
+		DECLARE bookCount INTEGER;
+		DECLARE numBooks INTEGER;
+		DECLARE sumBookPrice DECIMAL 0;
+		
+		SET bookCount = 1;
+		
+		SET numBooks = CARDINALITY(InputRoot.XMLNSC.Create_Book_Order_MSG.Book_Details.ISBN[]);
+		
+		WHILE bookCount <= numBooks DO
+			
+			SET sumBookPrice = sumBookPrice + CAST(InputRoot.XMLNSC.Create_Book_Order_MSG.Book_Details.Book_Price[bookCount] AS DECIMAL);
+			
+			SET OutputRoot.XMLNSC.Book_Order_Response_MSG.Book_Details[bookCount].ISBN = InputRoot.XMLNSC.Create_Book_Order_MSG.Book_Details.ISBN[bookCount];
+			SET OutputRoot.XMLNSC.Book_Order_Response_MSG.Book_Details[bookCount].Book_Price = InputRoot.XMLNSC.Create_Book_Order_MSG.Book_Details.Book_Price[bookCount];
+			
+			
+		END WHILE;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

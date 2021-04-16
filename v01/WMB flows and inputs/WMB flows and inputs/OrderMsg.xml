@@ -1,0 +1,12 @@
+<OrderMsg>
+   <OrderData Nr="300524" Date="2001-11-05/">
+   <Customer Nr="123456" FirstName="Andrew" LastName="Smith"/>
+   <OrderItem Nr='111' price ="27.95" InStock="100">
+       <Quantity>2</Quantity></OrderItem>
+   <OrderItem Nr="222" Price="8765.12">
+       <Quantity>2</Quantity></OrderItem>
+   <OrderItem Nr="333" Price="3.75" InStock="456">
+       <Quantity>10</Quantity>
+       <Discount>3</Discount></OrderItem>
+</OrderMsg>
+

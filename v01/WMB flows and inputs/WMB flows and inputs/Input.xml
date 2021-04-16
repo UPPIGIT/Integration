@@ -1,0 +1,6 @@
+<TestCase description="This is my TestCase">
+<Identifier>ES03B305_T1</Identifier>
+<Sport>Football</Sport>
+<Date>01/02/2000</Date>
+<Type>LEAGUE</Type>
+</TestCase>

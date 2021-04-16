@@ -1,0 +1,20 @@
+
+
+Importing file: C:\Users\IBM_ADMIN\IBM\wmbt70\Samples\AddressBookMessageSet\AddressBookMessageSet\addressbook\http\com\AddressBook.wsdl
+
+Copying source WSDL AddressBook.wsdl to AddressBook.wsdl.
+The WSDL import will proceed with bindings AddressBookMessageSetSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///C:/Users/IBM_ADMIN/Desktop/WMB flows and inputs/AddressBook.wsdl.
+Parsing wsdl binding {http://com.http.addressbook}AddressBookMessageSetSOAP_HTTP_Binding.
+Parsing wsdl binding input FindAddress.
+Parsing wsdl binding output FindAddress.
+Parsing wsdl binding fault FindAddress_Fault.
+Parsing wsdl binding input SaveAddress.
+Parsing wsdl binding output SaveAddress.
+Processing doc style for operation FindAddress.
+Processing doc style for operation SaveAddress.
+Populating WSDL schema file:///C:/Users/IBM_ADMIN/Desktop/WMB flows and inputs/AddressBook.wsdl.
+Removing unnecessary import statement with namespace http://www.w3.org/XML/1998/namespace from schema file:/C:/Users/IBM_ADMIN/IBM/wmbt70/LABS/Address_Book_MSET/Address_Book_MSET/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd.  This statement was not resolved and is never used.
+Creating file Address_Book_MSET/addressbook/http/com/AddressBook.mxsd in the workspace.
+Creating file Address_Book_MSET/com/addressbook/AddressBook_InlineSchema1_InlineSchema2_InlineSchema1_InlineSchema2.mxsd in the workspace.
+Creating file Address_Book_MSET/com/addressbook/AddressBook_InlineSchema1.mxsd in the workspace.

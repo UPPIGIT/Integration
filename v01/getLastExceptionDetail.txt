@@ -1,0 +1,50 @@
+CREATE COMPUTE MODULE CreateSOAPFault
+ 
+ DECLARE ns NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+ DECLARE xml NAMESPACE 'http://www.w3.org/XML/1998/namespace';
+ DECLARE SOAP_FAULTCODE_VALUE_CLIENT CHARACTER 'Client';
+ 
+ CREATE FUNCTION Main() RETURNS BOOLEAN
+ BEGIN
+ IF EXISTS(InputExceptionList.*[]) THEN
+ DECLARE exceptionNumber INT;
+ DECLARE messageText CHARACTER;
+ -- Accessing the informaton in exception text
+ CALL getLastExceptionDetail(InputExceptionList, exceptionNumber, messageText);
+ 
+ SET OutputRoot.SOAP.Context.Namespace.(SOAP.NamespaceDecl)xmlns:soapenv = soapenv;
+ SET OutputRoot.SOAP.Body.ns:Fault.faultcode = SOAP_FAULTCODE_VALUE_CLIENT;
+ SET OutputRoot.SOAP.Body.ns:Fault.faultstring = 'Error while parsing message';
+ SET OutputRoot.SOAP.Body.ns:Fault.faultactor = InputRoot.HTTPInputHeader."X-Original-HTTP-Command";
+ SET OutputRoot.SOAP.Body.ns:Fault.detail.ExceptionType = messageText;
+ SET OutputRoot.SOAP.Body.ns:Fault.detail.ExceptionNumber = exceptionNumber;
+ SET OutputRoot.SOAP.Body.ns:Fault.detail.ExceptionList = InputExceptionList;
+ -- status code must be an error code, otherwise Fault message will not be parsed on receiver
+ SET OutputLocalEnvironment.Destination.SOAP.Reply.Transport.HTTP.ReplyStatusCode = 500;
+ END IF;
+ 
+ RETURN TRUE;
+ END;
+ 
+ CREATE PROCEDURE getLastExceptionDetail(IN InputExceptionList reference, OUT exceptionNumber integer, OUT messageText char)
+ /****************************************************************************
+ * A procedure that will get the details of the last exception from a message
+ * IN InputExceptionList: The incoming exception list
+ * IN messageNumber: The last message number.
+ * IN messageText: The last message text.
+ *****************************************************************************/
+ BEGIN
+ -- Create a reference to the first child of the exception list
+ DECLARE ptrException reference to InputExceptionList.*[1];
+ -- keep looping while the moves to the child of exception list work
+ WHILE lastmove(ptrException) DO
+ -- store the current values for the error number and text
+ IF ptrException.Number is not null THEN
+ SET exceptionNumber = ptrException.Number;
+ SET messageText = ptrException.Text;
+ END IF;
+ -- now move to the last child which should be the next exceptionlist
+ move ptrException lastchild;
+ END WHILE;
+END;
+END MODULE;

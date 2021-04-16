@@ -1,0 +1,15 @@
+CREATE PROCEDURE PayFromSavings ( ) RETURNS BOOLEAN
+ 
+ BEGIN
+			DECLARE Saving_acc_no INTEGER;
+			DECLARE Loan_acc_no INTEGER;
+			DECLARE acc_name CHARACTER;
+			DECLARE stat CHARACTER;
+			DECLARE transaction CHARACTER;
+			DECLARE acc_status CHARACTER;
+			DECLARE amount FLOAT;
+			DECLARE balance FLOAT;
+			
+			
+			
+END;

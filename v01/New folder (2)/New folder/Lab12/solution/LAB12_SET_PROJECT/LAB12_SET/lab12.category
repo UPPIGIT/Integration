@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msgCoreModel:MRMessageCategory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msgCoreModel="http://www.ibm.com/msgmodel/2003/MSGCoreModel" name="lab12">
+  <MRMessageCategoryMember name="Complaint_Out" wsdlRole="output"/>
+  <MRMessageCategoryMember name="msg_CUSTOMERCOMPLAINT"/>
+</msgCoreModel:MRMessageCategory>

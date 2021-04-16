@@ -1,0 +1,6 @@
+$SYS/Broker/+/StatisticsAccounting/#
+
+
+
+
+Body.WMQIStatisticsAccounting.MessageFlow.TotalInputMessages>0

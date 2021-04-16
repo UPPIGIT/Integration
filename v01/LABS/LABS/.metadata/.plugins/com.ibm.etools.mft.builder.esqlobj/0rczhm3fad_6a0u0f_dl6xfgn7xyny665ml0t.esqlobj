@@ -1,0 +1,19 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		IF Root.XMLNSC.Reservation.Request = 'M' THEN
+			
+			RETURN TRUE;
+			
+		END IF;
+		
+		IF Root.XMLNSC.Reservation.Request = 'S' THEN
+			
+			RETURN FALSE;
+			
+		END IF;
+		
+		RETURN UNKNOWN;
+		
+		RETURN TRUE;
+	END;
+

@@ -1,0 +1,136 @@
+
+
+CREATE COMPUTE MODULE DebitCreditFlow_TransferLoanAmountFromSavings
+	
+CREATE FUNCTION Main() RETURNS BOOLEAN
+	
+BEGIN
+		
+-- CALL CopyMessageHeaders();
+		
+DECLARE result BOOLEAN;
+		
+CALL CopyEntireMessage();
+		
+CALL PayFromSavings()INTO result;
+		
+IF ( result = TRUE) then
+			
+RETURN TRUE;
+		
+ELSE
+			
+RETURN FALSE;
+		
+END IF;
+		
+	
+END;
+
+	
+
+
+CREATE PROCEDURE PayFromSavings() RETURNS BOOLEAN
+	
+BEGIN
+		
+DECLARE savings_acc_no , loan_acc_no INT;
+		
+DECLARE acc_name, stat , transaction , acc_status CHAR;
+		
+DECLARE amount, balance FLOAT;
+		
+		
+SET savings_acc_no = CAST(InputRoot.XMLNSC.Account.SavingsAccountNumber as INTEGER);
+
+SET loan_acc_no = CAST(InputRoot.XMLNSC.Account.LoanAccountNumber as INTEGER);
+		
+SET acc_name = InputRoot.XMLNSC.Account.AccountName;
+		
+SET amount = CAST(InputRoot.XMLNSC.Account.Amount as FLOAT);
+		
+SET transaction = 'DEBIT';
+
+			
+		
+CALL update_savings_account( savings_acc_no, acc_name , amount , transaction, balance, stat) IN Database.SAVG_ACC.DB2SCHEMA;
+   		
+IF (stat = 'SUCCESS') then
+	
+SET OutputRoot.XMLNSC.Account.BalanceSavings = balance;
+	
+		
+CALL update_loan_account( loan_acc_no, acc_name , amount , balance, stat) IN Database.LOAN_ACC.DB2SCHEMA;
+			
+IF (stat = 'SUCCESS') then
+		
+SET OutputRoot.XMLNSC.Account.BalanceLoan = balance;
+				
+SET OutputRoot.XMLNSC.Account.Status = ' TRANSACTION COMPLETED SUCCESSFULLY';
+				
+RETURN TRUE;
+			
+
+ELSE
+				
+IF (stat = 'FAILURE') then
+					
+SET acc_status = 'FAILURE';
+				
+END IF;
+				
+SET transaction = 'CREDIT';
+				
+
+CALL update_savings_account( savings_acc_no, acc_name , amount , transaction, balance, stat) IN Database.SAVG_ACC.DB2SCHEMA;
+				
+IF (stat = 'SUCCESS') then
+					
+    SET OutputRoot.XMLNSC.Account.BalanceSavings = balance;
+					
+      IF (acc_status = 'FAILURE') then
+						
+            SET OutputRoot.XMLNSC.Account.Status = ' TRANSACTION FAILED - ROLLBACK COMPLETED SUCCESSFULLY';
+					
+            ELSE
+						
+           SET OutputRoot.XMLNSC.Account.Status = ' TRANSACTION FAILED - ROLLBACK COMPLETED SUCCESSFULLY(LOAN ACCOUNT NUMBER/NAME NOT FOUND , TRY AGAIN WITH THE CORRECT ACCOUNT NUMBER)';
+					
+END IF;
+					
+PROPAGATE TO TERMINAL 'failure';
+					
+RETURN FALSE;
+				
+END IF;
+			
+END IF;
+   		
+ELSE IF (stat = 'FAILURE') then
+   				
+SET OutputRoot.XMLNSC.Account.Status = ' TRANSACTION FAILED ';	
+     	
+ELSE
+				
+SET OutputRoot.XMLNSC.Account.Status = ' TRANSACTION FAILED(SAVINGS ACCOUNT NUMBER/NAME NOT FOUND , TRY AGAIN WITH THE CORRECT ACCOUNT NUMBER) ';	
+   		END IF;
+   		
+PROPAGATE TO TERMINAL 'failure';
+   		
+RETURN FALSE; 
+   		
+END IF;
+		
+	
+END;
+	
+CREATE PROCEDURE update_savings_account( IN account_no INT,IN account_name CHAR, IN amount FLOAT,IN transaction CHAR, OUT balance FLOAT, OUT status CHAR ) LANGUAGE DATABASE EXTERNAL NAME "update_savings_account";	
+	
+CREATE PROCEDURE update_loan_account( IN account_no INT,IN account_name CHAR, IN amount FLOAT, OUT balance FLOAT , OUT status CHAR ) LANGUAGE DATABASE EXTERNAL NAME "update_loan_account";
+	
+
+END MODULE;
+
+
+
+

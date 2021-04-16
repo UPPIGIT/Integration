@@ -1,0 +1,153 @@
+CREATE COMPUTE MODULE LAB_ESQL_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+
+	
+	
+--	SET OutputRoot.XMLNSC.OrderMsg.OrderData.(XMLNSC.Attribute)Nr = InputRoot.XMLNSC.OrderMsg.OrderData.Nr;
+--	SET OutputRoot.XMLNSC.OrderMsg.OrderData.(XMLNSC.Attribute)Date = InputRoot.XMLNSC.OrderMsg.OrderData.Date;
+--	SET OutputRoot.XMLNSC.OrderMsg.Customer.(XMLNSC.Attribute)FirstName = InputRoot.XMLNSC.OrderMsg.Customer.FirstName;
+--	SET OutputRoot.XMLNSC.OrderMsg.Customer.(XMLNSC.Attribute)LasNatme = InputRoot.XMLNSC.OrderMsg.Customer.LastName;
+--/*********************************Input and OutPut ***************** /
+--Input:
+--<OrderMsg>
+--	<OrderData>
+--		<Nr>12345</Nr>
+--		<Date>2011-11-05</Date>
+--	</OrderData>
+--	<Customer>
+--		<FirstName>Andrew</FirstName>
+--		<LastName>Smith</LastName>
+--	</Customer>
+--	
+--	<OrderItem>
+--		<Nr>111</Nr>
+--		<Price>27.95</Price>
+--		<InStock>100</InStock>
+--		<Quantity>2</Quantity>
+--	</OrderItem>
+--	<OrderItem>
+--		<Nr>222</Nr>
+--		<Price>8765.12</Price>
+--		<Quantity>2</Quantity>
+--	</OrderItem>
+--	<OrderItem>
+--		<Nr>333</Nr>
+--		<Price>3.75</Price>
+--		<InStock>456</InStock>
+--		<Quantity>2</Quantity>
+--		<Discount>3</Discount>
+--	</OrderItem>
+--</OrderMsg>
+--
+--0utput:
+--<OrderMsg>
+--	<OrderData Nr = "300524" Date = "2001-11-05"/>
+--	<Customer Nr ="123456" FirstName = "Andrew" LastName ="smith"/>
+--	<OrderItem Nr =" 111" Price = "27.95" InStock = "100">
+--		<Quantity>2</Quantity></OrderItem>
+--	<OrderItem Nr =" 222" Price = "8765.12" >
+--		<Quantity>2</Quantity></OrderItem>
+--	<OrderItem Nr =" 333" Price = "3.75" InStock = "456">
+--		<Quantity>10</Quantity>
+--		<Discount>3</Discount></OrderItem>
+--</OrderMsg>
+--
+--
+
+		
+--		CREATE FIELD OutputRoot.XMLNSC.OrderMsg TYPE Name;
+--		CREATE FIRSTCHILD OF OutputRoot.XMLNSC.OrderMsg DOMAIN('XMLNSC') NAME 'OrderData' ;
+--		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderData.(XMLNSC.Attribute)Nr  VALUE InputRoot.XMLNSC.OrderMsg.OrderData.Nr; 
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderData.(XMLNSC.Attribute)Date  VALUE InputRoot.XMLNSC.OrderMsg.OrderData.Date;
+--  		
+--  		CREATE LASTCHILD OF OutputRoot.XMLNSC.OrderMsg DOMAIN('XMLNSC')NAME 'Customer';
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.Customer.(XMLNSC.Attribute)FirstName  VALUE InputRoot.XMLNSC.OrderMsg.Customer.FirstName;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.Customer.(XMLNSC.Attribute)LastName  VALUE InputRoot.XMLNSC.OrderMsg.Customer.LastName;
+--  	
+--  		CREATE LASTCHILD OF 	OutputRoot.XMLNSC.OrderMsg DOMAIN('XMLNSC')NAME  'OrderItem';
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[1].(XMLNSC.Attribute)Nr  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[1].Nr;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[1].(XMLNSC.Attribute)Price  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[1].Price;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[1].(XMLNSC.Attribute)InStock  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[1].InStock;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[1].Quanity VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[1].Quantity;
+--  		
+--        CREATE LASTCHILD OF 	OutputRoot.XMLNSC.OrderMsg DOMAIN('XMLNSC')NAME  'OrderItem';
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[2].(XMLNSC.Attribute)Nr  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[2].Nr;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[2].(XMLNSC.Attribute)Price  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[2].Price;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[2].Quanity VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[2].Quantity;
+--  		
+--  		
+--  		CREATE LASTCHILD OF 	OutputRoot.XMLNSC.OrderMsg DOMAIN('XMLNSC')NAME  'OrderItem';
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[3].(XMLNSC.Attribute)Nr  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[3].Nr;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[3].(XMLNSC.Attribute)Price  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[3].Price;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[3].(XMLNSC.Attribute)InStock  VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[3].InStock;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[3].Quanity VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[3].Quantity;
+--  		CREATE FIELD OutputRoot.XMLNSC.OrderMsg.OrderItem[3].Discount VALUE InputRoot.XMLNSC.OrderMsg.OrderItem[3].Discount;
+--  		
+--  
+--  		
+--Input:
+--	<OrderMsg>
+--	<OrderData Nr = "300524" Date = "2001-11-05"/>
+--	<Customer Nr ="123456" FirstName = "Andrew" LastName ="smith"/>
+--	<OrderItem Nr =" 111" Price = "27.95" InStock = "100">
+--		<Quantity>2</Quantity></OrderItem>
+--	<OrderItem Nr =" 222" Price = "8765.12" >
+--		<Quantity>2</Quantity></OrderItem>
+--	<OrderItem Nr =" 333" Price = "3.75" InStock = "456">
+--		<Quantity>10</Quantity>
+--		<Discount>3</Discount></OrderItem>
+--</OrderMsg>
+
+ --SET OutputRoot.XMLNSC.OrderMsg.NewField = InputRoot.XMLNSC.OrderMsg.OrderItem[2];
+ 
+-- output:
+-- <OrderMsg>
+-- <NewField Nr=" 222" Price="8765.12">
+--  <Quantity>2</Quantity>
+-- </NewField>
+--</OrderMsg>
+--
+--		DECLARE v INTEGER;
+-- 		DECLARE v1 INTEGER;
+-- 		DECLARE v2 INTEGER;
+-- 		DECLARE v3 INTEGER;
+--
+-- SET v = InputRoot.XMLNSC.OrderMsg.OrderItem[<].*[<3];
+-- SET v1 = InputRoot.XMLNSC.OrderMsg.OrderItem[>].[<];
+-- SET v2 = CARDINALITY(InputRoot.XMLNSC.OrderMsg.*[]); 
+-- SET v3 = CARDINALITY(InputRoot.XMLNSC.OrderMsg.OrderItem[]);
+---- SET OutputRoot.XMLNSC.OrderMsg.NewField[]= InputRoot.XMLNSC.OrderMsg.*[];
+-- SET OutputRoot.XMLNSC.OrderMsg.NewField[]= InputRoot.XMLNSC.OrderMsg.OrderItem.*[];
+-- 
+
+	DECLARE v CHARACTER;
+	DECLARE v1 CHARACTER;
+	DECLARE v2 CHARACTER;
+	
+	SET OutputRoot = InputRoot;
+	DECLARE myref REFERENCE TO OutputRoot.XMLNSC.OrderMsg.OrderData;
+	
+	SET v = FIELDNAME(myref);
+    SET v2 = FIELDTYPE(myref);
+    SET v3 = FIELDVALUE(myref); 
+  --MOVE myref NEXTSIBLING NAME 'OrderItem';
+--SET v = FIELDNAME(myref);
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

@@ -1,0 +1,21 @@
+CREATE FILTER MODULE XML_RESERVATION_MF_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		IF Root.XMLNSC.Reservation.Request = 'M' THEN
+			
+			RETURN TRUE;
+			
+		END IF;
+		
+		IF Root.XMLNSC.Reservation.Request = 'S' THEN
+			
+			RETURN FALSE;
+			
+		END IF;
+		
+		RETURN UNKNOWN;
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

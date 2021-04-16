@@ -1,0 +1,14 @@
+<Reservation>
+   <FlightDetails>
+      <Number>CA935</Number>
+      <Date>20030218</Date>
+   </FlightDetails>
+   <ListOfPassengers>
+      <PassengerDetails>
+         <FirstName>pavan</FirstName>
+         <LastName>thumesh</LastName>
+         <Class>F</Class>
+      </PassengerDetails>
+   </ListOfPassengers>
+   <Request>S</Request>
+</Reservation>

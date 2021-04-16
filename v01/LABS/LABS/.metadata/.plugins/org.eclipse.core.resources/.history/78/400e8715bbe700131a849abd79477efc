@@ -1,0 +1,15 @@
+
+
+Importing file: C:\Users\IBM_ADMIN\IBM\wmbt70\Samples\AddressBookMessageSet\AddressBookMessageSet\addressbook\http\com\AddressBook.wsdl
+
+Copying source WSDL AddressBook.wsdl to AddressBook.wsdl.
+The WSDL import will proceed with bindings AddressBookMessageSetSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///C:/Users/IBM_ADMIN/Desktop/WMB flows and inputs/AddressBook.wsdl.
+Parsing wsdl binding {http://com.http.addressbook}AddressBookMessageSetSOAP_HTTP_Binding.
+Parsing wsdl binding input FindAddress.
+Parsing wsdl binding output FindAddress.
+Parsing wsdl binding fault FindAddress_Fault.
+Parsing wsdl binding input SaveAddress.
+Parsing wsdl binding output SaveAddress.
+Processing doc style for operation FindAddress.
+Processing doc style for operation SaveAddress.

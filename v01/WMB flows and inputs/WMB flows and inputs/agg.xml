@@ -1,0 +1,22 @@
+<Customer>
+
+ <Information> 
+  <CustId>1234</CustId>
+  <CustName>LAX</CustName>
+  <CustAddress>Detroit</CustAddress>
+ </Information>
+
+ <Product>
+  <ProductId>pro345</ProductId>
+  <ProductName>Intel</ProductName>
+  <ProductCost>34$</ProductCost>
+ </Product>
+
+ <Order>
+  <CustId>1234</CustId>
+  <CustName>LAX</CustName>
+  <ProductId>pro345</ProductId>
+  <Quantity>5</Quantity>
+  </Order>
+</Customer>
+ 

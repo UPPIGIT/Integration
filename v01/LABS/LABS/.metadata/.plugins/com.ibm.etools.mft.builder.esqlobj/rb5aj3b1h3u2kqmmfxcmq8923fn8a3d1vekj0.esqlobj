@@ -1,0 +1,112 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		DECLARE i INTEGER 1;
+		DECLARE j INTEGER CARDINALITY(InputRoot.XMLNSC.emp[]); 
+		DECLARE ben FLOAT;
+		
+		WHILE i<= 1 DO
+			
+			SET Environment.Variables.personal_details[i] = THE(SELECT  T.* FROM Database.EMPLOYEE.DB2SCHEMA.PERSONAL_DETAILS  AS T
+		 WHERE T.EMPNAME=InputRoot.XMLNSC.emp[i].emp_name AND T.EMPNO = InputRoot.XMLNSC.emp[i].emp_no ); 
+		
+			SET Environment.Variables.emp_details[i] = THE(SELECT  T.* FROM Database.EMPLOYEE.DB2SCHEMA.EMPLOYMENT_DETAILS  AS T
+		 WHERE T.EMPNAME=InputRoot.XMLNSC.emp[i].emp_name AND T.EMPNO = InputRoot.XMLNSC.emp[i].emp_no ); 
+		
+		IF Environment.Variables.emp_details[i].CATEGORY = 'A'THEN
+			
+				
+			SET  ben =2000; 
+			
+		ELSEIF Environment.Variables.emp_details[i].CATEGORY = 'B'THEN
+			
+			 SET ben = 4000;
+			 
+		ELSEIF Environment.Variables.emp_details[i].CATEGORY = 'E' THEN
+			
+			SET ben = 6000;
+		ELSE
+			
+			SET ben = 8000;
+		END IF;
+		
+			
+		UPDATE Database.EMPLOYEE.DB2SCHEMA.PAYROLL_DETAILS AS T 
+		SET OTHER_BENEFITS = ben  WHERE T.EMPNAME=InputRoot.XMLNSC.emp[i].emp_name AND T.EMPNO = InputRoot.XMLNSC.emp[i].emp_no ;
+		
+		SET Environment.Variables.Payroll_Details[i] = THE(SELECT T.* FROM Database.EMPLOYEE.DB2SCHEMA.PAYROLL_DETAILS  AS T 
+		 WHERE T.EMPNAME=InputRoot.XMLNSC.emp[i].emp_name AND T.EMPNO = InputRoot.XMLNSC.emp[i].emp_no ); 		 
+			
+			
+			INSERT INTO Database.MASTERDB.DB2SCHEMA.MASTER_TABLE (EMPNAME,EMPNO,AGE,SEX,
+			MARITAL_STATUS,NATIONALITY,TYPE,DEPT,	
+			YEARS_OF_EXP,CATEGORY,SALARY,HRA,
+			CONVEYENCE,RETIRALS,OTHER_BENEFITS )
+			 VALUES (Environment.Variables.personal_details[i].EMPNAME,
+			 Environment.Variables.personal_details[i].EMPNO,
+			  Environment.Variables.personal_details[i].AGE,
+			  Environment.Variables.personal_details[i].SEX,
+			  Environment.Variables.personal_details[i].MARITAL_STATUS,
+			  Environment.Variables.personal_details[i].NATIONALITY,
+			  Environment.Variables.emp_details[i].TYPE,
+			  Environment.Variables.emp_details[i].DEPT,
+			  Environment.Variables.emp_details[i].YEARS_OF_EXP,
+		      Environment.Variables.emp_details[i].CATEGORY,
+		       Environment.Variables.Payroll_Details[i].SALARY,
+				Environment.Variables.Payroll_Details[i].HRA,
+		 Environment.Variables.Payroll_Details[i].CONVEYENCE,
+		 Environment.Variables.Payroll_Details[i].RETIRALS,
+		 Environment.Variables.Payroll_Details[i].OTHER_BENEFITS
+		 
+		 
+			      
+			 );
+			 
+			 
+			 SET OutputRoot.XMLNSC.emp.personal_info[i]=Environment.Variables.personal_details[i];
+			 SET OutputRoot.XMLNSC.emp.emp_info[i]= Environment.Variables.emp_details[i];
+			 
+		
+--		UPDATE Database.MASTERDB.DB2SCHEMA.MASTER_TABLE AS T
+--		SET EMPNAME = Environment.Variables.Personal_Details[i].EMPNAME,
+--		EMPNO = Environment.Variables.Personal_Details[i].EMPNO,
+--		AGE = Environment.Variables.Personal_Details[i].AGE,
+--		SEX = Environment.Variables.Personal_Details[i].SEX,
+--		MARITAL_STATUS = Environment.Variables.Personal_Details[i].MARITAL_STATUS,
+--		NATIONALITY =Environment.Variables.Personal_Details[i].NATIONALITY,
+--		
+--		TYPE = Environment.Variables.emp_details[i].TYPE,
+--		DEPT = Environment.Variables.emp_details[i].DEPT,
+--		YEARS_OF_EXP = Environment.Variables.emp_details[i].YEARS_OF_EXP,
+--		CATEGORY = Environment.Variables.emp_details[i].CATEGORY,
+--		
+--		SALARY = Environment.Variables.Payroll_Details[i].SALARY,
+--		HRA = Environment.Variables.Payroll_Details[i].HRA,
+--		CONVEYENCE = Environment.Variables.Payroll_Details[i].CONVEYENCE,
+--		RETIRALS = Environment.Variables.Payroll_Details[i].TETIRALS,
+--		OTHER_BENEFITS = Environment.Variables.Payroll_Details[i].OTHER_BENIFITS
+--		 WHERE T.EMPNAME=InputRoot.XMLNSC.emp[i].emp_name AND T.EMPNO = InputRoot.XMLNSC.emp[i].emp_no ;
+--		
+--		
+--		
+--			
+			SET i = i+1;
+			
+		END WHILE;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;

@@ -1,0 +1,29 @@
+CREATE COMPUTE MODULE LAB6_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	
+		BEGIN
+			
+			SET OutputRoot.Properties.MessageSet ='LAB6_MSG_SET';
+			SET OutputRoot.Properties.MessageType ='Complait_Reply';
+			
+			SET OutputRoot.MRM.YourComplaint.Type = InputRoot.XMLNSC.CUSTOMERCOMPLAINT.COMPLAINT.C_TYPE;
+			SET OutputRoot.MRM.YourComplaint.Reference = InputRoot.XMLNSC.CUSTOMERCOMPLAINT.COMPLAINT.C_REF;
+			SET OutputRoot.MRM.YourComplaint.Text = InputRoot.XMLNSC.CUSTOMERCOMPLAINT.COMPLAINT.C_TEXT;
+			
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

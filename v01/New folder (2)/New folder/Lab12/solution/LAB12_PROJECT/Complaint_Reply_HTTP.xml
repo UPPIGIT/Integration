@@ -1,0 +1,26 @@
+HTTP/1.1 200 OK 
+Content-Type: text/xml;charset=utf-8 
+Content-Length: 501 
+Date: Wed, 19 Oct 2005 19:45:50 GMT 
+Server: Apache-Coyote/1.1 
+Connection: close
+
+<tns:Envelope xmlns:tns="http://schemas.xmlsoap.org/soap/envelope/">
+	<tns:Body>
+		<Complaint_Reply>
+			<YourComplaint Type="Delivery">
+				<YourReference>XYZ123ABC</YourReference>
+				<Text>
+					I placed an order on 15-11-99, well in time for
+					Christmas and I still have not had a delivery
+					schedule sent to me. Please cancel the order and
+					refund me NOW.
+				</Text>
+			</YourComplaint>
+			<Reply>
+				<OurReference>C01-COM1806349</OurReference>
+				<Text>Your Complaint has been received.</Text>
+			</Reply>
+		</Complaint_Reply>
+	</tns:Body>
+</tns:Envelope>

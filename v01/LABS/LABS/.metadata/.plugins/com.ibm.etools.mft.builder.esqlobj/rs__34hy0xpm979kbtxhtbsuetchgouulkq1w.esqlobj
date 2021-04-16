@@ -1,0 +1,12 @@
+CREATE DATABASE MODULE UpdateFlightTb
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET Environment.Variables = THE(SELECT T.* FROM Database.UPENDER.XMLFLIGHTTB  AS T 
+		WHERE  T.FLIGHTDATE = Root.XMLNSC.Reservation.FlightDetails.Date 
+		AND T.FLIGHTNO = Root.XMLNSC.Reservation.FlightDetails.Number);
+	
+		RETURN TRUE;
+	END;
+
+END MODULE;

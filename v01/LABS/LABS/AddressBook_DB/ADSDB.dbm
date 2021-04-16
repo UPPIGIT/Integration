@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_HnyFwOfeEeOuecZh-HMH5g" name="ADSDB" vendor="DB2 UDB" version="V9.7" schemas="_HogegOfeEeOuecZh-HMH5g">
+    <eAnnotations xmi:id="_HnyFwefeEeOuecZh-HMH5g" source="ConnectionURI">
+      <details xmi:id="_HnyFwufeEeOuecZh-HMH5g" key="ConnectionKey" value="ADSDB"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_HogegOfeEeOuecZh-HMH5g" name="DB2ADMIN" tables="_HogegefeEeOuecZh-HMH5g" database="_HnyFwOfeEeOuecZh-HMH5g"/>
+  <LUW:LUWTable xmi:id="_HogegefeEeOuecZh-HMH5g" name="ADDREESSBOOKTB" schema="_HogegOfeEeOuecZh-HMH5g" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogegufeEeOuecZh-HMH5g" name="NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Hogeg-feEeOuecZh-HMH5g" name="CHAR" length="21"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogehOfeEeOuecZh-HMH5g" name="CITY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_HogehefeEeOuecZh-HMH5g" name="CHAR" length="21"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogehufeEeOuecZh-HMH5g" name="STREET" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Hogeh-feEeOuecZh-HMH5g" name="CHAR" length="21"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogeiOfeEeOuecZh-HMH5g" name="PROVINCE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_HogeiefeEeOuecZh-HMH5g" name="CHAR" length="21"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogeiufeEeOuecZh-HMH5g" name="POSTALCODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Hogei-feEeOuecZh-HMH5g" name="CHAR" length="21"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogejOfeEeOuecZh-HMH5g" name="AREA" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_HogejefeEeOuecZh-HMH5g" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogejufeEeOuecZh-HMH5g" name="PREFIX" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_Hogej-feEeOuecZh-HMH5g" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_HogekOfeEeOuecZh-HMH5g" name="LOCAL" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_HogekefeEeOuecZh-HMH5g" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+  </LUW:LUWTable>
+</xmi:XMI>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="C4MN240002001" name="Customer_Account" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Create_Customer_Account_MSG;XSDElementDeclaration$MRMessage" name="Create_Customer_Account_MSG"/>
+    <element
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Create_Customer_Account_MSG;XSDElementDeclaration"
+      name="Create_Customer_Account_MSG" type="mset://Customer_Account#/-/complexType{}Create_Customer_Account_MSG"/>
+    <complexType
+      baseType="mset://Customer_Account#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Personal_Details;XSDComplexTypeDefinition" name="Personal_Details"/>
+    <complexType
+      baseType="mset://Customer_Account#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Shipping_Address;XSDComplexTypeDefinition=1" name="Shipping_Address"/>
+    <complexType
+      baseType="mset://Customer_Account#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Billing_Address;XSDComplexTypeDefinition=2" name="Billing_Address"/>
+    <complexType
+      baseType="mset://Customer_Account#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Payment_Details;XSDComplexTypeDefinition=3" name="Payment_Details"/>
+    <complexType
+      baseType="mset://Customer_Account#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Customer_Account/Customer_Account/Customer_Account.mxsd#/0/Create_Customer_Account_MSG;XSDComplexTypeDefinition=4" name="Create_Customer_Account_MSG"/>
+  </MRMsgCollection>
+</MRMessageSet>

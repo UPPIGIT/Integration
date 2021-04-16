@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="N5MMN84002001" name="LAB6_MSG_SET" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/LAB6_MSG_SET/LAB6_MSG_SET/Complaint_Reply.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB6_MSG_SET/LAB6_MSG_SET/Complaint_Reply.mxsd#/0/Complaint_Reply;XSDElementDeclaration$MRMessage" name="Complaint_Reply">
+      <xwf idAttrName="id" idAttrNameNSURI=""
+        idAttrValue="Complaint_Reply" messageSetDefaultRep="XML1"
+        render="XMLElement" xmlName="Complaint_Reply"/>
+    </message>
+    <element
+      href="platform:/resource/LAB6_MSG_SET/LAB6_MSG_SET/Complaint_Reply.mxsd#/0/Complaint_Reply;XSDElementDeclaration"
+      name="Complaint_Reply" type="mset://LAB6_MSG_SET#/-/complexType{}t_Complaint_Reply">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="Complaint_Reply"/>
+    </element>
+    <complexType
+      baseType="mset://LAB6_MSG_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB6_MSG_SET/LAB6_MSG_SET/Complaint_Reply.mxsd#/0/t_YourComplaint;XSDComplexTypeDefinition" name="t_YourComplaint"/>
+    <complexType
+      baseType="mset://LAB6_MSG_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB6_MSG_SET/LAB6_MSG_SET/Complaint_Reply.mxsd#/0/t_Reply;XSDComplexTypeDefinition=1" name="t_Reply"/>
+    <complexType
+      baseType="mset://LAB6_MSG_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB6_MSG_SET/LAB6_MSG_SET/Complaint_Reply.mxsd#/0/t_Complaint_Reply;XSDComplexTypeDefinition=2" name="t_Complaint_Reply"/>
+  </MRMsgCollection>
+</MRMessageSet>

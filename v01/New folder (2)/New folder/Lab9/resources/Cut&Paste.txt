@@ -1,0 +1,9 @@
+--$MQSI ErrorHandler Version = 1.0 MQSI$
+--$MQSI ErrorHandler Author = student MQSI$			
+
+
+SET OutputRoot.Properties.Transactional = false;
+
+
+
+DECLARE ErrorTopic EXTERNAL CHAR 'FlowRuntimeError';

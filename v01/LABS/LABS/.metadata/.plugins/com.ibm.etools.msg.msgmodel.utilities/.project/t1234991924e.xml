@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="DRB0E8C002001" name="Reservation_mset" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/Reservation;XSDElementDeclaration$MRMessage" name="Reservation">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="Reservation"
+        messageSetDefaultRep="XML1" render="XMLElement" xmlName="Reservation"/>
+    </message>
+    <element
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/Reservation;XSDElementDeclaration"
+      name="Reservation" type="mset://Reservation_mset#/-/complexType{}Reservation">
+      <xwf messageSetDefaultRep="XML1" xmlName="Reservation"/>
+    </element>
+    <complexType
+      baseType="mset://Reservation_mset#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/Reservation;XSDComplexTypeDefinition" name="Reservation"/>
+    <complexType
+      baseType="mset://Reservation_mset#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/FlightDetails;XSDComplexTypeDefinition=1" name="FlightDetails"/>
+    <complexType
+      baseType="mset://Reservation_mset#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/ListOfPassengers;XSDComplexTypeDefinition=2" name="ListOfPassengers"/>
+    <complexType
+      baseType="mset://Reservation_mset#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/PassengerDetails;XSDComplexTypeDefinition=3" name="PassengerDetails"/>
+    <complexType
+      baseType="mset://Reservation_mset#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/complexType;XSDComplexTypeDefinition=4" name="complexType"/>
+    <complexType
+      baseType="mset://Reservation_mset#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_mset/Reservation_mset/Reservation_in.mxsd#/0/Request;XSDComplexTypeDefinition=5" name="Request"/>
+  </MRMsgCollection>
+</MRMessageSet>

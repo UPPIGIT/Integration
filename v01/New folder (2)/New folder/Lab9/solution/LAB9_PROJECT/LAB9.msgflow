@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmMQInput.msgnode="ComIbmMQInput.msgnode" xmlns:ComIbmTrace.msgnode="ComIbmTrace.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:subflows_ErrorHandler_SUBFLOW.msgflow="subflows/ErrorHandler_SUBFLOW.msgflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="LAB9.msgflow" nsPrefix="LAB9.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="LAB9" bundleName="LAB9" pluginId="LAB9_PROJECT"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/LAB9_PROJECT/icons/full/obj16/LAB9.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/LAB9_PROJECT/icons/full/obj30/LAB9.gif"/>
+    <shortDescription xmi:type="utility:ConstantString" string="Main flow to test ErrorHandler_SUBFLOW"/>
+    <longDescription xmi:type="utility:ConstantString" string="Main flow to test ErrorHandler_SUBFLOW in Lab 9.&#xD;&#xA;Send any non-XML message to queue LAB9_IN to provoke an exception."/>
+    <version xmi:type="utility:ConstantString" string="1.1"/>
+    <composition>
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="34,88" queueName="LAB9_IN" messageDomainProperty="XMLNSC">
+        <translation xmi:type="utility:ConstantString" string="MQInput LAB9_IN XMLNSC"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="303,88" pattern="This forces a parse of the message and will fail if we send Testmessage.txt which is not XML.&#xD;&#xA;${Root}">
+        <translation xmi:type="utility:ConstantString" string="Trace"/>
+      </nodes>
+      <nodes xmi:type="subflows_ErrorHandler_SUBFLOW.msgflow:FCMComposite_1" xmi:id="FCMComposite_1_4" location="174,88" messageText="Message has been published to topic FlowRuntimeError" ErrorTopic="FlowRuntimeError">
+        <translation xmi:type="utility:ConstantString" string="ErrorHandler_SUBFLOW"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.Failure"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.In"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.catch" targetTerminalName="InTerminal.Catch"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.Out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+  </eClassifiers>
+</ecore:EPackage>

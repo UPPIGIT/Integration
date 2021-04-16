@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_Lyqw4dYOEeOoq4oP2u0XGg" name="MSGSTORE" vendor="DB2 UDB" version="V9.7" schemas="_Ly0h4NYOEeOoq4oP2u0XGg">
+    <eAnnotations xmi:id="_Lyqw4tYOEeOoq4oP2u0XGg" source="ConnectionURI">
+      <details xmi:id="_Lyqw49YOEeOoq4oP2u0XGg" key="ConnectionKey" value="MSGSTORE"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_Ly0h4NYOEeOoq4oP2u0XGg" name="UPENDER" tables="_Ly0h4dYOEeOoq4oP2u0XGg" database="_Lyqw4dYOEeOoq4oP2u0XGg"/>
+  <LUW:LUWTable xmi:id="_Ly0h4dYOEeOoq4oP2u0XGg" name="MSGSTORE" schema="_Ly0h4NYOEeOoq4oP2u0XGg" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Ly0h4tYOEeOoq4oP2u0XGg" name="MSGID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_Ly0h49YOEeOoq4oP2u0XGg" name="BLOB" primitiveType="BINARY_LARGE_OBJECT" length="1048576"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Ly0h5NYOEeOoq4oP2u0XGg" name="RECEIVED" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_Ly0h5dYOEeOoq4oP2u0XGg" name="TIMESTAMP" primitiveType="TIMESTAMP" fractionalSecondsPrecision="6"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Ly0h5tYOEeOoq4oP2u0XGg" name="MESSAGE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_Ly0h59YOEeOoq4oP2u0XGg" name="BLOB" primitiveType="BINARY_LARGE_OBJECT" length="1048576"/>
+    </columns>
+  </LUW:LUWTable>
+</xmi:XMI>

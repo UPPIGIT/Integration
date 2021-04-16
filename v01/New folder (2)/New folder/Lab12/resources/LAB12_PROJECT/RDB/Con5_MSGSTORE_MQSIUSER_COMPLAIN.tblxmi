@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="COMPLAIN">
+  <database href="Con5_MSGSTORE.dbxmi#/"/>
+  <schema href="Con5_MSGSTORE_MQSIUSER.schxmi#/"/>
+  <columns xsi:type="RDBSchema:RDBColumn" name="MSGID" allowNull="true">
+    <type xsi:type="RDBSchema:SQLBinaryLargeObject" length="24">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLBinaryLargeObject_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="RECEIVED" allowNull="true">
+    <type xsi:type="RDBSchema:SQLTimestamp" precision="26">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="MESSAGE" allowNull="true">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="2000">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

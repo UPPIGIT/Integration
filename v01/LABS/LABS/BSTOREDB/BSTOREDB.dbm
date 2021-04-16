@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_KKzHgeG8EeOGOYMpX5xYfQ" name="BSTOREDB" vendor="DB2 UDB" version="V9.7" schemas="_KK84gOG8EeOGOYMpX5xYfQ">
+    <eAnnotations xmi:id="_KKzHguG8EeOGOYMpX5xYfQ" source="ConnectionURI">
+      <details xmi:id="_KKzHg-G8EeOGOYMpX5xYfQ" key="ConnectionKey" value="BSTOREDB"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_KK84gOG8EeOGOYMpX5xYfQ" name="UPENDER" tables="_KK84geG8EeOGOYMpX5xYfQ _KK84jOG8EeOGOYMpX5xYfQ" database="_KKzHgeG8EeOGOYMpX5xYfQ"/>
+  <LUW:LUWTable xmi:id="_KK84geG8EeOGOYMpX5xYfQ" name="BOOKORDRTB" schema="_KK84gOG8EeOGOYMpX5xYfQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84guG8EeOGOYMpX5xYfQ" name="USERID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84g-G8EeOGOYMpX5xYfQ" name="CHAR" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84hOG8EeOGOYMpX5xYfQ" name="ORDERNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84heG8EeOGOYMpX5xYfQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84huG8EeOGOYMpX5xYfQ" name="TIMESTAMP" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84h-G8EeOGOYMpX5xYfQ" name="CHAR" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84iOG8EeOGOYMpX5xYfQ" name="ISBN" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84ieG8EeOGOYMpX5xYfQ" name="CHAR" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84iuG8EeOGOYMpX5xYfQ" name="BOOK_PRICE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_KK84i-G8EeOGOYMpX5xYfQ" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_KK84jOG8EeOGOYMpX5xYfQ" name="CUSTACCTB" schema="_KK84gOG8EeOGOYMpX5xYfQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84jeG8EeOGOYMpX5xYfQ" name="LAST_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84juG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84j-G8EeOGOYMpX5xYfQ" name="FIRST_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84kOG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84keG8EeOGOYMpX5xYfQ" name="USERID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84kuG8EeOGOYMpX5xYfQ" name="CHAR" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84k-G8EeOGOYMpX5xYfQ" name="PASSWORD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84lOG8EeOGOYMpX5xYfQ" name="CHAR" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84leG8EeOGOYMpX5xYfQ" name="EMAIL">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84luG8EeOGOYMpX5xYfQ" name="CHAR" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84l-G8EeOGOYMpX5xYfQ" name="DAY_PHONE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84mOG8EeOGOYMpX5xYfQ" name="CHAR" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84meG8EeOGOYMpX5xYfQ" name="EVE_PHONE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84muG8EeOGOYMpX5xYfQ" name="CHAR" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84m-G8EeOGOYMpX5xYfQ" name="SHIP_ADDRESS1">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84nOG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84neG8EeOGOYMpX5xYfQ" name="SHIP_ADDRESS2">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84nuG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84n-G8EeOGOYMpX5xYfQ" name="SHIP_TOWN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84oOG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84oeG8EeOGOYMpX5xYfQ" name="SHIP_POSTCODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84ouG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84o-G8EeOGOYMpX5xYfQ" name="BILL_ADDRESS1">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84pOG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84peG8EeOGOYMpX5xYfQ" name="BILL_ADDRESS2">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84puG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84p-G8EeOGOYMpX5xYfQ" name="BILL_TOWN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84qOG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84qeG8EeOGOYMpX5xYfQ" name="BILL_POSTCODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84quG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84q-G8EeOGOYMpX5xYfQ" name="CARDTYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84rOG8EeOGOYMpX5xYfQ" name="CHAR" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84reG8EeOGOYMpX5xYfQ" name="CARDNUM">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_KK84ruG8EeOGOYMpX5xYfQ" name="CHAR" length="30"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84r-G8EeOGOYMpX5xYfQ" name="EXP_DATE">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_KK84sOG8EeOGOYMpX5xYfQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84seG8EeOGOYMpX5xYfQ" name="ISS_DATE">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_KK84suG8EeOGOYMpX5xYfQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84s-G8EeOGOYMpX5xYfQ" name="ISS_NUM">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_KK84tOG8EeOGOYMpX5xYfQ" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_KK84teG8EeOGOYMpX5xYfQ" name="SECCODE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_KK84tuG8EeOGOYMpX5xYfQ" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+  </LUW:LUWTable>
+</xmi:XMI>

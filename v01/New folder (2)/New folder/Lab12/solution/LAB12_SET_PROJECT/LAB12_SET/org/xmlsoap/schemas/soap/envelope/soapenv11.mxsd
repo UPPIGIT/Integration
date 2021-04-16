@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.xmlsoap.org/soap/envelope/">
+    <!-- Envelope, header and body -->
+    <xs:element name="Envelope" type="tns:Envelope">
+        <xs:annotation>
+            <xs:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/Envelope;XSDElementDeclaration$MRObject"/>
+      </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="Envelope">
+        <xs:sequence>
+            <xs:element minOccurs="0" ref="tns:Header"/>
+            <xs:element minOccurs="1" ref="tns:Body"/>
+        </xs:sequence>
+        <xs:attribute ref="tns:encodingStyle"/>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+    </xs:complexType>
+    <xs:element name="Header" type="tns:Header"/>
+    <xs:complexType name="Header">
+        <xs:choice maxOccurs="1" minOccurs="0">
+            <xs:element ref="tns:Fault"/>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:choice>
+                    <xs:annotation>
+                        <xs:appinfo source="WMQI_APPINFO">
+              <MRLocalGroup composition="message"/>
+            </xs:appinfo>
+                    </xs:annotation>
+                </xs:choice>
+            </xs:sequence>
+        </xs:choice>
+    </xs:complexType>
+    <xs:element name="Body" type="tns:Body"/>
+    <xs:complexType name="Body">
+        <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:sequence maxOccurs="unbounded">
+                <xs:choice>
+                    <xs:annotation>
+                        <xs:appinfo source="WMQI_APPINFO">
+              <MRLocalGroup composition="message" content="openDefined"/>
+            </xs:appinfo>
+                    </xs:annotation>
+                </xs:choice>
+            </xs:sequence>
+            <xs:element ref="tns:Fault"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <!-- Global Attributes.  The following attributes are intended to be usable via qualified attribute names on any complex type referencing them.  -->
+    <xs:attribute name="mustUnderstand">
+        <xs:simpleType>
+            <xs:restriction base="xs:boolean">
+                <xs:pattern value="0|1"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="actor" type="xs:anyURI"/>
+    <xs:attribute name="encodingStyle" type="xs:anyURI"/>
+    <xs:attributeGroup name="encodingStyle">
+        <xs:attribute ref="tns:encodingStyle"/>
+    </xs:attributeGroup>
+
+    <xs:element name="Fault" type="tns:Fault"/>
+    <xs:complexType final="extension" name="Fault">
+        <xs:annotation>
+            <xs:documentation>      Fault reporting structure    </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="faultcode" type="xs:QName"/>
+            <xs:element name="faultstring" type="xs:string"/>
+            <xs:element minOccurs="0" name="faultactor" type="xs:anyURI"/>
+            <xs:element minOccurs="0" name="detail" type="tns:detail"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="detail">
+        <xs:sequence minOccurs="0">
+            <xs:choice>
+                <xs:annotation>
+                    <xs:appinfo source="WMQI_APPINFO">
+            <MRLocalGroup composition="message" content="openDefined"/>
+          </xs:appinfo>
+                </xs:annotation>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

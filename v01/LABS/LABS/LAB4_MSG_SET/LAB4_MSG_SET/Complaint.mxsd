@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="N_FIRST" type="xsd:string"/>
+  <xsd:element name="VERSION" type="xsd:string"/>
+  <xsd:element name="C_REF" type="xsd:string"/>
+  <xsd:element name="COUNTRY" type="xsd:string"/>
+  <xsd:element name="C_TYPE" type="xsd:string"/>
+  <xsd:element name="CUSTOMER_ADDRESS">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/CUSTOMER_ADDRESS;XSDElementDeclaration=5$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="A_LINE"/>
+        <xsd:element ref="TOWN"/>
+        <xsd:element ref="ZIP"/>
+        <xsd:element ref="COUNTRY"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="A_LINE" type="xsd:string"/>
+  <xsd:element name="TOWN" type="xsd:string"/>
+  <xsd:element name="CUSTOMERCOMPLAINT">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/CUSTOMERCOMPLAINT;XSDElementDeclaration=8$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="VERSION"/>
+        <xsd:element ref="CUSTOMER_NAME"/>
+        <xsd:element ref="CUSTOMER_ADDRESS"/>
+        <xsd:element ref="COMPLAINT"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CUSTOMER_NAME">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/CUSTOMER_NAME;XSDElementDeclaration=9$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="N_FIRST"/>
+        <xsd:element ref="N_LAST"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="COMPLAINT">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/COMPLAINT;XSDElementDeclaration=10$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="C_TYPE"/>
+        <xsd:element ref="C_REF"/>
+        <xsd:element ref="C_TEXT"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="C_TEXT" type="xsd:string"/>
+  <xsd:element name="N_LAST" type="xsd:string"/>
+  <xsd:element name="ZIP" type="xsd:string"/>
+</xsd:schema>

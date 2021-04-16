@@ -1,0 +1,62 @@
+
+BROKER SCHEMA subflows
+
+
+CREATE COMPUTE MODULE Aggregate_Complaint_Out
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- Build new OutputRoot
+		-- set output properties for message Complaint_Out		
+		SET OutputRoot.Properties.MessageFormat='XML1';
+		SET OutputRoot.Properties.MessageSet='LAB12_SET';
+		SET OutputRoot.Properties.MessageType='Complaint_Out';
+		
+		-- restore saved state from MQRFH2 in ECHO reply
+		-- here, we just use original MsgId as CorrelId in output
+		-- CorrelId is a BLOB field, but RFH2.usr consists of CHAR fields, therefore we must cast
+		SET OutputRoot.MQMD.CorrelId =
+		CAST(InputRoot.ComIbmAggregateReplyBody.ECHO.MQRFH2.usr.originalMQMD.MsgId AS BLOB);
+		
+		-- restore first part of Body from ECHO reply
+		SET OutputRoot.MRM=InputRoot.ComIbmAggregateReplyBody.ECHO.MRM;
+		
+		-- now add the Accounts from each DIVISION reply		
+		CREATE FIELD OutputRoot.MRM.Accounts;
+		DECLARE ref REFERENCE TO OutputRoot.MRM.Accounts;
+		IF SINGULAR(InputRoot.ComIbmAggregateReplyBody.DIVISION1.MRM.Accounts.Account[]) THEN
+			CREATE LASTCHILD of ref FROM InputRoot.ComIbmAggregateReplyBody.DIVISION1.MRM.Accounts.Account;
+		END IF;
+		IF SINGULAR(InputRoot.ComIbmAggregateReplyBody.DIVISION2.MRM.Accounts.Account[]) THEN
+			CREATE LASTCHILD of ref FROM InputRoot.ComIbmAggregateReplyBody.DIVISION2.MRM.Accounts.Account;
+		END IF;
+		IF SINGULAR(InputRoot.ComIbmAggregateReplyBody.DIVISION3.MRM.Accounts.Account[]) THEN
+			CREATE LASTCHILD of ref FROM InputRoot.ComIbmAggregateReplyBody.DIVISION3.MRM.Accounts.Account;
+		END IF;
+		RETURN TRUE;
+	END;
+	
+END MODULE;
+
+CREATE COMPUTE MODULE Store_State_in_RFH2
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- store original MQMD in MQRFH2.usr
+		-- later, after Aggregation, we can use this to restore MsgId, PutTime etc.
+		-- You may use this folder for other state data, too.	
+			
+		SET OutputRoot=InputRoot;
+		
+		-- MQRFH2 must be last header before Body
+		-- if it doesn't exist, create new MQRFH2 directly before Body.
+		IF NOT EXISTS(OutputRoot.MQRFH2[]) THEN		
+			DECLARE ref REFERENCE TO OutputRoot;
+			MOVE ref LASTCHILD;
+			CREATE PREVIOUSSIBLING OF ref DOMAIN('MQRFH2');
+		END IF;
+		SET OutputRoot.MQRFH2.usr.originalMQMD=InputRoot.MQMD;
+		-- optional: store HTTP RequestIdentifier
+		SET OutputRoot.MQRFH2.usr.HTTPRequestIdentifier=InputLocalEnvironment.Destination.HTTP.RequestIdentifier;
+		RETURN TRUE;
+	END;
+	
+END MODULE;

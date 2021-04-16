@@ -1,0 +1,14 @@
+BROKER SCHEMA simulation
+
+
+CREATE COMPUTE MODULE LAB10_ECHO_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot=InputRoot;
+		SET OutputRoot.MQMD.CorrelId=InputRoot.MQMD.MsgId;
+		set InputLocalEnvironment.Destination.MQDestinationList.DestinationData.queueName = OutputRoot.MQMD.ReplyToQ;
+		RETURN TRUE;
+	END;
+
+	
+END MODULE;

@@ -1,0 +1,6 @@
+<FlowStartStop>
+	<BrokerName>WBRK6_DEFAULT_BROKER</BrokerName>
+	<ExecutionGroupLabel>EXEGRP1</ExecutionGroupLabel>
+	<FlowLabel>TEST</FlowLabel>
+</FlowStartStop>
+

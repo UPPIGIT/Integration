@@ -1,0 +1,56 @@
+/LAB12
+
+
+IF EXISTS(Root.HTTPInputHeader[]) THEN
+			RETURN TRUE;
+		ELSE 
+			RETURN FALSE;
+		END IF;
+
+
+
+
+
+
+DECLARE tns NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+
+
+
+SET OutputRoot.Properties=InputRoot.Properties;
+		SET OutputRoot.Properties.MessageFormat='msg_CUSTOMERCOMPLAINT';
+		
+		-- Add new MQMD. It will be filled automatically by Broker		
+		CREATE NEXTSIBLING OF OutputRoot.Properties DOMAIN 'MQMD';
+		
+		-- Propagate only SOAP Body without Envelope
+		SET OutputRoot.MRM=InputBody.tns:Body.msg_CUSTOMERCOMPLAINT;
+
+
+
+
+
+
+
+IF Root.Properties.ReplyProtocol='SOAP-HTTP' THEN
+			RETURN TRUE;
+		ELSE 
+			RETURN FALSE;
+		END IF;
+
+
+
+
+
+
+
+
+SET OutputRoot.Properties=InputRoot.Properties;
+SET OutputRoot.Properties.MessageType='Envelope';
+SET OutputRoot.MRM.tns:Body.Complaint_Reply=InputBody;	
+
+
+
+
+
+SET Environment.InputMQMD.CorrelId =
+		LocalEnvironment.WrittenDestination.MQ.DestinationData.replyIdentifier;	

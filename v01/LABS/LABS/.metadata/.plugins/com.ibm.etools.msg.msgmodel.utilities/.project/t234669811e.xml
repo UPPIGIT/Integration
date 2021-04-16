@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="DRDJV5C002001" name="Reservation_Response" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/Reservation_Response/Reservation_Response/Reservation_Response.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/Reservation_Response/Reservation_Response/Reservation_Response.mxsd#/0/PassengerReservationResponse;XSDElementDeclaration$MRMessage" name="PassengerReservationResponse">
+      <xwf idAttrName="id" idAttrNameNSURI=""
+        idAttrValue="PassengerReservationResponse"
+        messageSetDefaultRep="XML1" render="XMLElement" xmlName="PassengerReservationResponse"/>
+    </message>
+    <element
+      href="platform:/resource/Reservation_Response/Reservation_Response/Reservation_Response.mxsd#/0/PassengerReservationResponse;XSDElementDeclaration"
+      name="PassengerReservationResponse" type="mset://Reservation_Response#/-/complexType{}PassengerReservationResponse">
+      <xwf messageSetDefaultRep="XML1" xmlName="PassengerReservationResponse"/>
+    </element>
+    <complexType
+      baseType="mset://Reservation_Response#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_Response/Reservation_Response/Reservation_Response.mxsd#/0/PassengerReservationResponse;XSDComplexTypeDefinition" name="PassengerReservationResponse"/>
+    <complexType
+      baseType="mset://Reservation_Response#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_Response/Reservation_Response/Reservation_Response.mxsd#/0/ListOfConfirmations;XSDComplexTypeDefinition=1" name="ListOfConfirmations"/>
+    <complexType
+      baseType="mset://Reservation_Response#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/Reservation_Response/Reservation_Response/Reservation_Response.mxsd#/0/Confirmation;XSDComplexTypeDefinition=2" name="Confirmation"/>
+  </MRMsgCollection>
+</MRMessageSet>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.1.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_16SloebzEeO1-7q3MQ6wfw" name="LOAN_ACC" vendor="DB2 UDB" version="V9.7" schemas="_16lgkObzEeO1-7q3MQ6wfw _16lgm-bzEeO1-7q3MQ6wfw">
+    <eAnnotations xmi:id="_16SloubzEeO1-7q3MQ6wfw" source="ConnectionURI">
+      <details xmi:id="_16Slo-bzEeO1-7q3MQ6wfw" key="ConnectionKey" value="LOAN_ACC"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_16lgkObzEeO1-7q3MQ6wfw" name="DB2SCHEMA" tables="_16lgkebzEeO1-7q3MQ6wfw _16lgnObzEeO1-7q3MQ6wfw" database="_16SloebzEeO1-7q3MQ6wfw"/>
+  <LUW:LUWTable xmi:id="_16lgkebzEeO1-7q3MQ6wfw" name="LOAN_ACCOUNT" schema="_16lgkObzEeO1-7q3MQ6wfw" index="_16lgmebzEeO1-7q3MQ6wfw" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lgkubzEeO1-7q3MQ6wfw" name="ACCOUNT_NO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_16lgk-bzEeO1-7q3MQ6wfw" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lglObzEeO1-7q3MQ6wfw" name="ACCOUNT_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_16lglebzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lglubzEeO1-7q3MQ6wfw" name="BALANCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_16lgl-bzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_16lgmObzEeO1-7q3MQ6wfw" name="SQL140529110902140" members="_16lgkubzEeO1-7q3MQ6wfw"/>
+  </LUW:LUWTable>
+  <LUW:LUWIndex xmi:id="_16lgmebzEeO1-7q3MQ6wfw" name="SQL140529110902040" Schema="_16lgm-bzEeO1-7q3MQ6wfw" fillFactor="10" unique="true" systemGenerated="true" table="_16lgkebzEeO1-7q3MQ6wfw" systemRequired="true">
+    <members xmi:id="_16lgmubzEeO1-7q3MQ6wfw" column="_16lgkubzEeO1-7q3MQ6wfw"/>
+  </LUW:LUWIndex>
+  <DB2Model:DB2Schema xmi:id="_16lgm-bzEeO1-7q3MQ6wfw" name="SYSIBM" indices="_16lgmebzEeO1-7q3MQ6wfw" database="_16SloebzEeO1-7q3MQ6wfw"/>
+  <LUW:LUWTable xmi:id="_16lgnObzEeO1-7q3MQ6wfw" name="LOAN_ACCOUNT_TRANSACTION" schema="_16lgkObzEeO1-7q3MQ6wfw" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lgnebzEeO1-7q3MQ6wfw" name="ACCOUNT_NO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_16lgnubzEeO1-7q3MQ6wfw" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lgn-bzEeO1-7q3MQ6wfw" name="ACCOUNT_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_16lgoObzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lgoebzEeO1-7q3MQ6wfw" name="BALANCE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_16lgoubzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lgo-bzEeO1-7q3MQ6wfw" name="TRANSACTION_AMOUNT">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_16lgpObzEeO1-7q3MQ6wfw" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_16lgpebzEeO1-7q3MQ6wfw" name="TRANSACTION_STATUS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_16lgpubzEeO1-7q3MQ6wfw" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+  </LUW:LUWTable>
+</xmi:XMI>

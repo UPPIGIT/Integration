@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="EMPLOYEE">
+  <database href="Con7_SAMPLE.dbxmi#/"/>
+  <schema href="Con7_SAMPLE_MQSIUSER.schxmi#/"/>
+  <columns xsi:type="RDBSchema:RDBColumn" name="EMPNO">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="6">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="FIRSTNME">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="12">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="MIDINIT">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="1">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="LASTNAME">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="15">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_3"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="WORKDEPT" allowNull="true">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="3">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="PHONENO" allowNull="true">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="4">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="HIREDATE" allowNull="true">
+    <type xsi:type="RDBSchema:SQLDate">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLDate_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="JOB" allowNull="true">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="8">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="EDLEVEL">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLExactNumeric_4"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="SEX" allowNull="true">
+    <type xsi:type="RDBSchema:SQLCharacterStringType" characterSet="800" length="1">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="BIRTHDATE" allowNull="true">
+    <type xsi:type="RDBSchema:SQLDate">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLDate_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="SALARY" allowNull="true">
+    <type xsi:type="RDBSchema:SQLNumeric" precision="9" scale="2">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="BONUS" allowNull="true">
+    <type xsi:type="RDBSchema:SQLNumeric" precision="9" scale="2">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="COMM" allowNull="true">
+    <type xsi:type="RDBSchema:SQLNumeric" precision="9" scale="2">
+      <originatingType href="DB2UDBNT_V82_Primitives.xmi#SQLNumeric_3"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

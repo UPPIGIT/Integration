@@ -1,0 +1,31 @@
+<Create_Customer_Account_MSG>
+<Personal_Details>
+<First_Name>sruthi</First_Name>
+<Last_Name>pardiwar</Last_Name>
+<User_ID>sruthi</User_ID>
+<Password>p45sw0rd</Password>
+</Personal_Details>
+<Email_Address>Peter.Smith@nowhere.com</Email_Address>
+<Daytime_Telephone>1234567890</Daytime_Telephone>
+<Evening_Telephone>1234567890</Evening_Telephone>
+<Shipping_Address>
+<Address_1>19 Green Street</Address_1>
+<Address_2>Littleton</Address_2>
+<Town>Southington</Town>
+<Postcode>SU29 8YT</Postcode>
+</Shipping_Address>
+<Billing_Address>
+<Address_1>19 Green Street</Address_1>
+<Address_2>Littleton</Address_2>
+<Town>Southington</Town>
+<Postcode>SU29 8YT</Postcode>
+</Billing_Address>
+<Payment_Details>
+<Card>VISA</Card>
+<Card_Number>1234567890</Card_Number>
+<Expiry_Date>31.12.2009</Expiry_Date>
+<Issue_Date>31.12.2004</Issue_Date>
+<Issue_Number>02</Issue_Number>
+<Security_Code>333</Security_Code>
+</Payment_Details>
+</Create_Customer_Account_MSG>

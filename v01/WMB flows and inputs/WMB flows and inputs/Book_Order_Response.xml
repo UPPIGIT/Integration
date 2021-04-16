@@ -1,0 +1,22 @@
+<Book_Order_Response_MSG>
+<Customer_ID>0123456789</Customer_ID>
+<Order_Number>012345678920050927125512</Order_Number>
+<Order_Date>2005-09-27 12:55:12</Order_Date>
+<First_Class>Yes</First_Class>
+<Book_Details>
+<ISBN>0123456789</ISBN>
+<Book_Price>15.99</Book_Price>
+</Book_Details>
+<Book_Details>
+<ISBN>1425112342</ISBN>
+<Book_Price>7.99</Book_Price>
+</Book_Details>
+<Book_Details>
+<ISBN>9736316345</ISBN>
+<Book_Price>25.99</Book_Price>
+</Book_Details>
+<Delivery_Price>18.00</Delivery_Price>
+<Total_Price>49.97</Total_Price>
+<Order_Status>Order Received</Order_Status>
+</Book_Order_Response_MSG>
+

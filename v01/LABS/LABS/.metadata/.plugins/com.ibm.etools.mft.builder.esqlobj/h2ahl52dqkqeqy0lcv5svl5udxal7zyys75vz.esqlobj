@@ -1,0 +1,12 @@
+CREATE COMPUTE MODULE Output_in_3_different_formats
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+		SET OutputRoot.Properties.MessageFormat = 'XML1';
+		PROPAGATE DELETE NONE;
+		SET OutputRoot.Properties.MessageFormat = 'Binary1';
+		PROPAGATE DELETE NONE;
+		SET OutputRoot.Properties.MessageFormat = 'Text1';
+		RETURN TRUE;
+	END;
+END MODULE;

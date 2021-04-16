@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Book_Order_Response_MSG">
+    <xsd:sequence>
+      <xsd:element name="Customer_ID" type="xsd:string"/>
+      <xsd:element name="Order_Number" type="xsd:string"/>
+      <xsd:element name="Order_Date" type="xsd:dateTime"/>
+      <xsd:group ref="Delivery_Method"/>
+      <xsd:element maxOccurs="unbounded" name="Book_Details" type="Book_Details"/>
+      <xsd:element name="Delivery_Price" type="xsd:string"/>
+      <xsd:element name="Total_Price" type="xsd:string"/>
+      <xsd:element name="Order_Status" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Book_Details">
+    <xsd:sequence>
+      <xsd:element name="ISBN" type="xsd:string"/>
+      <xsd:element name="Book_Price" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:group name="Delivery_Method">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="First_Class" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Second_Class" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Airmail" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:element name="Book_Order_Response_MSG" type="Book_Order_Response_MSG">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/Book_Order_Response_MSG;XSDElementDeclaration$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,8 @@
+
+
+Importing file: C:\Users\IBM_ADMIN\Desktop\Labs\Labs\Lab12\resources\OrderService.wsdl
+
+BIP0224W The message set has no XML Wire Format layer defined. Only the logical information will appear in the model.
+Parsing wsdl binding {http://www.acmeOrders.com/OrderService}OrderServiceSOAP.
+Parsing wsdl binding input submitPO.
+Parsing wsdl binding output submitPO.

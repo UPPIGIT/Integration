@@ -1,0 +1,4 @@
+delete qlocal(EMP_IN)
+define qlocal(EMP_IN)
+delete qlocal(EMP_OUT)
+define qlocal(EMP_OUT)

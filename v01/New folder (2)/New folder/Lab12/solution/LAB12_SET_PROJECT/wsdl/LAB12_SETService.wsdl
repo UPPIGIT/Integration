@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/LAB12_SET" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LAB12_SET" targetNamespace="http://tempuri.org/LAB12_SET">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mrm="http://tempuri.org/LAB12_SET" targetNamespace="http://tempuri.org/LAB12_SET">
+      <include schemaLocation="COMPLAINT_REPLY.xsd"/>
+      <include schemaLocation="COMPLAINT_IN.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="cat1_in">
+    <wsdl:part element="tns:msg_CUSTOMERCOMPLAINT" name="msg_CUSTOMERCOMPLAINT"/>
+  </wsdl:message>
+  <wsdl:message name="cat1_out">
+    <wsdl:part element="tns:Complaint_Reply" name="Complaint_Reply"/>
+  </wsdl:message>
+  <wsdl:portType name="LAB12_SETPortType">
+    <wsdl:operation name="cat1">
+      <wsdl:input message="tns:cat1_in" name="cat1_msg_CUSTOMERCOMPLAINT"/>
+      <wsdl:output message="tns:cat1_out" name="cat1_Complaint_Reply"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LAB12_SETSOAP_HTTP_Binding" type="tns:LAB12_SETPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="cat1">
+      <soap:operation/>
+      <wsdl:input name="cat1_msg_CUSTOMERCOMPLAINT">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cat1_Complaint_Reply">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LAB12_SETSOAP_HTTP_Service">
+    <wsdl:port binding="tns:LAB12_SETSOAP_HTTP_Binding" name="SOAP_HTTP_Port">
+      <soap:address location="http://localhost:7080/LAB12"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

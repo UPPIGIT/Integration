@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		SET Environment.Variables = THE(SELECT T.* FROM Database.UPENDER.XMLFLIGHTTB  AS T 
+		WHERE  T.FLIGHTDATE = Root.XMLNSC.Reservation.FlightDetails.Date 
+		AND T.FLIGHTNO = Root.XMLNSC.Reservation.FlightDetails.Number);
+	
+		RETURN TRUE;
+	END;
+

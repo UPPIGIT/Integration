@@ -1,0 +1,29 @@
+<Reservation>
+   <FlightDetails>
+      <Number>CA937</Number>
+      <Date>20030525</Date>
+   </FlightDetails>
+   <ListOfPassengers>
+      <PassengerDetails>
+         <FirstName>SRUTHI</FirstName>
+         <LastName>PARDIWAR</LastName>
+         <Class>Y</Class>
+      </PassengerDetails>
+      <PassengerDetails>
+         <FirstName>SACHI</FirstName>
+         <LastName>SURYA VAMSHI</LastName>
+         <Class>Y</Class>
+      </PassengerDetails>
+      <PassengerDetails>
+         <FirstName>NAVEEN</FirstName>
+         <LastName>NAIK</LastName>
+         <Class>F</Class>
+      </PassengerDetails>
+      <PassengerDetails>
+         <FirstName>VEENA</FirstName>
+         <LastName>JADAV</LastName>
+         <Class>F</Class>
+      </PassengerDetails>
+   </ListOfPassengers>
+   <Request>M</Request>
+</Reservation>

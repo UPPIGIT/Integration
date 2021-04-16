@@ -1,0 +1,26 @@
+<SaveAddress>
+
+ <Operation>Save</Operation>
+  <Address>
+  
+    <firstname >upender</firstname>
+    <lastname>tadewar</lastname>
+    <city>pune</city>
+    <country>india</country>
+    <zip>411057</zip>
+  </Address>
+  <Address>
+    <firstname >avinash</firstname>
+    <lastname>tadewar</lastname>
+    <city>hyderabad</city>
+    <country>india</country>
+    <zip>12344</zip>
+  </Address>
+  <Address>
+    <firstname >neha</firstname>
+    <lastname>pawar</lastname>
+    <city>mumbai</city>
+    <country>india</country>
+    <zip>12342</zip>
+  </Address>
+</SaveAddress>

@@ -1,0 +1,27 @@
+CREATE COMPUTE MODULE Client_Flow_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.XMLNSC.OrderResponse.Status = InputRoot.XMLNSC.ns:submitPOResponse.orderStatus;
+		SET OutputRoot.XMLNSC.OrderResponse.AMT = InputRoot.XMLNSC.ns:submitPOResponse.orderAmt;
+		SET OutputRoot.XMLNSC.OrderResponse.PartNo = InputRoot.XMLNSC.ns:submitPOResponse.partNo;
+		SET OutputRoot.XMLNSC.OrderResponse.PartQuantity = InputRoot.XMLNSC.ns:submitPOResponse.partQuantity;
+		
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

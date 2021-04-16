@@ -1,0 +1,99 @@
+DECLARE envelope NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+DECLARE ns2 NAMESPACE 'http://addressbook.com/';
+DECLARE Tree SHARED ROW;
+
+CREATE COMPUTE MODULE Ws_Provider_flow_SaveCompute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+--		DECLARE body REFERENCE TO InputRoot.SOAP.Body;
+--		
+--		InsertPerson :BEGIN ATOMIC
+--		
+--	DECLARE i INTEGER ;
+--	
+--	SET i = CARDINALITY(Tree.Persons[])+1;
+--	SET Tree.Persons[i] = body;
+--	END InsertPerson;
+--		
+--		
+--		
+--		
+
+  INSERT INTO Database.ADSDB.DB2ADMIN.ADDREESSBOOKTB ( NAME,CITY,STREET,PROVINCE,POSTALCODE,AREA,PREFIX,LOCAL) 
+  VALUES ( InputRoot.SOAP.Body.ns2:Person.ns2:Name,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:City,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:Street,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:Province,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PostalCode,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PhoneNumber.ns2:Area,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PhoneNumber.ns2:Prefix,
+   InputRoot.SOAP.Body.ns2:Person.ns2:Address.ns2:PhoneNumber.ns2:Local);
+   
+   
+   SET OutputRoot.SOAP.Body.ns2:SaveAddressResponse = TRUE;
+   
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
+
+
+CREATE COMPUTE MODULE Ws_Provider_flow_FindCompute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+--		DECLARE adress ROW;
+--		
+--		
+--		SET adress.addresses[] =( SELECT A.ns2:Person.ns2:Address 
+--		 FROM Tree.Persons[] AS A 
+--		 WHERE A.ns2:Person.ns2:Name = InputRoot.SOAP.Body.ns2:Name ) ;
+		
+		SET Environment.Variables.address= THE(SELECT T.* FROM Database.ADSDB.DB2ADMIN.ADDREESSBOOKTB  AS T 
+		WHERE T.NAME = InputRoot.SOAP.Body.ns2:Name );
+		
+		IF EXISTS(Environment.Variables.address[]) THEN
+			
+			SET OutputRoot.SOAP.Body.ns2:Name = Environment.Variables.address[1].Name;
+			
+		ELSE
+			
+			SET OutputLocalEnvironment.Destination.SOAP.Reply.Transport.HTTP.ReplyStatusCode = 500;
+			
+			SET OutputRoot.SOAP.Body.envelope:Fault.faultcode ='NS1:Server';
+			SET OutputRoot.SOAP.Body.envelope:Fault.faultstring='Server Error';
+			SET OutputRoot.SOAP.Body.envelope:Fault.detail.ns2:FindAddressFault.ns2:Comment ='Address does not exist';
+			
+		END IF;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

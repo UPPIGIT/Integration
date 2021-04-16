@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://addressbook.com/" xmlns:Q1="http://addressbook.com/" xmlns:mrm="http://com.http.addressbook" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://com.http.addressbook" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:include schemaLocation="AddressBook_InlineSchema1.mxsd"/>
+    </xsd:schema>

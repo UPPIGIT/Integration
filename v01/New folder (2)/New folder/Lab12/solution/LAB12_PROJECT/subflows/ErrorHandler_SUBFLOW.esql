@@ -1,0 +1,43 @@
+BROKER SCHEMA subflows
+
+
+CREATE COMPUTE MODULE "Store ExceptionList in RFH2.usr"
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyMessageHeaders();
+		-- Publication should not be rolled back!
+		SET OutputRoot.Properties.Transactional = false;
+		
+		-- build Topic tree which includes Broker Properties for identification
+		SET OutputRoot.MQRFH2.psc.Topic=
+		'FlowRuntimeError/'||
+		BrokerName || '/' ||
+		ExecutionGroupLabel || '/' ||
+		MessageFlowLabel;
+		
+		/*now temporarily store ExceptionList in OutputRoot.XMLNSC
+		to profit from implicit casting of XML parser into CHAR
+		which is required for RFH2.usr*/		
+		SET OutputRoot.XMLNSC.ExceptionList=InputExceptionList; 
+		SET OutputRoot.MQRFH2.usr=OutputRoot.XMLNSC; 
+		SET Environment.OriginalMessage = ASBITSTREAM(InputRoot); 
+		
+		/*at last we must delete the temporary XML body*/		
+		DELETE FIELD OutputRoot.XMLNSC; 
+				
+		RETURN TRUE; 
+	END; 
+	
+	CREATE PROCEDURE CopyMessageHeaders() 
+	BEGIN
+		DECLARE I INTEGER;
+		DECLARE J INTEGER;
+		SET I = 1;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+	
+END MODULE;

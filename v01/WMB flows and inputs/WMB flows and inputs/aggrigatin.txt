@@ -1,0 +1,82 @@
+project name: Customerinfo_Aggregate_MFlow
+flow name: Customer_Details_Process
+............................................................
+msg
+custometr details
+Order details
+product info
+...............................................................
+<Customer>
+
+ <Information> 
+  <CustId>1234</CustId>
+  <CustName>LAX</CustName>
+  <CustAddress>Detroit</CustAddress>
+ </Information>
+
+ <Product>
+  <ProductId>pro345</ProductId>
+  <ProductName>Intel</ProductName>
+  <ProductCost>34$</ProductCost>
+ </Product>
+
+ <Order>
+  <CustId>1234</CustId>
+  <CustName>LAX</CustName>
+  <ProductId>pro345</ProductId>
+  <Quantity>5</Quantity>
+  </Order>
+</Customer>
+ 
+
+....................................................
+Aggrigatecontrole node:
+
+AggrigateName:CustomerDetails
+Timeout:1000
+
+AggrigateRequest Node1:
+
+folder name:INFo
+
+AggrigateRequest Node2:
+
+folder name:PRODUCT
+
+AggrigateRequest Node3:
+
+folder name:ORDER
+
+AggrigateReply node:
+
+Aggrigate Name:CustomerDetails
+unknown message timeout:1000
+transtion mode:check
+..........................................................
+flows:
+
+Customer_Details_Process.msgflow
+
+CustomerInfoMsg_Request.msgflow
+
+OrderInfoMsg_Request.msgflow
+
+ProductInfoMsg_Request.msgflow
+
+
+Queues;
+
+CUST.ERR.OUT
+
+CUST.INFO.REQ
+
+CUST.MSG.INQ
+
+CUST.ORD.REQ
+
+CUST.PRO.REQ
+
+CUST.REQ.REP
+
+CUST.SUC.OUT
+

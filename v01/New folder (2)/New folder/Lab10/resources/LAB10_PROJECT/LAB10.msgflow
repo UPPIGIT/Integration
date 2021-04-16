@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmDatabase.msgnode="ComIbmDatabase.msgnode" xmlns:ComIbmMQInput.msgnode="ComIbmMQInput.msgnode" xmlns:ComIbmMQOutput.msgnode="ComIbmMQOutput.msgnode" xmlns:ComIbmMQReply.msgnode="ComIbmMQReply.msgnode" xmlns:ComIbmMapping.msgnode="ComIbmMapping.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:subflows_ErrorHandler_SUBFLOW.msgflow="subflows/ErrorHandler_SUBFLOW.msgflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="LAB10.msgflow" nsPrefix="LAB10.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="LAB10" bundleName="LAB10" pluginId="LAB10_PROJECT"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/LAB10_PROJECT/icons/full/obj16/LAB10.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/LAB10_PROJECT/icons/full/obj30/LAB10.gif"/>
+    <composition>
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="10,17" queueName="LAB10_IN" messageDomainProperty="MRM" messageSetProperty="LAB10_SET" messageTypeProperty="msg_CUSTOMERCOMPLAINT" messageFormatProperty="CWF1" transactionMode="no" validateMaster="contentAndValue">
+        <translation xmi:type="utility:ConstantString" string="MQInput LAB10_IN CWF"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="577,96" queueName="LAB10_OUT" messageContext="default">
+        <translation xmi:type="utility:ConstantString" string="MQOutput LAB10_OUT"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="952,17">
+        <translation xmi:type="utility:ConstantString" string="MQReply"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="429,17" dataSource="SAMPLE" mappingExpression="map://mainMap/maps#msg_CUSTOMERCOMPLAINT_to_Complaint_Out" mappingMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Map to Complaint_Out"/>
+      </nodes>
+      <nodes xmi:type="ComIbmDatabase.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="291,17" dataSource="MSGSTORE" statement="esql://routine/#StoreMsg.Main">
+        <translation xmi:type="utility:ConstantString" string="Database Store Msg"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="728,17" computeExpression="esql://routine/#Output_in_3_different_formats.Main">
+        <translation xmi:type="utility:ConstantString" string="Compute output in 3 different formats"/>
+      </nodes>
+      <nodes xmi:type="subflows_ErrorHandler_SUBFLOW.msgflow:FCMComposite_1" xmi:id="FCMComposite_1_6" location="169,17">
+        <translation xmi:type="utility:ConstantString" string="ERRORHANDLER"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="595,17" computeExpression="esql://routine/#Compute_Reply.Main">
+        <translation xmi:type="utility:ConstantString" string="Compute Reply"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_7" sourceNode="FCMComposite_1_5" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.Failure"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.In"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.catch" targetTerminalName="InTerminal.Catch"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.Out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_21" targetNode="FCMComposite_1_10" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_11" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_14" targetNode="FCMComposite_1_11" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_15" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+  </eClassifiers>
+</ecore:EPackage>

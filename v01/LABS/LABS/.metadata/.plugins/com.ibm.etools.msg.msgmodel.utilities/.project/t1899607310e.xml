@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="JC9JLS8002001" name="LAB12Driver_SET" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd#/0/OrderMessage;XSDElementDeclaration$MRMessage" name="OrderMessage">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="OrderMessage"
+        messageSetDefaultRep="XML1" render="XMLElement" xmlName="OrderMessage"/>
+    </message>
+    <message
+      href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd#/0/OrderResponse;XSDElementDeclaration=1$MRMessage" name="OrderResponse">
+      <xwf idAttrName="id" idAttrNameNSURI=""
+        idAttrValue="OrderResponse" messageSetDefaultRep="XML1"
+        render="XMLElement" xmlName="OrderResponse"/>
+    </message>
+    <element
+      href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd#/0/OrderMessage;XSDElementDeclaration"
+      name="OrderMessage" type="mset://LAB12Driver_SET#/-/complexType{}complexType1">
+      <xwf messageSetDefaultRep="XML1" xmlName="OrderMessage"/>
+    </element>
+    <element
+      href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd#/0/OrderResponse;XSDElementDeclaration=1"
+      name="OrderResponse" type="mset://LAB12Driver_SET#/-/complexType{}complexType2">
+      <xwf messageSetDefaultRep="XML1" xmlName="OrderResponse"/>
+    </element>
+    <complexType
+      baseType="mset://LAB12Driver_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd#/0/complexType1;XSDComplexTypeDefinition" name="complexType1"/>
+    <complexType
+      baseType="mset://LAB12Driver_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB12Driver_SET/LAB12Driver_SET/driverMessage.mxsd#/0/complexType2;XSDComplexTypeDefinition=1" name="complexType2"/>
+  </MRMsgCollection>
+</MRMessageSet>

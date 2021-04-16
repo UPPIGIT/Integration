@@ -1,0 +1,13 @@
+<Create_Book_Order_MSG>
+<Customer_ID>0123456789</Customer_ID>
+<Order_Date>2005-09-27 12:55:12</Order_Date>
+<First_Class>Yes</First_Class>
+<Book_Details>
+<ISBN>0123456789</ISBN>
+<Book_Price>15.99</Book_Price>
+<ISBN>1425112342</ISBN>
+<Book_Price>7.99</Book_Price>
+<ISBN>9736316345</ISBN>
+<Book_Price>25.99</Book_Price>
+</Book_Details>
+</Create_Book_Order_MSG>

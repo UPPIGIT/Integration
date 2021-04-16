@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="L4MCN5C002001" name="LAB7_SET" parser="MRM">
+  <MRMsgCollection
+    href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/msg_CUSTOMERCOMPLAINT;XSDElementDeclaration$MRMessage" name="msg_CUSTOMERCOMPLAINT">
+      <xwf idAttrName="id" idAttrNameNSURI=""
+        idAttrValue="msg_CUSTOMERCOMPLAINT" messageSetDefaultRep="XML1"
+        render="XMLElement" xmlName="msg_CUSTOMERCOMPLAINT"/>
+    </message>
+    <element
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/msg_CUSTOMERCOMPLAINT;XSDElementDeclaration"
+      name="msg_CUSTOMERCOMPLAINT" type="mset://LAB7_SET#/-/complexType{}CUSTOMERCOMPLAINT">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_CUSTOMERCOMPLAINT"/>
+    </element>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/CUSTOMERCOMPLAINT;XSDComplexTypeDefinition" name="CUSTOMERCOMPLAINT"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/customercomplaint_customer__name;XSDComplexTypeDefinition=1" name="customercomplaint_customer__name"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/customercomplaint_customer__address;XSDComplexTypeDefinition=2" name="customercomplaint_customer__address"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/customercomplaint_complaint;XSDComplexTypeDefinition=3" name="customercomplaint_complaint"/>
+    <group
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/customercomplaint_customer__name;XSDModelGroupDefinition" name="customercomplaint_customer__name"/>
+    <group
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/customercomplaint_customer__address;XSDModelGroupDefinition=1" name="customercomplaint_customer__address"/>
+    <group
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_IN.mxsd#/0/customercomplaint_complaint;XSDModelGroupDefinition=2" name="customercomplaint_complaint"/>
+  </MRMsgCollection>
+  <MRMsgCollection
+    href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/Complaint_Out;XSDElementDeclaration$MRMessage" name="Complaint_Out">
+      <xwf idAttrName="id" idAttrNameNSURI=""
+        idAttrValue="Complaint_Out" messageSetDefaultRep="XML1"
+        render="XMLElement" xmlName="Complaint_Out"/>
+    </message>
+    <element
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/Complaint_Out;XSDElementDeclaration"
+      name="Complaint_Out" type="mset://LAB7_SET#/-/complexType{}t_Complaint_Out">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="Complaint_Out"/>
+    </element>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Complaint_Out;XSDComplexTypeDefinition" name="t_Complaint_Out"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Name;XSDComplexTypeDefinition=1" name="t_Name"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Address;XSDComplexTypeDefinition=2" name="t_Address"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Complaint;XSDComplexTypeDefinition=3" name="t_Complaint"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Admin;XSDComplexTypeDefinition=4" name="t_Admin"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Manager;XSDComplexTypeDefinition=5" name="t_Manager"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Accounts;XSDComplexTypeDefinition=6" name="t_Accounts"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Account;XSDComplexTypeDefinition=7" name="t_Account"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_OUT.mxsd#/0/t_Customer;XSDComplexTypeDefinition=8" name="t_Customer"/>
+  </MRMsgCollection>
+  <MRMsgCollection
+    href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_REPLY.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_REPLY.mxsd#/0/Complaint_Reply;XSDElementDeclaration$MRMessage" name="Complaint_Reply">
+      <xwf idAttrName="id" idAttrNameNSURI=""
+        idAttrValue="Complaint_Reply" messageSetDefaultRep="XML1"
+        render="XMLElement" xmlName="Complaint_Reply"/>
+    </message>
+    <element
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_REPLY.mxsd#/0/Complaint_Reply;XSDElementDeclaration"
+      name="Complaint_Reply" type="mset://LAB7_SET#/-/complexType{}t_Complaint_Reply">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="Complaint_Reply"/>
+    </element>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_REPLY.mxsd#/0/t_YourComplaint;XSDComplexTypeDefinition" name="t_YourComplaint"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_REPLY.mxsd#/0/t_Reply;XSDComplexTypeDefinition=1" name="t_Reply"/>
+    <complexType
+      baseType="mset://LAB7_SET#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType"
+      href="platform:/resource/LAB7_SET_PROJECT/LAB7_SET/COMPLAINT_REPLY.mxsd#/0/t_Complaint_Reply;XSDComplexTypeDefinition=2" name="t_Complaint_Reply"/>
+  </MRMsgCollection>
+</MRMessageSet>

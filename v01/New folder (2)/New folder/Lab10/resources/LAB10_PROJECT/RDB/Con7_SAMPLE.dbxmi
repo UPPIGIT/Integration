@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBDatabase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="SAMPLE">
+  <schemata href="Con7_SAMPLE_MQSIUSER.schxmi#/"/>
+  <tableGroup href="Con7_SAMPLE_MQSIUSER_EMPLOYEE.tblxmi#/"/>
+  <connection href="Con7.conxmi#/"/>
+  <domain href="DB2UDBNT_V82_Domain.xmi#SQLVendor_1"/>
+  <rlCon href="SAMPLE_Con7.rlconxmi#/"/>
+</RDBSchema:RDBDatabase>

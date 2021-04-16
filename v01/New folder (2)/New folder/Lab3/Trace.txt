@@ -1,0 +1,572 @@
+Trace at 2006-02-14 11:41:26.383
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2006-02-14 10:38:52.920'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51205742524b365f44454641554c69b0f14320002a02'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'WBRK6_DEFAULT_QUEUE_MANAGER                     '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2006-02-14'
+    (0x03000000):PutTime          = GMTTIME '10:38:52.920'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x01000021):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		
+Trace at 2006-02-14 11:43:30.802
+Root = (
+  (0x01000000):Properties = (
+    (0x03000000):MessageSet      = 'LAB3_SET'
+    (0x03000000):MessageType     = 'msg_CUSTOMERCOMPLAINT'
+    (0x03000000):MessageFormat   = 'CWF1'
+    (0x03000000):Encoding        = 546
+    (0x03000000):CodedCharSetId  = 437
+    (0x03000000):Transactional   = TRUE
+    (0x03000000):Persistence     = FALSE
+    (0x03000000):CreationTime    = GMTTIMESTAMP '2006-02-14 10:43:24.970'
+    (0x03000000):ExpirationTime  = -1
+    (0x03000000):Priority        = 0
+    (0x03000000):ReplyIdentifier = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):ReplyProtocol   = 'MQ'
+    (0x03000000):Topic           = NULL
+    (0x03000000):ContentType     = ''
+  )
+  (0x01000000):MQMD       = (
+    (0x03000000):SourceQueue      = 'LAB3_IN'
+    (0x03000000):Transactional    = TRUE
+    (0x03000000):Encoding         = 546
+    (0x03000000):CodedCharSetId   = 437
+    (0x03000000):Format           = '        '
+    (0x03000000):Version          = 2
+    (0x03000000):Report           = 0
+    (0x03000000):MsgType          = 8
+    (0x03000000):Expiry           = -1
+    (0x03000000):Feedback         = 0
+    (0x03000000):Priority         = 0
+    (0x03000000):Persistence      = 0
+    (0x03000000):MsgId            = X'414d51205742524b365f44454641554c69b0f14320002a04'
+    (0x03000000):CorrelId         = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):BackoutCount     = 0
+    (0x03000000):ReplyToQ         = '                                                '
+    (0x03000000):ReplyToQMgr      = 'WBRK6_DEFAULT_QUEUE_MANAGER                     '
+    (0x03000000):UserIdentifier   = 'Kaestner    '
+    (0x03000000):AccountingToken  = X'160105150000005d3755f861b8bc8c727b2138f401000000000000000000000b'
+    (0x03000000):ApplIdentityData = '                                '
+    (0x03000000):PutApplType      = 11
+    (0x03000000):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   '
+    (0x03000000):PutDate          = DATE '2006-02-14'
+    (0x03000000):PutTime          = GMTTIME '10:43:24.970'
+    (0x03000000):ApplOriginData   = '    '
+    (0x03000000):GroupId          = X'000000000000000000000000000000000000000000000000'
+    (0x03000000):MsgSeqNumber     = 1
+    (0x03000000):Offset           = 0
+    (0x03000000):MsgFlags         = 0
+    (0x03000000):OriginalLength   = -1
+  )
+  (0x0100001B):MRM        = (
+    (0x0300000B):VERSION          = 2
+    (0x01000013):CUSTOMER_NAME    = (
+      (0x0300000B):N_FIRST = 'Ed'
+      (0x0300000B):N_LAST  = 'Fletcher'
+    )
+    (0x01000013):CUSTOMER_ADDRESS = (
+      (0x0300000B):A_LINE  = 'Mail Point 135'
+      (0x0300000B):A_LINE  = 'Hursley Park'
+      (0x0300000B):TOWN    = 'Winchester'
+      (0x0300000B):ZIP     = 'SO21 2JN'
+      (0x0300000B):COUNTRY = 'UK'
+    )
+    (0x01000013):COMPLAINT        = (
+      (0x0300000B):C_TYPE = 'Delivery'
+      (0x0300000B):C_REF  = 'XYZ123ABC'
+      (0x0300000B):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X'
+    )
+  )
+)
+		
+Trace at 2010-08-13 22:15:54.089592
+Root = ( ['MQROOT' : 0xb4b900]
+  (0x01000000:Name ):Properties = ( ['MQPROPERTYPARSER' : 0x13b86d70]
+    (0x03000000:NameValue):MessageSet             = 'LAB3_SET' (CHARACTER)
+    (0x03000000:NameValue):MessageType            = 'msg_CUSTOMERCOMPLAINT' (CHARACTER)
+    (0x03000000:NameValue):MessageFormat          = 'CWF1' (CHARACTER)
+    (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+    (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+    (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2010-08-13 16:45:54.090' (GMTTIMESTAMP)
+    (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+    (0x03000000:NameValue):Priority               = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyIdentifier        = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+  )
+  (0x01000000:Name ):MQMD       = ( ['MQHMD' : 0xd49ae8]
+    (0x03000000:NameValue):SourceQueue      = 'LAB3_IN' (CHARACTER)
+    (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+    (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+    (0x03000000:NameValue):Version          = 2 (INTEGER)
+    (0x03000000:NameValue):Report           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgType          = 8 (INTEGER)
+    (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+    (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+    (0x03000000:NameValue):Priority         = 0 (INTEGER)
+    (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+    (0x03000000:NameValue):MsgId            = X'414d51204d4237514d475220202020205966654c20003d02' (BLOB)
+    (0x03000000:NameValue):CorrelId         = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+    (0x03000000:NameValue):ReplyToQMgr      = 'MB7QMGR                                         ' (CHARACTER)
+    (0x03000000:NameValue):UserIdentifier   = 'db2admin    ' (CHARACTER)
+    (0x03000000:NameValue):AccountingToken  = X'160105150000002df4fdc3b8b02a5ed47dbebcf103000000000000000000000b' (BLOB)
+    (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+    (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+    (0x03000000:NameValue):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   ' (CHARACTER)
+    (0x03000000:NameValue):PutDate          = DATE '2010-08-13' (DATE)
+    (0x03000000:NameValue):PutTime          = GMTTIME '16:45:54.090' (GMTTIME)
+    (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+    (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+    (0x03000000:NameValue):Offset           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+    (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+  )
+  (0x01000021:Name+):MRM        = ( ['mrm' : 0x19945060]
+    (0x0300000B:NameValue+):VERSION          = 2 (INTEGER)
+    (0x01000013:Name+     ):CUSTOMER_NAME    = (
+      (0x0300000B:NameValue+):N_FIRST = 'Ed' (CHARACTER)
+      (0x0300000B:NameValue+):N_LAST  = 'Fletcher' (CHARACTER)
+    )
+    (0x01000013:Name+     ):CUSTOMER_ADDRESS = (
+      (0x0300000B:NameValue+):A_LINE  = 'Mail Point 135' (CHARACTER)
+      (0x0300000B:NameValue+):A_LINE  = 'Hursley Park' (CHARACTER)
+      (0x0300000B:NameValue+):TOWN    = 'Winchester' (CHARACTER)
+      (0x0300000B:NameValue+):ZIP     = 'SO21 2JN' (CHARACTER)
+      (0x0300000B:NameValue+):COUNTRY = 'UK' (CHARACTER)
+    )
+    (0x01000013:Name+     ):COMPLAINT        = (
+      (0x0300000B:NameValue+):C_TYPE = 'Delivery' (CHARACTER)
+      (0x0300000B:NameValue+):C_REF  = 'XYZ123ABC' (CHARACTER)
+      (0x0300000B:NameValue+):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X' (CHARACTER)
+    )
+  )
+)
+Trace at 2010-08-13 22:32:23.429321
+Root = ( ['MQROOT' : 0xb31638]
+  (0x01000000:Name ):Properties = ( ['MQPROPERTYPARSER' : 0x13c93d70]
+    (0x03000000:NameValue):MessageSet             = 'LAB3_SET' (CHARACTER)
+    (0x03000000:NameValue):MessageType            = 'msg_CUSTOMERCOMPLAINT' (CHARACTER)
+    (0x03000000:NameValue):MessageFormat          = 'CWF1' (CHARACTER)
+    (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+    (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+    (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2010-08-13 17:02:23.410' (GMTTIMESTAMP)
+    (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+    (0x03000000:NameValue):Priority               = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyIdentifier        = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+  )
+  (0x01000000:Name ):MQMD       = ( ['MQHMD' : 0xd2bee8]
+    (0x03000000:NameValue):SourceQueue      = 'LAB3_IN' (CHARACTER)
+    (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+    (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+    (0x03000000:NameValue):Version          = 2 (INTEGER)
+    (0x03000000:NameValue):Report           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgType          = 8 (INTEGER)
+    (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+    (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+    (0x03000000:NameValue):Priority         = 0 (INTEGER)
+    (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+    (0x03000000:NameValue):MsgId            = X'414d51204d4237514d475220202020205966654c20003d03' (BLOB)
+    (0x03000000:NameValue):CorrelId         = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+    (0x03000000:NameValue):ReplyToQMgr      = 'MB7QMGR                                         ' (CHARACTER)
+    (0x03000000:NameValue):UserIdentifier   = 'db2admin    ' (CHARACTER)
+    (0x03000000:NameValue):AccountingToken  = X'160105150000002df4fdc3b8b02a5ed47dbebcf103000000000000000000000b' (BLOB)
+    (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+    (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+    (0x03000000:NameValue):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   ' (CHARACTER)
+    (0x03000000:NameValue):PutDate          = DATE '2010-08-13' (DATE)
+    (0x03000000:NameValue):PutTime          = GMTTIME '17:02:23.410' (GMTTIME)
+    (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+    (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+    (0x03000000:NameValue):Offset           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+    (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+  )
+  (0x01000021:Name+):MRM        = ( ['mrm' : 0xd3bc60]
+    (0x0300000B:NameValue+):VERSION          = 2 (INTEGER)
+    (0x01000013:Name+     ):CUSTOMER_NAME    = (
+      (0x0300000B:NameValue+):N_FIRST = 'Ed' (CHARACTER)
+      (0x0300000B:NameValue+):N_LAST  = 'Fletcher' (CHARACTER)
+    )
+    (0x01000013:Name+     ):CUSTOMER_ADDRESS = (
+      (0x0300000B:NameValue+):A_LINE  = 'Mail Point 135' (CHARACTER)
+      (0x0300000B:NameValue+):A_LINE  = 'Hursley Park' (CHARACTER)
+      (0x0300000B:NameValue+):TOWN    = 'Winchester' (CHARACTER)
+      (0x0300000B:NameValue+):ZIP     = 'SO21 2JN' (CHARACTER)
+      (0x0300000B:NameValue+):COUNTRY = 'UK' (CHARACTER)
+    )
+    (0x01000013:Name+     ):COMPLAINT        = (
+      (0x0300000B:NameValue+):C_TYPE = 'Delivery' (CHARACTER)
+      (0x0300000B:NameValue+):C_REF  = 'XYZ123ABC' (CHARACTER)
+      (0x0300000B:NameValue+):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X' (CHARACTER)
+    )
+  )
+)
+Trace at 2010-08-13 23:02:18.364179
+Root = ( ['MQROOT' : 0xb4bf78]
+  (0x01000000:Name ):Properties = ( ['MQPROPERTYPARSER' : 0x13af7d70]
+    (0x03000000:NameValue):MessageSet             = 'LAB3_SET' (CHARACTER)
+    (0x03000000:NameValue):MessageType            = 'msg_CUSTOMERCOMPLAINT' (CHARACTER)
+    (0x03000000:NameValue):MessageFormat          = 'CWF1' (CHARACTER)
+    (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+    (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+    (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2010-08-13 17:32:18.350' (GMTTIMESTAMP)
+    (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+    (0x03000000:NameValue):Priority               = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyIdentifier        = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+  )
+  (0x01000000:Name ):MQMD       = ( ['MQHMD' : 0xd65ee8]
+    (0x03000000:NameValue):SourceQueue      = 'LAB3_IN' (CHARACTER)
+    (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+    (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+    (0x03000000:NameValue):Version          = 2 (INTEGER)
+    (0x03000000:NameValue):Report           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgType          = 8 (INTEGER)
+    (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+    (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+    (0x03000000:NameValue):Priority         = 0 (INTEGER)
+    (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+    (0x03000000:NameValue):MsgId            = X'414d51204d4237514d475220202020205966654c20003d04' (BLOB)
+    (0x03000000:NameValue):CorrelId         = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+    (0x03000000:NameValue):ReplyToQMgr      = 'MB7QMGR                                         ' (CHARACTER)
+    (0x03000000:NameValue):UserIdentifier   = 'db2admin    ' (CHARACTER)
+    (0x03000000:NameValue):AccountingToken  = X'160105150000002df4fdc3b8b02a5ed47dbebcf103000000000000000000000b' (BLOB)
+    (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+    (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+    (0x03000000:NameValue):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   ' (CHARACTER)
+    (0x03000000:NameValue):PutDate          = DATE '2010-08-13' (DATE)
+    (0x03000000:NameValue):PutTime          = GMTTIME '17:32:18.350' (GMTTIME)
+    (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+    (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+    (0x03000000:NameValue):Offset           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+    (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+  )
+  (0x01000021:Name+):MRM        = ( ['mrm' : 0xd69c60]
+    (0x0300000B:NameValue+):VERSION          = 2 (INTEGER)
+    (0x01000013:Name+     ):CUSTOMER_NAME    = (
+      (0x0300000B:NameValue+):N_FIRST = 'Ed' (CHARACTER)
+      (0x0300000B:NameValue+):N_LAST  = 'Fletcher' (CHARACTER)
+    )
+    (0x01000013:Name+     ):CUSTOMER_ADDRESS = (
+      (0x0300000B:NameValue+):A_LINE  = 'Mail Point 135' (CHARACTER)
+      (0x0300000B:NameValue+):A_LINE  = 'Hursley Park' (CHARACTER)
+      (0x0300000B:NameValue+):TOWN    = 'Winchester' (CHARACTER)
+      (0x0300000B:NameValue+):ZIP     = 'SO21 2JN' (CHARACTER)
+      (0x0300000B:NameValue+):COUNTRY = 'UK' (CHARACTER)
+    )
+    (0x01000013:Name+     ):COMPLAINT        = (
+      (0x0300000B:NameValue+):C_TYPE = 'Delivery' (CHARACTER)
+      (0x0300000B:NameValue+):C_REF  = 'XYZ123ABC' (CHARACTER)
+      (0x0300000B:NameValue+):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X' (CHARACTER)
+    )
+  )
+)
+Trace at 2010-08-13 23:06:13.230427
+Root = ( ['MQROOT' : 0xb4bf78]
+  (0x01000000:Name ):Properties = ( ['MQPROPERTYPARSER' : 0x13af7d70]
+    (0x03000000:NameValue):MessageSet             = 'LAB3_SET' (CHARACTER)
+    (0x03000000:NameValue):MessageType            = 'msg_CUSTOMERCOMPLAINT' (CHARACTER)
+    (0x03000000:NameValue):MessageFormat          = 'CWF1' (CHARACTER)
+    (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+    (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+    (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2010-08-13 17:34:54.370' (GMTTIMESTAMP)
+    (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+    (0x03000000:NameValue):Priority               = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyIdentifier        = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+  )
+  (0x01000000:Name ):MQMD       = ( ['MQHMD' : 0xd65ee8]
+    (0x03000000:NameValue):SourceQueue      = 'LAB3_IN' (CHARACTER)
+    (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+    (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+    (0x03000000:NameValue):Version          = 2 (INTEGER)
+    (0x03000000:NameValue):Report           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgType          = 8 (INTEGER)
+    (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+    (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+    (0x03000000:NameValue):Priority         = 0 (INTEGER)
+    (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+    (0x03000000:NameValue):MsgId            = X'414d51204d4237514d475220202020205966654c20003d05' (BLOB)
+    (0x03000000:NameValue):CorrelId         = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+    (0x03000000:NameValue):ReplyToQMgr      = 'MB7QMGR                                         ' (CHARACTER)
+    (0x03000000:NameValue):UserIdentifier   = 'db2admin    ' (CHARACTER)
+    (0x03000000:NameValue):AccountingToken  = X'160105150000002df4fdc3b8b02a5ed47dbebcf103000000000000000000000b' (BLOB)
+    (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+    (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+    (0x03000000:NameValue):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   ' (CHARACTER)
+    (0x03000000:NameValue):PutDate          = DATE '2010-08-13' (DATE)
+    (0x03000000:NameValue):PutTime          = GMTTIME '17:34:54.370' (GMTTIME)
+    (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+    (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+    (0x03000000:NameValue):Offset           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+    (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+  )
+  (0x01000021:Name+):MRM        = ( ['mrm' : 0xd69c60]
+    (0x0300000B:NameValue+):VERSION          = 2 (INTEGER)
+    (0x01000013:Name+     ):CUSTOMER_NAME    = (
+      (0x0300000B:NameValue+):N_FIRST = 'Ed' (CHARACTER)
+      (0x0300000B:NameValue+):N_LAST  = 'Fletcher' (CHARACTER)
+    )
+    (0x01000013:Name+     ):CUSTOMER_ADDRESS = (
+      (0x0300000B:NameValue+):A_LINE  = 'Mail Point 135' (CHARACTER)
+      (0x0300000B:NameValue+):A_LINE  = 'Hursley Park' (CHARACTER)
+      (0x0300000B:NameValue+):TOWN    = 'Winchester' (CHARACTER)
+      (0x0300000B:NameValue+):ZIP     = 'SO21 2JN' (CHARACTER)
+      (0x0300000B:NameValue+):COUNTRY = 'UK' (CHARACTER)
+    )
+    (0x01000013:Name+     ):COMPLAINT        = (
+      (0x0300000B:NameValue+):C_TYPE = 'Delivery' (CHARACTER)
+      (0x0300000B:NameValue+):C_REF  = 'XYZ123ABC' (CHARACTER)
+      (0x0300000B:NameValue+):C_TEXT = 'I placed an order on 15-11-99, well in time for Christmas and I still have not had a delivery schedule sent to me.  Please cancel the order and refund me NOW.                                         X' (CHARACTER)
+    )
+  )
+)
+Trace at 2010-08-14 09:19:50.851516
+Root = ( ['MQROOT' : 0xb4bd50]
+  (0x01000000:Name):Properties = ( ['MQPROPERTYPARSER' : 0x13af7d70]
+    (0x03000000:NameValue):MessageSet             = 'LAB3_SET' (CHARACTER)
+    (0x03000000:NameValue):MessageType            = 'msg_CUSTOMERCOMPLAINT' (CHARACTER)
+    (0x03000000:NameValue):MessageFormat          = 'CWF1' (CHARACTER)
+    (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+    (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+    (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2010-08-14 03:49:50.770' (GMTTIMESTAMP)
+    (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+    (0x03000000:NameValue):Priority               = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyIdentifier        = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+  )
+  (0x01000000:Name):MQMD       = ( ['MQHMD' : 0xd64ee8]
+    (0x03000000:NameValue):SourceQueue      = 'LAB3_IN' (CHARACTER)
+    (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+    (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+    (0x03000000:NameValue):Version          = 2 (INTEGER)
+    (0x03000000:NameValue):Report           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgType          = 8 (INTEGER)
+    (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+    (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+    (0x03000000:NameValue):Priority         = 0 (INTEGER)
+    (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+    (0x03000000:NameValue):MsgId            = X'414d51204d4237514d47522020202020b30f664c20003302' (BLOB)
+    (0x03000000:NameValue):CorrelId         = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+    (0x03000000:NameValue):ReplyToQMgr      = 'MB7QMGR                                         ' (CHARACTER)
+    (0x03000000:NameValue):UserIdentifier   = 'db2admin    ' (CHARACTER)
+    (0x03000000:NameValue):AccountingToken  = X'160105150000002df4fdc3b8b02a5ed47dbebcf103000000000000000000000b' (BLOB)
+    (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+    (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+    (0x03000000:NameValue):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   ' (CHARACTER)
+    (0x03000000:NameValue):PutDate          = DATE '2010-08-14' (DATE)
+    (0x03000000:NameValue):PutTime          = GMTTIME '03:49:50.770' (GMTTIME)
+    (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+    (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+    (0x03000000:NameValue):Offset           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+    (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+  )
+)
+Trace at 2010-08-14 09:21:37.415939
+Root = ( ['MQROOT' : 0xb4bd50]
+  (0x01000000:Name):Properties = ( ['MQPROPERTYPARSER' : 0x13af7d70]
+    (0x03000000:NameValue):MessageSet             = 'LAB3_SET' (CHARACTER)
+    (0x03000000:NameValue):MessageType            = 'msg_CUSTOMERCOMPLAINT' (CHARACTER)
+    (0x03000000:NameValue):MessageFormat          = 'CWF1' (CHARACTER)
+    (0x03000000:NameValue):Encoding               = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId         = 437 (INTEGER)
+    (0x03000000:NameValue):Transactional          = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Persistence            = FALSE (BOOLEAN)
+    (0x03000000:NameValue):CreationTime           = GMTTIMESTAMP '2010-08-14 03:51:37.400' (GMTTIMESTAMP)
+    (0x03000000:NameValue):ExpirationTime         = -1 (INTEGER)
+    (0x03000000:NameValue):Priority               = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyIdentifier        = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):ReplyProtocol          = 'MQ' (CHARACTER)
+    (0x03000000:NameValue):Topic                  = NULL
+    (0x03000000:NameValue):ContentType            = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourcePassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentitySourceIssuedBy = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedType     = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedToken    = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedPassword = '' (CHARACTER)
+    (0x03000000:NameValue):IdentityMappedIssuedBy = '' (CHARACTER)
+  )
+  (0x01000000:Name):MQMD       = ( ['MQHMD' : 0xd64ee8]
+    (0x03000000:NameValue):SourceQueue      = 'LAB3_IN' (CHARACTER)
+    (0x03000000:NameValue):Transactional    = TRUE (BOOLEAN)
+    (0x03000000:NameValue):Encoding         = 546 (INTEGER)
+    (0x03000000:NameValue):CodedCharSetId   = 437 (INTEGER)
+    (0x03000000:NameValue):Format           = '        ' (CHARACTER)
+    (0x03000000:NameValue):Version          = 2 (INTEGER)
+    (0x03000000:NameValue):Report           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgType          = 8 (INTEGER)
+    (0x03000000:NameValue):Expiry           = -1 (INTEGER)
+    (0x03000000:NameValue):Feedback         = 0 (INTEGER)
+    (0x03000000:NameValue):Priority         = 0 (INTEGER)
+    (0x03000000:NameValue):Persistence      = 0 (INTEGER)
+    (0x03000000:NameValue):MsgId            = X'414d51204d4237514d47522020202020b30f664c20003303' (BLOB)
+    (0x03000000:NameValue):CorrelId         = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):BackoutCount     = 0 (INTEGER)
+    (0x03000000:NameValue):ReplyToQ         = '                                                ' (CHARACTER)
+    (0x03000000:NameValue):ReplyToQMgr      = 'MB7QMGR                                         ' (CHARACTER)
+    (0x03000000:NameValue):UserIdentifier   = 'db2admin    ' (CHARACTER)
+    (0x03000000:NameValue):AccountingToken  = X'160105150000002df4fdc3b8b02a5ed47dbebcf103000000000000000000000b' (BLOB)
+    (0x03000000:NameValue):ApplIdentityData = '                                ' (CHARACTER)
+    (0x03000000:NameValue):PutApplType      = 11 (INTEGER)
+    (0x03000000:NameValue):PutApplName      = 'C:\Labs\Tools\rfhutil.exe   ' (CHARACTER)
+    (0x03000000:NameValue):PutDate          = DATE '2010-08-14' (DATE)
+    (0x03000000:NameValue):PutTime          = GMTTIME '03:51:37.400' (GMTTIME)
+    (0x03000000:NameValue):ApplOriginData   = '    ' (CHARACTER)
+    (0x03000000:NameValue):GroupId          = X'000000000000000000000000000000000000000000000000' (BLOB)
+    (0x03000000:NameValue):MsgSeqNumber     = 1 (INTEGER)
+    (0x03000000:NameValue):Offset           = 0 (INTEGER)
+    (0x03000000:NameValue):MsgFlags         = 0 (INTEGER)
+    (0x03000000:NameValue):OriginalLength   = -1 (INTEGER)
+  )
+)

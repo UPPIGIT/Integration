@@ -1,0 +1,50 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		SET OutputRoot = InputRoot;
+		
+		SET OutputRoot.XMLNSC.PassengerQuery = NULL;
+		
+		SET Environment.Variables.Reservation[] = (SELECT T.* FROM Database.UPENDER.XMLPASSENGERTB  AS T
+	    WHERE T.FIRSTNAME = InputRoot.XMLNSC.PassengerQuery.FirstName AND 
+	    T.LASTNAME = InputRoot.XMLNSC.PassengerQuery.LastName) ;
+	    
+	    CREATE FIELD OutputRoot.XMLNSC.PassengerInfoResponse.ListOfReservations;
+	    
+	    DECLARE outres REFERENCE TO OutputRoot.XMLNSC.PassengerInfoResponse.ListOfReservations;
+	    
+	    DECLARE i INTEGER 1;
+	    DECLARE j INTEGER CARDINALITY(Environment.Variables.*[]);
+	    
+	    WHILE i<=j DO
+	    	
+	    	SET outres.Reservation[i].FlightNumber = Environment.Variables.Reservation[i].FLIGHTNO;
+	    	SET outres.Reservation[i].FlightDate = Environment.Variables.Reservation[i].FLIGHTDATE;
+	    	SET outres.Reservation[i].Class = Environment.Variables.Reservation[i].CLASSTYPE;
+	    	
+	    	SET i = i + 1 ;
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    END WHILE;
+	    
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;

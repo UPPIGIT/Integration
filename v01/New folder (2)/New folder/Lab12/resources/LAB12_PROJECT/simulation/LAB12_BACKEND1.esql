@@ -1,0 +1,25 @@
+BROKER SCHEMA simulation
+
+
+CREATE COMPUTE MODULE LAB12_BACKEND1_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot=InputRoot;
+		-- Just generate a dummy number
+		SET OutputRoot.MRM.Customer.Number=123456;
+		RETURN TRUE;
+	END;
+END MODULE;
+
+CREATE COMPUTE MODULE LAB12_DIVISON_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot=InputRoot;
+		-- Just generate some random values
+		SET OutputRoot.MRM.Accounts.Account.Number=1000000*(EXTRACT(SECOND FROM CURRENT_TIME)-FLOOR(EXTRACT(SECOND FROM CURRENT_TIME)));
+		SET OutputRoot.MRM.Accounts.Account.Type=MessageFlowLabel;
+		SET OutputRoot.MRM.Accounts.Account.Amount=FLOOR(10000*EXTRACT(SECOND FROM CURRENT_TIME));
+		SET OutputRoot.MRM.Accounts.Account.Remarks=' ';
+		RETURN TRUE;
+	END;
+END MODULE;

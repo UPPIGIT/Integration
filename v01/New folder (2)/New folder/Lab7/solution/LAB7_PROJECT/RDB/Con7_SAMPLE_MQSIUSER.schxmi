@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="MQSIUSER">
+  <database href="Con7_SAMPLE.dbxmi#/"/>
+  <tables href="Con7_SAMPLE_MQSIUSER_EMPLOYEE.tblxmi#/"/>
+</RDBSchema:RDBSchema>

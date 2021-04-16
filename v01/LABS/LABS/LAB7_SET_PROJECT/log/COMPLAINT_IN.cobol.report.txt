@@ -1,0 +1,37 @@
+
+
+Importing file: C:\Users\IBM_ADMIN\Desktop\Labs\Labs\Lab7\data\COMPLAINT_IN.cpy
+
+Import options for COBOL: 
+	EXT_DECIMAL_SIGN=ASCII
+	NUMPROC=PFD
+	QUOTE=DOUBLE
+	FLOATING_POINT_FORMAT=0
+	NSYMBOL=NATIONAL
+	ENDIAN=Little
+	EXTENSION_CPY=DS
+	CODEPAGE=ISO8859_1
+	TRUNC=STD
+	EXTENSION_CBL=FP
+	PLATFORM_SELECTION=0
+	EXTENSION_CCP=FP
+	REMOTE_ENDIAN=Little
+	EXTENSION_COB=FP
+	SCHEMA_TARGET_NAMESPACE_URI=null
+	CREATE_DEFAULT_VALUES_FROM_INITIAL_VALUES=false
+	CREATE_FACETS_FROM_LEVEL_88_VALUE_CLAUSES=false
+	CREATE_NULL_VALUES_FOR_FIELDS=false
+	NULL_CHARACTER=SPACE
+	STRING_PADDING_CHARACTER=SPACE
+
+Creating global element "msg_CUSTOMERCOMPLAINT" for type "CUSTOMERCOMPLAINT"
+Creating message "msg_CUSTOMERCOMPLAINT" from global element "msg_CUSTOMERCOMPLAINT"
+Setting Padding Character for elements of type String  "SPACE"
+
+Elapsed time processing this message definition file: 0.507 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

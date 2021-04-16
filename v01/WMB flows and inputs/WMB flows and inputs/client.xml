@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<tns:Envelope xmlns:tns="
+http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:NS1="http://www.brokersamplewshost.ibm.com"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <tns:Body>
+        <NS1:IA81CONFOUT>
+            <MessageId>IA81CONF</MessageId>
+            <OrderNumber>LAB51234</OrderNumber>
+            <ItemReference>ITEM12345678</ItemReference>
+            <ItemQuantity>qty00005</ItemQuantity>
+            <CustomerNumber>CUST34567890</CustomerNumber>
+            <DeliveryRef>JOHNCORP</DeliveryRef>
+            <Confirm>N</Confirm>
+            <filler1>   </filler1>
+        </NS1:IA81CONFOUT>
+    </tns:Body>
+</tns:Envelope>

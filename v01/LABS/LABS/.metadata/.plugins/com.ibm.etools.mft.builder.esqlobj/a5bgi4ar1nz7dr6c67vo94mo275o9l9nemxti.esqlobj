@@ -1,0 +1,26 @@
+CREATE COMPUTE MODULE LAB12_Compute2
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.MQMD = NULL;
+		SET OutputRoot.XMLNSC.ns:submitPOResponse.orderStatus = InputRoot.XMLNSC.OrderResponse.Status;
+		SET OutputRoot.XMLNSC.ns:submitPOResponse.orderAmt = InputRoot.XMLNSC.OrderResponse.AMT;
+		SET OutputRoot.XMLNSC.ns:submitPOResponse.partNo = InputRoot.XMLNSC.OrderResponse.PartNo;
+		SET OutputRoot.XMLNSC.ns:submitPOResponse.partQuantity = InputRoot.XMLNSC.OrderResponse.PartQuantity;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

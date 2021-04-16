@@ -1,0 +1,87 @@
+
+
+
+
+CREATE COMPUTE MODULE TransferLoanAmountFromSavings
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		CALL CopyEntireMessage();
+
+		
+	
+
+
+	
+
+		DECLARE Saving_acc_no INTEGER;
+		DECLARE Loan_acc_no INTEGER;
+		DECLARE acc_name CHARACTER;
+		DECLARE stat CHARACTER;
+		DECLARE transaction CHARACTER;
+		DECLARE acc_status CHARACTER;
+		DECLARE amount FLOAT;
+		DECLARE balance FLOAT;
+
+		SET Saving_acc_no = CAST(InputRoot.XMLNSC.Account.SavingAccountNumber AS INTEGER);
+		SET Loan_acc_no = CAST(InputRoot.XMLNSC.Account.LoanAccountNumber AS INTEGER);
+		SET acc_name = InputRoot.XMLNSC.Account.AccountName;
+		SET amount = CAST(InputRoot.XMLNSC.Account.Amount AS FLOAT);
+		SET transaction ='DEBIT';
+		
+			CALL update_savings_account( Saving_acc_no,acc_name , amount , transaction, balance, stat) IN Database.SAVG_ACC.DB2SCHEMA;
+   
+
+IF (stat = 'SUCCESS') then
+	
+SET OutputRoot.XMLNSC.Account.BalanceSavings = balance;
+	
+END IF;
+CALL update_loan_account( Loan_acc_no, acc_name , amount , balance, stat) IN Database.LOAN_ACC.DB2SCHEMA;
+			
+IF (stat = 'SUCCESS') then
+		
+SET OutputRoot.XMLNSC.Account.BalanceLoan = balance;
+				
+SET OutputRoot.XMLNSC.Account.Status = ' TRANSACTION COMPLETED SUCCESSFULLY';
+				
+END IF;
+RETURN TRUE;
+
+	
+	
+			
+
+	END;
+	
+
+	
+	
+	
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+
+
+
+CREATE PROCEDURE update_savings_account(IN account_no INTEGER ,IN account_name CHARACTER ,IN amount FLOAT ,IN transaction CHARACTER,
+	OUT balance FLOAT , OUT status CHARACTER)LANGUAGE DATABASE EXTERNAL NAME "Database.SAVG_ACC.DB2SCHEMA.update_saving_account";		
+
+
+	CREATE PROCEDURE update_loan_account (IN account_no INTEGER , IN account_name CHARACTER, IN amount FLOAT ,
+	OUT balance FLOAT , OUT status CHARACTER )
+	LANGUAGE DATABASE
+	EXTERNAL NAME "Database.DB2SCHEMA.update_loan_account";		
+	
+
+END MODULE;

@@ -1,0 +1,37 @@
+LAB10_REQ_CUSTNO
+
+LAB10_REPLY_CUSTNO
+
+Environment.InputMQMD
+
+OutputRoot.MRM.Customer.Number
+
+ResultRoot.MRM.Customer.Number
+
+
+
+
+SET OutputRoot.MRM.Customer=InputBody.Customer;
+
+SET OutputRoot.Properties.MessageFormat='XML1';
+SET OutputRoot.Properties.MessageType='CustomerSummary';
+
+
+
+
+SET Environment.InputMQMD=Root.MQMD;
+
+SET Environment.InputMQMD.CorrelId = LocalEnvironment.WrittenDestination.MQ.DestinationData.replyIdentifier;
+
+
+
+
+
+
+LAB10
+
+LAB10_REQ_DIVISION1
+
+LAB10_REPLY_DIVISIONS
+
+DIVISION1

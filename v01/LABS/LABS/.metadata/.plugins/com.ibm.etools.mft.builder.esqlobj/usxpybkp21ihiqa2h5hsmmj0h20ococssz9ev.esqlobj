@@ -1,0 +1,35 @@
+CREATE COMPUTE MODULE saveCompute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.Properties.CodedCharSetId = 1208;
+		
+		DECLARE request REFERENCE TO InputRoot.XMLNSC.request;
+		
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Name =request.Name;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:City = request.City;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:Street = request.Street;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:Province = request.Province;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:PostalCode = request.PostalCode;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:PhoneNumber.ns:Area = request.Area;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:PhoneNumber.ns:Prefix = request.Prefix;
+		SET OutputRoot.SOAP.Body.ns:Person.ns:Address.ns:PhoneNumber.ns:Local = request.Local;
+		
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

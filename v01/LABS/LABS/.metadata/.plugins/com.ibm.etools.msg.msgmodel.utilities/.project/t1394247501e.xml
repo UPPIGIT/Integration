@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MRMessageSet id="N4B4NNK002001" name="LAB4_MSG_SET" parser="XMLNSC">
+  <MRMsgCollection
+    href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd"
+    prefix="" targetNamespace="">
+    <message
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/CUSTOMER_ADDRESS;XSDElementDeclaration=5$MRMessage" name="CUSTOMER_ADDRESS"/>
+    <message
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/CUSTOMERCOMPLAINT;XSDElementDeclaration=8$MRMessage" name="CUSTOMERCOMPLAINT"/>
+    <message
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/CUSTOMER_NAME;XSDElementDeclaration=9$MRMessage" name="CUSTOMER_NAME"/>
+    <message
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/COMPLAINT;XSDElementDeclaration=10$MRMessage" name="COMPLAINT"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/N_FIRST;XSDElementDeclaration"
+      name="N_FIRST" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/VERSION;XSDElementDeclaration=1"
+      name="VERSION" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/C_REF;XSDElementDeclaration=2"
+      name="C_REF" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/COUNTRY;XSDElementDeclaration=3"
+      name="COUNTRY" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/C_TYPE;XSDElementDeclaration=4"
+      name="C_TYPE" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/CUSTOMER_ADDRESS;XSDElementDeclaration=5" name="CUSTOMER_ADDRESS"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/A_LINE;XSDElementDeclaration=6"
+      name="A_LINE" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/TOWN;XSDElementDeclaration=7"
+      name="TOWN" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/CUSTOMERCOMPLAINT;XSDElementDeclaration=8" name="CUSTOMERCOMPLAINT"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/CUSTOMER_NAME;XSDElementDeclaration=9" name="CUSTOMER_NAME"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/COMPLAINT;XSDElementDeclaration=10" name="COMPLAINT"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/C_TEXT;XSDElementDeclaration=11"
+      name="C_TEXT" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/N_LAST;XSDElementDeclaration=12"
+      name="N_LAST" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element
+      href="platform:/resource/LAB4_MSG_SET/LAB4_MSG_SET/Complaint.mxsd#/0/ZIP;XSDElementDeclaration=13"
+      name="ZIP" type="mset://LAB4_MSG_SET#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+  </MRMsgCollection>
+</MRMessageSet>
